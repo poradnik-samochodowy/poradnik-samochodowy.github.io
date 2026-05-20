@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://poradnik-samochodowy.github.io/sitemap.xml
