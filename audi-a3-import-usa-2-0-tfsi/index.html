@@ -26,7 +26,7 @@
   .article-hero .lead { margin-top: 12px; opacity: 0.9; max-width: 720px; }
   .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
   .spec-pill { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
-  .wrap { max-width: 1120px; margin: 28px auto 48px; padding: 0 22px; display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; align-items: start; }
+  .wrap { max-width: 1040px; margin: 28px auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 290px; gap: 28px; }
   .content { background: #fff; border-radius: 10px; padding: 32px 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
   h2 { font-size: 1.35rem; color: #922b21; margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
   h2:first-of-type { margin-top: 0; }
@@ -47,17 +47,7 @@
   footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
   .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
   footer a { color: rgba(255,255,255,0.9); }
-    .sidebar { display: grid; gap: 16px; position: sticky; top: 18px; }
-  .sidebar-panel { background: #fff; border-radius: 10px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-  .sidebar-panel h3 { margin: 0 0 12px; font-size: 0.95rem; color: #0f172a; border-bottom: 2px solid #1a56db; padding-bottom: 6px; }
-  .sidebar-panel ul { margin: 0; padding-left: 0; list-style: none; }
-  .sidebar-panel ul li { padding: 4px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.88rem; }
-  .sidebar-panel ul li:last-child { border-bottom: none; }
-  .sidebar-panel ul li a { color: #1a56db; }
-  .sidebar-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.88rem; }
-  .sidebar-stat:last-child { border-bottom: none; }
-  .sidebar-stat .val { font-weight: 700; color: #0f172a; }
-  @media(max-width:900px){ .wrap { grid-template-columns: 1fr; } .sidebar { position: static; } }
+  @media(max-width:900px){ .wrap { max-width: 1040px; margin: 28px auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 290px; gap: 28px; } }
   @media(max-width:600px){ .content { padding: 22px 18px; } table { font-size: 0.82rem; } th, td { padding: 8px; } }
 </style>
 <script type="application/ld+json">
@@ -176,8 +166,8 @@
     </div>
   </div>
 </header>
-<article class="wrap">
-  <div class="content">
+<div class="wrap">
+  <main class="content">
 <p>Sprowadzenie Audi A3 sedan (8V) z USA kusi konkretną oszczędnością: auto z rocznika 2017 kupujesz na aukcji Copart/IAAI za około <strong>28 000 USD (ok. 108 000 zł przy kursie 3,85 PLN/USD)</strong>, a po doliczeniu transportu, cła, VAT i akcyzy całkowity koszt zamyka się w <strong>195 000–220 000 zł</strong>. Porównywalne A3 8V na OTOMOTO wyceniane jest na 210 000–250 000 zł — potencjalna oszczędność to <strong>15 000–30 000 zł</strong>. Zanim jednak zdecydujesz się na import, musisz znać kody silnika, różnice konstrukcyjne i realne koszty całej operacji. W tym poradniku znajdziesz konkretną wiedzę, która pomoże Ci uniknąć kosztownych błędów.</p>
 
     <div style="background:#fef9e7;border:2px solid #f39c12;border-radius:10px;padding:16px 20px;margin:0 0 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-around;">
@@ -448,37 +438,40 @@
     <p style="font-size: 0.9em;">Artykuł powstał na podstawie analizy aukcji Copart, raportów Carfax oraz wiedzy mechaników VAG. Dla starszych generacji (np. <a href="/audi/a3-8p/">Audi A3 8P</a>) również warto rozważyć import, choć modele 8V są nowsze i bezpieczniejsze w eksploatacji.</p>
 
     <div class="note"><strong>Zastrzeżenie:</strong> Podane w artykule wyliczenia kosztów (cło, VAT, akcyza) są orientacyjne i opierają się na przepisach obowiązujących w 2025 r. Nie stanowią porady prawnej ani podatkowej. Przed skorzystaniem z informacji skonsultuj się z doradcą podatkowym lub agencją celną. Stawki celne i podatkowe mogą się zmieniać w zależności od decyzji administracyjnych oraz miejsca odprawy.</div>
+  </main>
+
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <div class="sidebar-title">Szybkie fakty</div>
+    <ul class="related-links">
+      <li>Cena w USA: <strong>~28 000 USD</strong></li>
+      <li>Po przeliczeniu: <strong>~108 000 PLN</strong></li>
+      <li>Oszczędność vs OTOMOTO: <strong>15–30 tys. zł</strong></li>
+      <li>Czas importu: <strong>6–10 tygodni</strong></li>
+      <li>Akcyza (silnik &gt;2L): <strong>18,6%</strong></li>
+    </ul>
   </div>
-  <aside class="sidebar">
-    <div class="sidebar-panel">
-      <h3>Szybkie fakty</h3>
-      <div class="sidebar-stat"><span>Cena w USA</span><span class="val">~28 000 USD</span></div>
-      <div class="sidebar-stat"><span>Po przeliczeniu</span><span class="val">~108 000 PLN</span></div>
-      <div class="sidebar-stat"><span>Oszczędność vs OTOMOTO</span><span class="val">15–30 tys. zł</span></div>
-      <div class="sidebar-stat"><span>Czas importu</span><span class="val">6–10 tygodni</span></div>
-      <div class="sidebar-stat"><span>Akcyza (silnik &gt;2L)</span><span class="val">18,6%</span></div>
-    </div>
-    <div class="sidebar-panel">
-      <h3>Spis treści</h3>
-      <ul>
-        <li><a href="#dlaczego">1. Dlaczego import z USA?</a></li>
-        <li><a href="#silnik">2. Silnik 2.0 TFSI i kody</a></li>
-        <li><a href="#vin">3. Sprawdzenie VIN i Carfax</a></li>
-        <li><a href="#koszty">4. Koszty krok po kroku</a></li>
-        <li><a href="#porownanie">5. USA vs OTOMOTO</a></li>
-        <li><a href="#checklista">6. Checklista przed zakupem</a></li>
-        <li><a href="#faq">7. FAQ</a></li>
-      </ul>
-    </div>
-    <div class="sidebar-panel">
-      <h3>Powiązane artykuły</h3>
-      <ul>
-        <li><a href="/audi/a3-8p/">Audi A3 8P – co warto wiedzieć</a></li>
-        <li><a href="/audi/">Wszystkie artykuły Audi</a></li>
-      </ul>
-    </div>
-  </aside>
-</article>
+  <div class="sidebar-card">
+    <div class="sidebar-title">Spis treści</div>
+    <ul class="related-links">
+      <li><a href="#dlaczego">1. Dlaczego import z USA?</a></li>
+      <li><a href="#silnik">2. Silnik 2.0 TFSI i kody</a></li>
+      <li><a href="#vin">3. Sprawdzenie VIN i Carfax</a></li>
+      <li><a href="#koszty">4. Koszty krok po kroku</a></li>
+      <li><a href="#porownanie">5. USA vs OTOMOTO</a></li>
+      <li><a href="#checklista">6. Checklista przed zakupem</a></li>
+      <li><a href="#faq">7. FAQ</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-card">
+    <div class="sidebar-title">Powiązane artykuły</div>
+    <ul class="related-links">
+      <li><a href="/audi/a3-8p/">Audi A3 8P — co warto wiedzieć</a></li>
+      <li><a href="/audi/">Wszystkie artykuły Audi →</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
 <footer>
   <div class="footer-inner">
     <span>© 2026 Poradnik Samochodowy</span>
