@@ -26,7 +26,7 @@
   .article-hero .lead { margin-top: 12px; opacity: 0.9; max-width: 720px; }
   .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
   .spec-pill { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
-  .wrap { max-width: 1040px; margin: 28px auto; padding: 0 20px 48px; }
+  .wrap { max-width: 1040px; margin: 28px auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 290px; gap: 28px; }
   .content { background: #fff; border-radius: 10px; padding: 32px 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
   h2 { font-size: 1.35rem; color: #922b21; margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
   h2:first-of-type { margin-top: 0; }
@@ -47,7 +47,13 @@
   footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
   .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
   footer a { color: rgba(255,255,255,0.9); }
+  @media(max-width:720px){ .wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
   @media(max-width:600px){ .content { padding: 22px 18px; } table { font-size: 0.82rem; } th, td { padding: 8px; } }
+  .sidebar-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; }
+  .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #1a56db; margin-bottom: 14px; }
+  .related-links { list-style: none; margin: 0; padding: 0; }
+  .related-links li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.93rem; }
+  .related-links li:last-child { border: none; }
 </style>
 <script type="application/ld+json">
 {
@@ -96,13 +102,13 @@
     </div>
   </div>
 </header>
-<article class="wrap">
-  <div class="content">
-    <h2>Audi A3 8P — co to za generacja?</h2>
+<div class="wrap">
+  <main class="content">
+    <h2 id="generacja">Audi A3 8P — co to za generacja?</h2>
     <p>Audi A3 <strong>8P</strong> to druga generacja modelu A3, produkowana w latach <strong>2003–2013</strong>. W dokumentacji serwisowej i na forach VAG pojawia się właśnie kod <strong>8P</strong> — to najpewniejszy sposób, żeby dobrać części i nie pomylić generacji z <strong>8L</strong> (1996–2003) ani <strong>8V</strong> (od ok. 2012).</p>
     <p>W Polsce 8P jest jednym z najpopularniejszych kompaktów premium na rynku wtórnym. Kupujący szukają głównie wersji <strong>2.0 TDI</strong> i <strong>2.0 TFSI</strong>, ale warto znać różnice między kodami silników — od tego zależą typowe usterki i koszty napraw.</p>
 
-    <h2>Specyfikacja — nadwozia i lata</h2>
+    <h2 id="specyfikacja">Specyfikacja — nadwozia i lata</h2>
     <table>
       <thead>
         <tr><th>Wariant</th><th>Lata</th><th>Uwagi</th></tr>
@@ -115,7 +121,7 @@
       </tbody>
     </table>
 
-    <h2>Silniki — kody robocze (najczęstsze)</h2>
+    <h2 id="silniki">Silniki — kody robocze (najczęstsze)</h2>
     <table>
       <thead>
         <tr><th>Silnik</th><th>Kod</th><th>Moc (orient.)</th><th>Uwaga</th></tr>
@@ -131,7 +137,7 @@
     </table>
     <p><strong>Tip:</strong> Przy zakupie wpisz VIN w katalogu części (TecDoc, Inter Cars) — wtedy silnik i skrzynia dopasują się automatycznie.</p>
 
-    <h2>Wycieraczki Audi A3 8P — rozmiary</h2>
+    <h2 id="wycieraczki">Wycieraczki Audi A3 8P — rozmiary</h2>
     <p>To jedno z najczęstszych zapytań w Google („wycieraczki audi a3 8p rozmiar”). Poniżej typowe wartości dla <strong>hatchback / Sportback</strong> — zawsze zweryfikuj przed zakupem (rok, reflektory, wyciągacz tylnej wycieraczki).</p>
     <table>
       <thead>
@@ -147,7 +153,7 @@
       <strong>Cabrio 8P</strong> i niektóre wersje z innymi reflektorami mogą wymagać innych długości. Jeśli masz numer VIN, porównaj w dwóch katalogach sklepów — rozbieżność 1 rozmiaru to norma przy rynku wtórnym.
     </div>
 
-    <h2>Typowe usterki Audi A3 8P (z forów i warsztatów)</h2>
+    <h2 id="usterki">Typowe usterki Audi A3 8P (z forów i warsztatów)</h2>
     <p>Na forach takich jak Elektroda czy VAG-group najczęściej wraca kilka tematów — warto je wpleść w checklistę przed zakupem:</p>
     <h3>2.0 TFSI — łańcuch rozrządu</h3>
     <p>Metaliczny stuk przy zimnym rozruchu, błędy faz rozrządu — to sygnały zużytego łańcucha. Naprawa bywa kosztowna; szukaj aut z udokumentowaną wymianą lub niskim przebiegiem u sprawdzonego silnika.</p>
@@ -160,7 +166,7 @@
     <h3>Zawieszenie i łożyska</h3>
     <p>Po 150–200 tys. km często pojawiają się stuki z przodu (wahacze, łożyska kolumn McPherson). To normalne zużycie, ale negocjuj cenę.</p>
 
-    <h2>Co sprawdzić przed zakupem A3 8P?</h2>
+    <h2 id="zakup">Co sprawdzić przed zakupem A3 8P?</h2>
     <ol>
       <li><strong>VIN i raport historii</strong> — kolizje, kraje, przebieg.</li>
       <li><strong>Diagnostika OBD</strong> — błędy silnika, skrzyni, ABS, airbag.</li>
@@ -170,14 +176,14 @@
       <li><strong>Opony i hamulce</strong> — data produkcji, grubość tarcz.</li>
     </ol>
 
-    <h2>Audi A3 8P vs inne generacje</h2>
+    <h2 id="porownanie">Audi A3 8P vs inne generacje</h2>
     <ul>
       <li><strong>8L (1996–2003)</strong> — starsza, tańsza, inne części; mniej komfortu.</li>
       <li><strong>8P (2003–2013)</strong> — sweet spot ceny/jakości na rynku wtórnym w PL.</li>
       <li><strong>8V (2012+)</strong> — nowsza platforma MQB, droższe naprawy elektroniki.</li>
     </ul>
 
-    <h2>Najczęstsze pytania (FAQ)</h2>
+    <h2 id="faq">Najczęstsze pytania (FAQ)</h2>
     <div class="faq">
       <details><summary>Jaki jest kod nadwozia Audi A3 z lat 2003–2013?</summary><div class="answer">Druga generacja to <strong>8P</strong>. Produkcja 2003–2013, lifting ok. 2008.</div></details>
       <details><summary>Jakie wycieraczki do A3 8P hatchback?</summary><div class="answer">Zwykle <strong>600 mm + 400 mm</strong> z przodu i <strong>280 mm</strong> z tyłu — zweryfikuj po VIN.</div></details>
@@ -187,8 +193,38 @@
     </div>
 
     <p style="margin-top:28px;font-size:0.88rem;color:#888;">Ostatnia aktualizacja: maj 2026. Dane techniczne weryfikuj po VIN przed zakupem części.</p>
-  </div>
-</article>
+  </main>
+
+  <aside class="sidebar">
+<div class="sidebar-card">
+      <div class="sidebar-title">Dane techniczne A3 8P</div>
+      <ul class="related-links">
+        <li>Produkcja: <strong>2003–2013</strong></li>
+        <li>Nadwozia: <strong>3d, 5d, cabrio, S3</strong></li>
+        <li>Silniki: <strong>1.4–3.2 TFSI / 1.9–2.0 TDI</strong></li>
+        <li>Platforma: <strong>PQ35 (Golf V)</strong></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">Spis treści</div>
+      <ul class="related-links">
+        <li><a href="#generacja">1. Co to za generacja?</a></li>
+        <li><a href="#specyfikacja">2. Specyfikacja i lata</a></li>
+        <li><a href="#silniki">3. Silniki i kody</a></li>
+        <li><a href="#usterki">5. Typowe usterki</a></li>
+        <li><a href="#zakup">6. Co sprawdzić?</a></li>
+        <li><a href="#faq">8. FAQ</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">Powiązane artykuły</div>
+      <ul class="related-links">
+        <li><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 8V z USA — import krok po kroku</a></li>
+        <li><a href="/audi/">Wszystkie artykuły Audi →</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
 <footer>
   <div class="footer-inner">
     <span>© 2026 Poradnik Samochodowy</span>
