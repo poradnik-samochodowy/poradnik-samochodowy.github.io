@@ -1,16 +1,13 @@
 (function () {
   'use strict';
 
-  // Record initial URL so popstate works on first back
   history.replaceState({ path: location.pathname }, '', location.pathname);
 
-  // Intercept all same-origin link clicks
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a');
     if (!a) return;
     var href = a.getAttribute('href');
     if (!href) return;
-    // Skip: external, anchors, new-tab, downloads
     if (a.target === '_blank' || a.hasAttribute('download')) return;
     if (href.startsWith('http') || href.startsWith('//') ||
         href.startsWith('#') || href.startsWith('mailto:') ||
@@ -19,7 +16,6 @@
     navigate(href);
   });
 
-  // Browser back / forward
   window.addEventListener('popstate', function () {
     load(location.pathname, false);
   });
@@ -31,7 +27,6 @@
   }
 
   function load(path, doScroll) {
-    // Normalize: /foo → /foo/index.html if no extension, but fetch as-is
     document.body.classList.add('ps-nav-loading');
 
     fetch(path)
@@ -42,7 +37,19 @@
       .then(function (html) {
         var doc = new DOMParser().parseFromString(html, 'text/html');
 
-        // Swap page metadata
+        // --- Swap <head> styles ---
+        // Remove previously injected dynamic styles
+        document.querySelectorAll('style[data-router]').forEach(function (el) { el.remove(); });
+
+        // Inject new page's styles
+        doc.querySelectorAll('style').forEach(function (s) {
+          var clone = document.createElement('style');
+          clone.setAttribute('data-router', 'dynamic');
+          clone.textContent = s.textContent;
+          document.head.appendChild(clone);
+        });
+
+        // --- Swap metadata ---
         document.title = doc.title;
         swapMeta(doc, 'name', 'description');
         swapMeta(doc, 'name', 'robots');
@@ -50,7 +57,7 @@
         var curCanon  = document.querySelector('link[rel="canonical"]');
         if (canonical && curCanon) curCanon.href = canonical.href;
 
-        // Identify content region in both old and new doc
+        // --- Swap body content between header and footer ---
         var newNodes = getContentNodes(doc.body);
         if (!newNodes.length) { location.href = path; return; }
 
@@ -58,7 +65,6 @@
         var footer  = document.querySelector('footer');
         if (!topbar || !footer) { location.href = path; return; }
 
-        // Remove existing between-header-and-footer nodes
         var cur = topbar.nextSibling;
         while (cur && cur !== footer) {
           var nxt = cur.nextSibling;
@@ -66,7 +72,6 @@
           cur = nxt;
         }
 
-        // Insert fetched content nodes before footer
         var frag = document.createDocumentFragment();
         newNodes.forEach(function (n) {
           frag.appendChild(document.importNode(n, true));
