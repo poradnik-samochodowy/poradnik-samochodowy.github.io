@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wyłączenie Start-Stop w Audi przez OBD2 — bez VCDS, bez dealera</title>
+<meta name="description" content="Wyłączenie start stop audi obd2 krok po kroku: OBDEleven i CarScanner, modele A3 8V, A4 B8/B9, A6 C7, Q5. Bez VCDS, bez dealera. Tabela porównawcza narzędzi.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Wyłączenie Start-Stop w Audi przez OBD2 — bez VCDS, bez dealera",
+  "datePublished": "2026-05-31",
+  "dateModified": "2026-05-31",
+  "publisher": {"@type": "Organization", "name": "Poradnik Samochodowy"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy można trwale wyłączyć Start-Stop w Audi bez VCDS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak. OBDEleven (Android, ~200 PLN) i CarScanner (iOS/Android, ~40–80 PLN jednorazowo) umożliwiają kodowanie modułu silnika, które trwale wyłącza Start-Stop w Audi A3 8V/8P, A4 B8/B9, A6 C7 i Q5. Zmiana działa po wyłączeniu i ponownym uruchomieniu auta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Które modele Audi obsługuje OBDEleven?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OBDEleven obsługuje wszystkie modele Audi oparte na platformie VAG z interfejsem UDS/KWP: A1, A3 8P/8V, A4 B8/B9, A5, A6 C6/C7, A7, A8, Q3, Q5, Q7 i nowsze. Starsze modele (przed 2004) mogą wymagać protokołu KWP2000 — sprawdź listę zgodności w aplikacji."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy wyłączenie Start-Stop przez OBD2 kasuje gwarancję w Audi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samo kodowanie OBD2 nie jest widoczne jako modyfikacja w systemach serwisowych Audi. Dealer nie ma narzędzia, które jednoznacznie pokaże, że Start-Stop był wyłączony przez OBD2. Zmianę można w każdej chwili cofnąć przed wizytą serwisową. Ryzyko utraty gwarancji jest bardzo niskie, o ile nie dokonujesz zmian w parametrach silnika ani skrzyni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ile kosztuje OBDEleven do Audi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adapter OBDEleven Pro kosztuje ok. 150–220 PLN. Aplikacja jest bezpłatna, ale funkcje one-click i zaawansowane kodowanie wymagają zakupu kredytów (1 kredyt = ok. 1 PLN) lub subskrypcji PRO (~8 USD/miesiąc). Jednorazowe wyłączenie Start-Stop kosztuje 1–2 kredyty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co to jest CarScanner i czy działa z Audi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CarScanner to aplikacja iOS i Android współpracująca z adapterem ELM327 Bluetooth lub Wi-Fi. Obsługuje kodowanie VAG (w tym Audi) przez protokół UDS. Jednorazowa licencja to ok. 40–80 PLN. Działa z Audi A3 8V, A4 B8/B9, A6 C7, Q5 wyprodukowanymi po 2008 roku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy Start-Stop wraca po aktualizacji oprogramowania w Audi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Po flashowaniu ECU (np. update oprogramowania w serwisie) kodowanie może zostać przywrócone do wartości fabrycznych. Sprawdź ustawienie Start-Stop po każdej wizycie serwisowej, która obejmuje aktualizację oprogramowania sterownika silnika."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.75;color:#1a1a2e;background:#f5f5f5}
+  a{color:#c0392b;text-decoration:none}a:hover{text-decoration:underline}
+  .topbar{background:#c0392b;color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  .topbar-inner{max-width:1040px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:54px}
+  .topbar-brand{font-size:1.15rem;font-weight:700;color:#fff}
+  .topbar-nav{display:flex;gap:18px;flex-wrap:wrap}.topbar-nav a{color:rgba(255,255,255,.9);font-size:.9rem}
+  .breadcrumb{max-width:1040px;margin:14px auto 0;padding:0 20px;font-size:.85rem;color:#666}.breadcrumb a{color:#c0392b}
+  .article-hero{background:linear-gradient(135deg,#1a1a2e 0%,#2d3436 100%);color:#fff;padding:36px 20px}
+  .article-hero-inner{max-width:1040px;margin:0 auto}
+  .kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;opacity:.7;margin-bottom:8px}
+  .article-hero h1{font-size:1.9rem;font-weight:800;line-height:1.25}
+  .article-hero .lead{margin-top:12px;opacity:.88;max-width:700px;font-size:1.05rem}
+  .spec-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .spec-pill{background:rgba(255,255,255,.12);padding:5px 14px;border-radius:20px;font-size:.82rem}
+  .answer-box{background:#e8f5e9;border-left:5px solid #2ecc71;padding:18px 22px;margin:24px 0 20px;border-radius:0 8px 8px 0}
+  .answer-box strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#27ae60;margin-bottom:8px}
+  .answer-box p{margin:0;font-size:1rem;color:#1a1a2e}
+  .wrap{max-width:1040px;margin:28px auto;padding:0 20px 48px;display:grid;grid-template-columns:1fr 290px;gap:28px}
+  @media(max-width:720px){.wrap{grid-template-columns:1fr}.sidebar{display:none}}
+  .content{background:#fff;border-radius:10px;padding:32px 36px;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  @media(max-width:600px){.content{padding:22px 18px}}
+  h2{font-size:1.3rem;color:#922b21;margin:32px 0 14px;padding-bottom:8px;border-bottom:2px solid #e8c3c3}
+  h2:first-of-type{margin-top:0}
+  h3{font-size:1.05rem;color:#333;font-weight:700;margin:22px 0 10px}
+  p{margin-bottom:14px}ul,ol{margin:0 0 16px 22px}li{margin-bottom:7px}
+  table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.93rem}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid #e8e8e8}
+  th{background:#922b21;color:#fff;font-weight:600}tr:nth-child(even){background:#fafafa}
+  .note{background:#fff8e6;border-left:4px solid #f39c12;padding:14px 18px;margin:20px 0;font-size:.92rem;border-radius:0 6px 6px 0}
+  .danger{background:#fdecea;border-left:4px solid #e74c3c;padding:14px 18px;margin:20px 0;font-size:.92rem;border-radius:0 6px 6px 0}
+  .faq details{border:1px solid #e8e8e8;border-radius:8px;margin-bottom:10px}
+  .faq summary{padding:14px 18px;font-weight:600;cursor:pointer;list-style:none;font-size:.97rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq details[open] summary{border-bottom:1px solid #eee;color:#922b21}
+  .faq .answer{padding:14px 18px;font-size:.93rem;color:#444}
+  .related-links{list-style:none;margin:0;padding:0}.related-links li{padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:.93rem}.related-links li:last-child{border:none}
+  .sidebar-card{background:#fff;border-radius:10px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:20px}
+  .sidebar-title{font-size:.95rem;font-weight:700;color:#922b21;margin-bottom:14px}
+  .cta-box{background:linear-gradient(135deg,#922b21,#c0392b);color:#fff;border-radius:10px;padding:24px;margin-top:32px;text-align:center}
+  .cta-box h3{color:#fff;margin:0 0 10px;font-size:1.1rem}.cta-box p{color:rgba(255,255,255,.88);margin-bottom:16px;font-size:.93rem}
+  .cta-btn{display:inline-block;background:#fff;color:#922b21;font-weight:700;padding:12px 28px;border-radius:6px;font-size:.95rem}
+  footer{background:#922b21;color:rgba(255,255,255,.8);padding:28px 20px;margin-top:40px}
+  .footer-inner{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.88rem}
+  footer a{color:rgba(255,255,255,.9)}
+  .steps{counter-reset:step-counter;list-style:none;margin:0 0 20px 0;padding:0}
+  .steps li{counter-increment:step-counter;padding:14px 16px 14px 56px;position:relative;border-left:3px solid #e8c3c3;margin-bottom:10px;background:#fafafa;border-radius:0 8px 8px 0}
+  .steps li::before{content:counter(step-counter);position:absolute;left:14px;top:14px;width:28px;height:28px;background:#922b21;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+  code{background:#f0f0f0;padding:2px 7px;border-radius:4px;font-size:.9em;font-family:'Courier New',monospace;color:#c0392b}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="topbar-brand">Poradnik Samochodowy</a>
+    <nav class="topbar-nav">
+      <a href="/diagnostyka-obd2/">Diagnostyka OBD2</a>
+      <a href="/kodowanie-vag/">Kodowanie VAG</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Strona główna</a> › <a href="/diagnostyka-obd2/">Diagnostyka OBD2</a> › Wyłączenie Start-Stop w Audi
+</div>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <div class="kicker">Kodowanie OBD2 · Audi</div>
+    <h1>Wyłączenie Start-Stop w Audi przez OBD2 — bez VCDS, bez dealera</h1>
+    <p class="lead">OBDEleven i CarScanner wystarczą. Poradnik krok po kroku dla A3 8V/8P, A4 B8/B9, A6 C7 i Q5 — ze zdjęciami interfejsu i tabelą porównawczą narzędzi.</p>
+    <div class="spec-pills">
+      <span class="spec-pill">A3 8P / 8V</span>
+      <span class="spec-pill">A4 B8 / B9</span>
+      <span class="spec-pill">A6 C7</span>
+      <span class="spec-pill">Q5 8R / FY</span>
+      <span class="spec-pill">OBDEleven · CarScanner</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div style="max-width:1040px;margin:24px auto 0;padding:0 20px">
+    <div class="answer-box">
+      <strong>SZYBKA ODPOWIEDŹ</strong>
+      <p>Wyłączenie Start-Stop w Audi przez OBD2 bez VCDS jest możliwe za pomocą <strong>OBDEleven</strong> (Android, ~200 PLN + 1–2 kredyty) lub <strong>CarScanner</strong> (iOS/Android, jednorazowa licencja ~40–80 PLN). Wejdź w moduł silnika → Kodowanie → znajdź parametr <strong>Start-Stop automatyczny</strong> i zmień wartość na <code>nie aktywny</code>. Zmiana jest trwała, ale odwracalna w każdej chwili.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <article class="content">
+
+      <h2>Dlaczego kierowcy wyłączają Start-Stop w Audi</h2>
+      <p>System Start-Stop w samochodach Audi miał zmniejszyć zużycie paliwa w mieście. W praktyce oszczędności są minimalne — poniżej 0,3 l/100 km w typowej jeździe miejskiej — a irytacja bywa spora. Najczęstsze powody, dla których właściciele Audi decydują się na trwałe wyłączenie:</p>
+      <ul>
+        <li><strong>Zużycie rozrusznika i akumulatora.</strong> System Start-Stop wymaga specjalnego akumulatora AGM — jego wymiana to koszt 600–1200 PLN. Rozrusznik projektowany do 300 000 uruchomień zamiast typowych 50 000 szybciej wykazuje zużycie przy intensywnej eksploatacji w korku.</li>
+        <li><strong>Drgania przy ponownym uruchomieniu.</strong> W szczególności w starszych silnikach benzynowych (1.8 TFSI, 2.0 TFSI pre-EA888) restart bywa wyczuwalny przez kierowcę i pasażerów.</li>
+        <li><strong>Brak klimatyzacji przy zatrzymaniu.</strong> Przy wyłączonym silniku klimatyzacja pracuje tylko przez kilka sekund, co w upalne dni jest odczuwalne.</li>
+        <li><strong>Irytacja przy manewrach parkingowych.</strong> Silnik gasi się i odpala kilkanaście razy podczas parkowania równoległego lub zawracania.</li>
+      </ul>
+      <p>Producent przewidział możliwość ręcznego wyłączenia przycisku Start-Stop przy każdym uruchomieniu, ale ustawienie nie jest zapamiętywane. Kodowanie OBD2 eliminuje ten problem raz na zawsze — bez konieczności naciskania przycisku przy każdym odpaleniu auta.</p>
+
+      <h2>Które Audi mają kodowanie Start-Stop przez OBD2</h2>
+      <p>Trwałe wyłączenie Start-Stop przez kodowanie OBD2 jest dostępne we wszystkich modelach Audi z tym systemem, które komunikują się przez protokół UDS (ISO 14229). W praktyce obejmuje to produkcję od ok. 2010 roku. Poniżej zestawienie najczęściej spotykanych modeli w Polsce:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Generacja</th>
+            <th>Lata prod.</th>
+            <th>Kodowanie Start-Stop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Audi A3</td><td>8P (face-lift)</td><td>2008–2012</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi A3</td><td>8V</td><td>2012–2020</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi A4</td><td>B8</td><td>2008–2015</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi A4</td><td>B9</td><td>2015–2023</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi A6</td><td>C7</td><td>2011–2018</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi Q5</td><td>8R</td><td>2008–2017</td><td>Tak (moduł silnika)</td></tr>
+          <tr><td>Audi Q5</td><td>FY</td><td>2017–2023</td><td>Tak (moduł silnika)</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">Modele A4 B9 i A6 C8 (po 2018) z układem mild-hybrid (48V) mają rozbudowany system zarządzania energią. Kodowanie Start-Stop w tych modelach jest możliwe, ale zalecamy sprawdzenie aktualnych wątków na <a href="https://forums.audi.com/" target="_blank" rel="noopener">forum Audi</a> przed wykonaniem zmiany — interfejs kodowania może się nieznacznie różnić w zależności od wersji oprogramowania sterownika.</p>
+
+      <h2>Jakie urządzenie OBD2 kupić — OBDEleven vs VCDS vs CarScanner</h2>
+      <p>VCDS od Ross-Tech to profesjonalne narzędzie warsztatowe — kosztuje 1200–2000 PLN i jest przeznaczone dla mechaników obsługujących wiele aut. Dla właściciela jednego lub dwóch samochodów Audi/VAG są tańsze i wystarczające alternatywy.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Narzędzie</th>
+            <th>Cena adaptera</th>
+            <th>Cena aplikacji / licencji</th>
+            <th>System</th>
+            <th>Trudność</th>
+            <th>Modele VAG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OBDEleven</strong></td>
+            <td>150–220 PLN</td>
+            <td>Bezpłatna + kredyty (1 PLN/szt.) lub PRO ~8 USD/mies.</td>
+            <td>Android</td>
+            <td>Niska — gotowe "one-click apps"</td>
+            <td>Pełna obsługa VAG (VW, Audi, Skoda, SEAT)</td>
+          </tr>
+          <tr>
+            <td><strong>VCDS</strong></td>
+            <td>1200–2000 PLN</td>
+            <td>W cenie adaptera</td>
+            <td>Windows PC</td>
+            <td>Średnia — profesjonalny interfejs</td>
+            <td>Pełna obsługa VAG, najszersze możliwości</td>
+          </tr>
+          <tr>
+            <td><strong>CarScanner</strong></td>
+            <td>ELM327 BT/Wi-Fi: 30–80 PLN</td>
+            <td>Jednorazowo 40–80 PLN (iOS) / bezpłatna (Android basic)</td>
+            <td>iOS / Android</td>
+            <td>Średnia — wymaga ręcznego kodowania</td>
+            <td>VAG, BMW, Ford i inne przez OBD2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Rekomendacja:</strong> jeśli masz Androida i chcesz prostoty — wybierz OBDEleven. Jeśli masz iPhone'a lub chcesz wydać mniej na adapter — CarScanner z tanim ELM327 Wi-Fi będzie działał równie dobrze do tego konkretnego zadania. VCDS kupuj tylko wtedy, gdy planujesz regularne kodowanie lub obsługujesz kilka aut VAG.</p>
+
+      <h2>Krok po kroku: wyłączenie Start-Stop przez OBDEleven</h2>
+      <p>Zanim zaczniesz: upewnij się, że akumulator jest naładowany (silnik uruchomiony lub podłączona ładowarka), adapter OBDEleven jest wpięty do gniazda OBD2 (pod kierownicą, strona kierowcy) i sparowany przez Bluetooth z telefonem.</p>
+
+      <ol class="steps">
+        <li>Otwórz aplikację OBDEleven. Na ekranie głównym naciśnij <strong>Skanuj</strong> — aplikacja połączy się z autem i załaduje listę modułów.</li>
+        <li>Z listy modułów wybierz <strong>01 — Sterownik silnika (ECU)</strong>. Poczekaj na załadowanie danych (kilka sekund).</li>
+        <li>Naciśnij <strong>Kodowanie długie (Long Coding)</strong> lub skorzystaj z zakładki <strong>One-Click Apps</strong> i odszukaj wpis „Wyłącz Start-Stop" lub „Disable Start-Stop" — jeśli dostępny dla twojego modelu.</li>
+        <li>W trybie ręcznym: znajdź bajt odpowiedzialny za Start-Stop. W większości sterowników Audi (Bosch MED17, Bosch MG1) jest to <strong>bajt 5, bit 5</strong> — opis: <em>Automatisches Start-Stop-System</em>. Zmień wartość bitu z <code>1</code> na <code>0</code>.</li>
+        <li>Naciśnij <strong>Zatwierdź</strong> (Save / Do it). Aplikacja wyśle nowe kodowanie do sterownika i potwierdzi zapis.</li>
+        <li>Wyłącz zapłon, odczekaj 30 sekund, ponownie uruchom silnik. Sprawdź, czy przycisk Start-Stop na desce rozdzielczej jest domyślnie wyszarzony lub czy system nie aktywuje się przy zatrzymaniu na czerwonym świetle.</li>
+      </ol>
+
+      <p class="note">Jeśli korzystasz z One-Click Apps: OBDEleven w wersjach aplikacji po 2023 r. pobiera 1–2 kredyty za jednorazowe użycie gotowej aplikacji. Kredyty kupujesz w aplikacji (pakiet 10 kredytów to ~10 PLN). Operację możesz powtarzać bez dodatkowych kosztów po wykupieniu subskrypcji PRO.</p>
+
+      <h3>Jak cofnąć zmianę w OBDEleven</h3>
+      <p>Wróć do Kodowania długiego sterownika silnika i zmień bit z powrotem na <code>1</code>. Zmiana jest w pełni odwracalna — możesz to zrobić w ciągu 2 minut przed wizytą serwisową lub po sprzedaży auta.</p>
+
+      <h2>Krok po kroku: wyłączenie Start-Stop przez CarScanner</h2>
+      <p>CarScanner wymaga adaptera ELM327 Bluetooth (Android) lub ELM327 Wi-Fi (iOS). Kupując adapter, unikaj najtańszych klonów poniżej 20 PLN — mają problemy z protokołem UDS wymaganym przez Audi. Sprawdzone adaptery to KONNWEI KW902, Vgate iCar Pro lub BAFX Products.</p>
+
+      <ol class="steps">
+        <li>Podłącz adapter ELM327 do gniazda OBD2. W przypadku Wi-Fi: połącz telefon z siecią Wi-Fi adaptera (SSID zwykle zawiera „OBDII" lub „ELM327"). W przypadku Bluetooth: sparuj urządzenia w ustawieniach systemu.</li>
+        <li>Otwórz CarScanner. Wejdź w <strong>Ustawienia połączenia</strong> i wybierz swój adapter. Upewnij się, że protokół jest ustawiony na <strong>Automatyczny</strong> lub <strong>ISO 14229 (UDS)</strong>.</li>
+        <li>Wróć do ekranu głównego. Naciśnij <strong>Połącz</strong>. Po nawiązaniu połączenia wybierz <strong>Diagnostyka VAG</strong> → <strong>Wybierz moduł</strong>.</li>
+        <li>Wybierz <strong>01 — Silnik</strong>. Przejdź do <strong>Kodowanie</strong> → <strong>Kodowanie długie</strong>.</li>
+        <li>Aplikacja wyświetli hexadecymalny ciąg kodowania sterownika. Kliknij <strong>Edytuj</strong> i przejdź do bajtu 5 (liczymy od bajtu 0). Zmień bit 5 z wartości <code>1</code> na <code>0</code>. Możesz też skorzystać z widoku bitowego — zaznacz bajt 5 i odznacz checkbox przy opisie <em>Start-Stop</em>.</li>
+        <li>Zatwierdź zapis. Wyłącz zapłon na 30 sekund i sprawdź działanie po ponownym uruchomieniu.</li>
+      </ol>
+
+      <p class="danger"><strong>Uwaga na złe adaptery ELM327:</strong> tanie klony często nie obsługują protokołu CAN 500kbps wymaganego przez Audi. Objaw: aplikacja łączy się, ale nie widzi sterownika silnika lub wyświetla błąd „ECU not responding". Jeśli tak się dzieje — problem leży w adapterze, nie w aucie.</p>
+
+      <h2>Czy to bezpieczne i czy wpływa na gwarancję</h2>
+      <p>Kodowanie Start-Stop przez OBD2 to zmiana jednego bitu w konfiguracji sterownika silnika — tego samego, który VCDS od dawna umożliwia. Nie modyfikujesz map paliwowych, kąta zapłonu ani limitów ciśnienia doładowania. Z technicznego punktu widzenia jest to bezpieczna operacja.</p>
+
+      <p><strong>Gwarancja fabryczna i ASO:</strong> Audi Polska (jak większość dealerów VAG w Europie) nie ma narzędzia, które jednoznacznie wykaże, że wyłączyłeś Start-Stop przez OBD2 — w przeciwieństwie do wymiany podzespołów czy chip-tuningu. Zmiana kodowania mieści się w ramach ustawień przewidzianych przez producenta. Niemniej jeśli masz aktywną gwarancję fabryczną i chcesz być absolutnie ostrożny — przed wizytą serwisową przywróć oryginalne kodowanie (2 minuty roboty).</p>
+
+      <p><strong>Ubezpieczenie OC/AC:</strong> wyłączenie Start-Stop nie ma żadnego wpływu na polisę ubezpieczeniową — nie jest to modyfikacja pojazdu w rozumieniu warunków ubezpieczeń komunikacyjnych.</p>
+
+      <p><strong>Po aktualizacji oprogramowania ECU:</strong> jeśli serwis Audi przeprowadzi flash-update sterownika silnika, kodowanie może wrócić do wartości fabrycznych. Sprawdź ustawienie Start-Stop po każdej wizycie serwisowej obejmującej aktualizację oprogramowania.</p>
+
+      <h2>Kiedy warto zostawić Start-Stop włączony</h2>
+      <p>System Start-Stop przynosi realne korzyści w kilku konkretnych sytuacjach. Zanim go wyłączysz, rozważ, czy twój styl jazdy do nich należy:</p>
+      <ul>
+        <li><strong>Intensywna jazda miejska w dużych korkach.</strong> W Warszawie czy Krakowie w godzinach szczytu auto może stać łącznie 20–30 minut — Start-Stop rzeczywiście zmniejsza wtedy emisję spalin i zużycie paliwa.</li>
+        <li><strong>Nowe Audi z akumulatorem AGM i silnikiem EA888 evo4.</strong> Nowsze jednostki mają wygładzony restart — praktycznie niewyczuwalny. Wyłączenie systemu w nowym aucie na gwarancji jest mniej uzasadnione niż w starszych modelach.</li>
+        <li><strong>Leasing z rozliczeniem emisji CO₂.</strong> Niektóre umowy leasingowe lub flotowe uwzględniają emisje — tu system Start-Stop ma znaczenie dokumentacyjne.</li>
+      </ul>
+      <p>Jeśli jeździsz głównie trasami i autostradami, Start-Stop i tak rzadko się aktywuje — nie ma potrzeby wyłączania. Warto też sprawdzić, czy twoje Audi ma opcję <strong>zapamiętania wyłączonego Start-Stop</strong> przez inne kodowanie zamiast całkowitego dezaktywowania systemu — niektóre modele B9/C8 to obsługują. Sprawdź dostępne opcje w OBDEleven lub CarScanner dla swojego konkretnego sterownika. Więcej o diagnostyce VAG przez OBD2 znajdziesz w artykule <a href="/diagnostyka-obd2-vag/">Diagnostyka OBD2 w autach VAG — co możesz zrobić sam</a>.</p>
+
+      <section class="faq">
+        <h2>Najczęstsze pytania</h2>
+
+        <details>
+          <summary>Czy można trwale wyłączyć Start-Stop w Audi bez VCDS?</summary>
+          <div class="answer">Tak. OBDEleven (Android, ~200 PLN) i CarScanner (iOS/Android, ~40–80 PLN jednorazowo) umożliwiają kodowanie modułu silnika, które trwale wyłącza Start-Stop w Audi A3 8V/8P, A4 B8/B9, A6 C7 i Q5. Zmiana działa po wyłączeniu i ponownym uruchomieniu auta.</div>
+        </details>
+
+        <details>
+          <summary>Które modele Audi obsługuje OBDEleven?</summary>
+          <div class="answer">OBDEleven obsługuje wszystkie modele Audi oparte na platformie VAG z interfejsem UDS/KWP: A1, A3 8P/8V, A4 B8/B9, A5, A6 C6/C7, A7, A8, Q3, Q5, Q7 i nowsze. Starsze modele mogą wymagać protokołu KWP2000 — sprawdź listę zgodności w aplikacji.</div>
+        </details>
+
+        <details>
+          <summary>Czy wyłączenie Start-Stop przez OBD2 kasuje gwarancję?</summary>
+          <div class="answer">Samo kodowanie OBD2 nie jest widoczne jako modyfikacja w systemach serwisowych Audi. Dealer nie ma narzędzia, które jednoznacznie pokaże, że Start-Stop był wyłączony przez OBD2. Zmianę można w każdej chwili cofnąć. Ryzyko utraty gwarancji jest bardzo niskie, o ile nie modyfikujesz map silnikowych.</div>
+        </details>
+
+        <details>
+          <summary>Ile kosztuje OBDEleven do Audi?</summary>
+          <div class="answer">Adapter OBDEleven Pro kosztuje ok. 150–220 PLN. Aplikacja jest bezpłatna, ale One-Click Apps wymagają kredytów (1 kredyt ≈ 1 PLN) lub subskrypcji PRO (~8 USD/miesiąc). Jednorazowe wyłączenie Start-Stop kosztuje 1–2 kredyty.</div>
+        </details>
+
+        <details>
+          <summary>Co to jest CarScanner i czy działa z Audi?</summary>
+          <div class="answer">CarScanner to aplikacja iOS i Android współpracująca z adapterem ELM327. Obsługuje kodowanie VAG przez protokół UDS. Jednorazowa licencja to ok. 40–80 PLN. Działa z Audi A3 8V, A4 B8/B9, A6 C7, Q5 wyprodukowanymi po 2008 roku. Wymaga sprawnego adaptera ELM327 (unikaj najtańszych klonów).</div>
+        </details>
+
+        <details>
+          <summary>Czy Start-Stop wraca po aktualizacji oprogramowania w Audi?</summary>
+          <div class="answer">Po flash-update ECU w serwisie kodowanie może wrócić do wartości fabrycznych. Sprawdź ustawienie Start-Stop po każdej wizycie serwisowej obejmującej aktualizację oprogramowania sterownika silnika — i w razie potrzeby ponów kodowanie przez OBDEleven lub CarScanner.</div>
+        </details>
+
+        <details>
+          <summary>Bajt 5, bit 5 — skąd wiem, że to właściwy bajt?</summary>
+          <div class="answer">Lokalizacja bitu Start-Stop zależy od wersji sterownika. Bajt 5, bit 5 to typowa lokalizacja w sterownikach Bosch MED17 i MG1 stosowanych w A4 B8/B9 i A6 C7. OBDEleven wyświetla opisy parametrów w języku ludzkim, więc łatwo zidentyfikować właściwy wpis. W CarScanner szukaj opisu zawierającego „Start-Stop" lub „Automatik" w widoku bitowym. Przed zmianą zawsze zapisz lub sfotografuj oryginalne kodowanie.</div>
+        </details>
+
+        <details>
+          <summary>Czy mogę wyłączyć Start-Stop tylko na zimę i z powrotem włączyć na lato?</summary>
+          <div class="answer">Tak — zmiana jest w pełni odwracalna w dowolnym momencie. Wróć do kodowania długiego sterownika silnika i zmień bit z powrotem na wartość 1. Zajmuje to 2–3 minuty i nie wymaga żadnych dodatkowych kosztów (jeśli masz subskrypcję PRO w OBDEleven lub jednorazową licencję CarScanner).</div>
+        </details>
+
+      </section>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title">Szybkie zestawienie</div>
+        <table>
+          <tr><td><strong>OBDEleven</strong></td><td>Android, ~200 PLN</td></tr>
+          <tr><td><strong>CarScanner</strong></td><td>iOS/Android, ~40–80 PLN</td></tr>
+          <tr><td><strong>VCDS</strong></td><td>PC, 1200–2000 PLN</td></tr>
+          <tr><td><strong>A3 8V/8P</strong></td><td>Tak</td></tr>
+          <tr><td><strong>A4 B8/B9</strong></td><td>Tak</td></tr>
+          <tr><td><strong>A6 C7</strong></td><td>Tak</td></tr>
+          <tr><td><strong>Q5 8R/FY</strong></td><td>Tak</td></tr>
+          <tr><td><strong>Bajt (typowy)</strong></td><td>5, bit 5</td></tr>
+        </table>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Powiązane artykuły</div>
+        <ul class="related-links">
+          <li><a href="/diagnostyka-obd2-vag/">Diagnostyka OBD2 VAG — co możesz zrobić sam</a></li>
+          <li><a href="/kodowanie-vag/">Kodowanie VAG — przewodnik</a></li>
+          <li><a href="/obdeleven-recenzja/">OBDEleven — recenzja i poradnik</a></li>
+          <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew</a></li>
+          <li><a href="/diagnostyka-obd2/">Wszystkie artykuły OBD2 →</a></li>
+        </ul>
+      </div>
+      <div class="cta-box">
+        <h3>Masz pytanie o kodowanie?</h3>
+        <p>Sprawdź inne poradniki diagnostyczne dla aut VAG i nie tylko.</p>
+        <a href="/diagnostyka-obd2/" class="cta-btn">Wszystkie poradniki</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Poradnik Samochodowy · Informacje mają charakter poglądowy. Zawsze weryfikuj w instrukcji obsługi.</span>
+    <div><a href="/privacy.html">Prywatność</a></div>
+  </div>
+</footer>
+<style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
+<script src="/assets/router.js" defer></script>
+</body>
+</html>
