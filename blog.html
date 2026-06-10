@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -8,113 +8,113 @@
 <meta name="description" content="Przeglądaj wszystkie porady motoryzacyjne. Kupno aut, naprawy, ubezpieczenia OC/AC i koszty eksploatacji.">
 <meta name="robots" content="index, follow">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f5f5f5; }
-  a { color: #c0392b; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-  .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
-  .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
-  .topbar-nav { display: flex; gap: 18px; }
-  .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
-  .page-hero { background: #922b21; color: #fff; padding: 36px 20px; text-align: center; }
-  .page-hero h1 { font-size: 1.8rem; font-weight: 800; }
-  .page-hero p { opacity: 0.85; margin-top: 8px; }
-  .wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px; }
-  .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
-  @media(max-width:600px){ .article-grid { grid-template-columns: 1fr; } }
-  .article-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-  .card-category { font-size: 0.75rem; font-weight: 700; color: #c0392b; text-transform: uppercase; margin-bottom: 6px; }
-  .card-title { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.4; }
-  .card-title a { color: inherit; }
-  .card-excerpt { font-size: 0.88rem; color: #555; margin-bottom: 14px; }
-  .card-meta { font-size: 0.8rem; color: #888; }
-  .empty-state { text-align: center; padding: 60px 20px; color: #888; background: #fff; border-radius: 10px; }
-  footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
-  .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
-  footer a { color: rgba(255,255,255,0.9); }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f5f5f5; }
+ a { color: #c0392b; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+ .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+ .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
+ .topbar-nav { display: flex; gap: 18px; }
+ .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+ .page-hero { background: #922b21; color: #fff; padding: 36px 20px; text-align: center; }
+ .page-hero h1 { font-size: 1.8rem; font-weight: 800; }
+ .page-hero p { opacity: 0.85; margin-top: 8px; }
+ .wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px; }
+ .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+ @media(max-width:600px){ .article-grid { grid-template-columns: 1fr; } }
+ .article-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+ .card-category { font-size: 0.75rem; font-weight: 700; color: #c0392b; text-transform: uppercase; margin-bottom: 6px; }
+ .card-title { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.4; }
+ .card-title a { color: inherit; }
+ .card-excerpt { font-size: 0.88rem; color: #555; margin-bottom: 14px; }
+ .card-meta { font-size: 0.8rem; color: #888; }
+ .empty-state { text-align: center; padding: 60px 20px; color: #888; background: #fff; border-radius: 10px; }
+ footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
+ .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+ footer a { color: rgba(255,255,255,0.9); }
 </style>
 </head>
 <body>
 <header class="topbar">
-  <div class="topbar-inner">
-    <a href="/" class="topbar-brand">🚗 Poradnik Samochodowy</a>
-    <nav class="topbar-nav">
-      <a href="/">Start</a>
-      <a href="/blog.html">Artykuły</a>
-      <a href="/about.html">O nas</a>
-      <a href="/contact.html">Kontakt</a>
-      <a href="/sitemap.html">Mapa strony</a>
-    </nav>
-  </div>
+ <div class="topbar-inner">
+ <a href="/" class="topbar-brand">🚗 Poradnik Samochodowy</a>
+ <nav class="topbar-nav">
+ <a href="/">Start</a>
+ <a href="/blog.html">Artykuły</a>
+ <a href="/about.html">O nas</a>
+ <a href="/contact.html">Kontakt</a>
+ <a href="/sitemap.html">Mapa strony</a>
+ </nav>
+ </div>
 </header>
 <div class="page-hero">
-  <h1>Wszystkie artykuły</h1>
-  <p>Porady motoryzacyjne bez lania wody</p>
+ <h1>Wszystkie artykuły</h1>
+ <p>Porady motoryzacyjne bez lania wody</p>
 </div>
 <div class="wrap">
-  <div class="article-grid" id="article-grid">
-    <article class="article-card">
-      <div class="card-category">Audi · Start-stop</div>
-      <h2 class="card-title"><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie start-stop Audi OBD2 bez VCDS: co działa, a co jest ryzykowne</a></h2>
-      <p class="card-excerpt">Praktyczny poradnik dla kierowców Audi: aplikacje OBD2, kodowanie, moduł akumulatora i granice bezpiecznej modyfikacji.</p>
-      <p class="card-meta">Czerwiec 2026 · ~2500 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">Import · Audi A3</div>
-      <h2 class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 z USA — 2.0 TFSI: sprowadzenie, VIN i czy się opłaca</a></h2>
-      <p class="card-excerpt">Silniki CZTA/CHHB, koszty importu krok po kroku, Carfax vs OTOMOTO — odpowiedź na pytania z Wykopu.</p>
-      <p class="card-meta">Maj 2026 · ~3400 słów</p>
-    </article>
+ <div class="article-grid" id="article-grid">
+ <article class="article-card">
+ <div class="card-category">Audi · Start-stop</div>
+ <h2 class="card-title"><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie start-stop Audi OBD2 bez VCDS: co działa, a co jest ryzykowne</a></h2>
+ <p class="card-excerpt">Praktyczny poradnik dla kierowców Audi: aplikacje OBD2, kodowanie, moduł akumulatora i granice bezpiecznej modyfikacji.</p>
+ <p class="card-meta">Czerwiec 2026 · ~2500 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">Import · Audi A3</div>
+ <h2 class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 z USA — 2.0 TFSI: sprowadzenie, VIN i czy się opłaca</a></h2>
+ <p class="card-excerpt">Silniki CZTA/CHHB, koszty importu krok po kroku, Carfax vs OTOMOTO — odpowiedź na pytania z Wykopu.</p>
+ <p class="card-meta">Maj 2026 · ~3400 słów</p>
+ </article>
 
-    <article class="article-card">
-      <div class="card-category">Katalog · Audi A3</div>
-      <h2 class="card-title"><a href="/audi/a3-8p/">Audi A3 8P (2003–2013) — silniki, usterki, checklista zakupu</a></h2>
-      <p class="card-excerpt">Kody silników 1.6/2.0 TDI i TFSI, rozmiary wycieraczek, najczęstsze usterki z forów i warsztatów.</p>
-      <p class="card-meta">Maj 2026 · ~900 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">BMW · Nawiew</div>
-      <h2 class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew: bezpiecznik, rezystor, silniczek</a></h2>
-      <p class="card-excerpt">Bezpiecznik 30A, rezystor Endstufe, silniczek dmuchawy — trzy punkty do sprawdzenia w tej kolejności.</p>
-      <p class="card-meta">Maj 2026 · ~1200 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">VW · Nawiew</div>
-      <h2 class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew: bezpiecznik, rezystor, moduł</a></h2>
-      <p class="card-excerpt">SC23 30A w kabinie, rezystor pod pasażerem — sprawdzony schemat diagnostyczny dla Golf V (2003–2009).</p>
-      <p class="card-meta">Maj 2026 · ~1200 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">Ford · Nawiew</div>
-      <h2 class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew: GEM, rezystor, silniczek</a></h2>
-      <p class="card-excerpt">Skrzynka bezpiecznikowa pod maską, moduł GEM i rezystor pod pasażerem — typowe przyczyny awarii.</p>
-      <p class="card-meta">Maj 2026 · ~1200 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">Skoda · Nawiew</div>
-      <h2 class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew: SF27, rezystor, dmuchawa</a></h2>
-      <p class="card-excerpt">Bezpiecznik SF27, rezystor za schowkiem pasażera, silniczek dmuchawy — schemat naprawy dla Octavii 1Z.</p>
-      <p class="card-meta">Maj 2026 · ~1000 słów</p>
-    </article>
-    <article class="article-card">
-      <div class="card-category">Toyota · Nawiew</div>
-      <h2 class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew: bezpiecznik, silniczek</a></h2>
-      <p class="card-excerpt">Bezpiecznik 15A (AM2), silniczek 87103-02210, rezystor pod prawą deską — diagnostyka krok po kroku.</p>
-      <p class="card-meta">Maj 2026 · ~1000 słów</p>
-    </article>
-  </div>
+ <article class="article-card">
+ <div class="card-category">Katalog · Audi A3</div>
+ <h2 class="card-title"><a href="/audi/a3-8p/">Audi A3 8P (2003–2013) — silniki, usterki, checklista zakupu</a></h2>
+ <p class="card-excerpt">Kody silników 1.6/2.0 TDI i TFSI, rozmiary wycieraczek, najczęstsze usterki z forów i warsztatów.</p>
+ <p class="card-meta">Maj 2026 · ~900 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">BMW · Nawiew</div>
+ <h2 class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew: bezpiecznik, rezystor, silniczek</a></h2>
+ <p class="card-excerpt">Bezpiecznik 30A, rezystor Endstufe, silniczek dmuchawy — trzy punkty do sprawdzenia w tej kolejności.</p>
+ <p class="card-meta">Maj 2026 · ~1200 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">VW · Nawiew</div>
+ <h2 class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew: bezpiecznik, rezystor, moduł</a></h2>
+ <p class="card-excerpt">SC23 30A w kabinie, rezystor pod pasażerem — sprawdzony schemat diagnostyczny dla Golf V (2003–2009).</p>
+ <p class="card-meta">Maj 2026 · ~1200 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">Ford · Nawiew</div>
+ <h2 class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew: GEM, rezystor, silniczek</a></h2>
+ <p class="card-excerpt">Skrzynka bezpiecznikowa pod maską, moduł GEM i rezystor pod pasażerem — typowe przyczyny awarii.</p>
+ <p class="card-meta">Maj 2026 · ~1200 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">Skoda · Nawiew</div>
+ <h2 class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew: SF27, rezystor, dmuchawa</a></h2>
+ <p class="card-excerpt">Bezpiecznik SF27, rezystor za schowkiem pasażera, silniczek dmuchawy — schemat naprawy dla Octavii 1Z.</p>
+ <p class="card-meta">Maj 2026 · ~1000 słów</p>
+ </article>
+ <article class="article-card">
+ <div class="card-category">Toyota · Nawiew</div>
+ <h2 class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew: bezpiecznik, silniczek</a></h2>
+ <p class="card-excerpt">Bezpiecznik 15A (AM2), silniczek 87103-02210, rezystor pod prawą deską — diagnostyka krok po kroku.</p>
+ <p class="card-meta">Maj 2026 · ~1000 słów</p>
+ </article>
+ </div>
 </div>
 <footer>
-  <div class="footer-inner">
-    <span>© 2026 Poradnik Samochodowy</span>
-    <nav style="display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="/about.html">O nas</a>
-      <a href="/contact.html">Kontakt</a>
-      <a href="/privacy.html">Prywatność</a>
-      <a href="/sitemap.html">Mapa strony</a>
-    </nav>
-  </div>
+ <div class="footer-inner">
+ <span>© 2026 Poradnik Samochodowy</span>
+ <nav style="display:flex;gap:16px;flex-wrap:wrap;">
+ <a href="/about.html">O nas</a>
+ <a href="/contact.html">Kontakt</a>
+ <a href="/privacy.html">Prywatność</a>
+ <a href="/sitemap.html">Mapa strony</a>
+ </nav>
+ </div>
 </footer>
 <style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
 <script src="/assets/router.js" defer></script>

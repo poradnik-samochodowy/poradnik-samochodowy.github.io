@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -8,121 +8,121 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://poradnik-samochodowy.github.io/nie-dziala-nawiew/">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a2e; background: #f5f5f5; }
-  a { color: #c0392b; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-  .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
-  .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
-  .breadcrumb { max-width: 1040px; margin: 14px auto 0; padding: 0 20px; font-size: 0.85rem; color: #666; }
-  .breadcrumb a { color: #c0392b; }
-  .hub-hero { background: linear-gradient(135deg, #c0392b 0%, #922b21 100%); color: #fff; padding: 48px 20px 40px; text-align: center; }
-  .hub-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 14px; }
-  .hub-hero p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
-  .wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px 48px; }
-  .intro { background: #fff; border-radius: 10px; padding: 28px 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 32px; }
-  .intro h2 { font-size: 1.15rem; color: #922b21; margin-bottom: 12px; }
-  .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #922b21; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
-  .model-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-bottom: 36px; }
-  .model-card { background: #fff; border-radius: 8px; padding: 18px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.07); display: flex; flex-direction: column; gap: 6px; transition: transform 0.15s; }
-  .model-card:hover { transform: translateY(-2px); }
-  .model-card .brand { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #922b21; letter-spacing: 0.05em; }
-  .model-card .model-name { font-size: 1rem; font-weight: 700; color: #1a1a2e; }
-  .model-card .serp-tag { font-size: 0.75rem; background: #e8f5e9; color: #27ae60; padding: 2px 8px; border-radius: 10px; display: inline-block; font-weight: 600; }
-  .model-card .serp-tag.good { background: #fff3e0; color: #e67e22; }
-  .coming-soon { opacity: 0.55; cursor: default; }
-  .coming-soon .model-name { color: #666; }
-  .coming-soon-tag { font-size: 0.73rem; color: #999; }
-  .diag-box { background: #fff8e6; border-left: 4px solid #f39c12; padding: 18px 22px; border-radius: 0 8px 8px 0; margin-bottom: 32px; }
-  .diag-box h2 { font-size: 1.1rem; color: #c0392b; margin-bottom: 10px; }
-  footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
-  .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
-  footer a { color: rgba(255,255,255,0.9); }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a2e; background: #f5f5f5; }
+ a { color: #c0392b; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+ .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+ .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
+ .breadcrumb { max-width: 1040px; margin: 14px auto 0; padding: 0 20px; font-size: 0.85rem; color: #666; }
+ .breadcrumb a { color: #c0392b; }
+ .hub-hero { background: linear-gradient(135deg, #c0392b 0%, #922b21 100%); color: #fff; padding: 48px 20px 40px; text-align: center; }
+ .hub-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 14px; }
+ .hub-hero p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+ .wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px 48px; }
+ .intro { background: #fff; border-radius: 10px; padding: 28px 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 32px; }
+ .intro h2 { font-size: 1.15rem; color: #922b21; margin-bottom: 12px; }
+ .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #922b21; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
+ .model-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-bottom: 36px; }
+ .model-card { background: #fff; border-radius: 8px; padding: 18px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.07); display: flex; flex-direction: column; gap: 6px; transition: transform 0.15s; }
+ .model-card:hover { transform: translateY(-2px); }
+ .model-card .brand { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #922b21; letter-spacing: 0.05em; }
+ .model-card .model-name { font-size: 1rem; font-weight: 700; color: #1a1a2e; }
+ .model-card .serp-tag { font-size: 0.75rem; background: #e8f5e9; color: #27ae60; padding: 2px 8px; border-radius: 10px; display: inline-block; font-weight: 600; }
+ .model-card .serp-tag.good { background: #fff3e0; color: #e67e22; }
+ .coming-soon { opacity: 0.55; cursor: default; }
+ .coming-soon .model-name { color: #666; }
+ .coming-soon-tag { font-size: 0.73rem; color: #999; }
+ .diag-box { background: #fff8e6; border-left: 4px solid #f39c12; padding: 18px 22px; border-radius: 0 8px 8px 0; margin-bottom: 32px; }
+ .diag-box h2 { font-size: 1.1rem; color: #c0392b; margin-bottom: 10px; }
+ footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
+ .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+ footer a { color: rgba(255,255,255,0.9); }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="topbar-inner">
-    <a href="/" class="topbar-brand">Poradnik Samochodowy</a>
-  </div>
+ <div class="topbar-inner">
+ <a href="/" class="topbar-brand">Poradnik Samochodowy</a>
+ </div>
 </header>
 
 <div class="breadcrumb">
-  <a href="/">Strona główna</a> › Nie działa nawiew
+ <a href="/">Strona główna</a> › Nie działa nawiew
 </div>
 
 <div class="hub-hero">
-  <h1>Nie działa nawiew — znajdź swój model</h1>
-  <p>Bezpiecznik, rezystor, silnik dmuchawy. Krok po kroku dla każdego popularnego modelu.</p>
+ <h1>Nie działa nawiew — znajdź swój model</h1>
+ <p>Bezpiecznik, rezystor, silnik dmuchawy. Krok po kroku dla każdego popularnego modelu.</p>
 </div>
 
 <div class="wrap">
 
-  <div class="diag-box">
-    <h2>Szybka diagnostyka — 3 pytania</h2>
-    <ul>
-      <li><strong>Działa tylko bieg 4?</strong> → Uszkodzony rezystor dmuchawy (najczęstszy przypadek)</li>
-      <li><strong>Nie działa żaden bieg?</strong> → Sprawdź bezpiecznik w skrzynce pod deską</li>
-      <li><strong>Bezpiecznik OK, napięcie jest, ale nie kręci?</strong> → Wymiana silnika dmuchawy</li>
-    </ul>
-  </div>
+ <div class="diag-box">
+ <h2>Szybka diagnostyka — 3 pytania</h2>
+ <ul>
+ <li><strong>Działa tylko bieg 4?</strong> → Uszkodzony rezystor dmuchawy (najczęstszy przypadek)</li>
+ <li><strong>Nie działa żaden bieg?</strong> → Sprawdź bezpiecznik w skrzynce pod deską</li>
+ <li><strong>Bezpiecznik OK, napięcie jest, ale nie kręci?</strong> → Wymiana silnika dmuchawy</li>
+ </ul>
+ </div>
 
-  <div class="section-label">Opublikowane poradniki</div>
-  <div class="model-grid">
+ <div class="section-label">Opublikowane poradniki</div>
+ <div class="model-grid">
 
-    <a href="/bmw-e46-nie-dziala-nawiew/" class="model-card">
-      <span class="brand">BMW</span>
-      <span class="model-name">E46 nie działa nawiew</span>
-    </a>
+ <a href="/bmw-e46-nie-dziala-nawiew/" class="model-card">
+ <span class="brand">BMW</span>
+ <span class="model-name">E46 nie działa nawiew</span>
+ </a>
 
-    <a href="/volkswagen-golf-5-nie-dziala-nawiew/" class="model-card">
-      <span class="brand">Volkswagen</span>
-      <span class="model-name">Golf 5 nie działa nawiew</span>
-    </a>
+ <a href="/volkswagen-golf-5-nie-dziala-nawiew/" class="model-card">
+ <span class="brand">Volkswagen</span>
+ <span class="model-name">Golf 5 nie działa nawiew</span>
+ </a>
 
-    <a href="/ford-focus-mk2-nie-dziala-nawiew/" class="model-card">
-      <span class="brand">Ford</span>
-      <span class="model-name">Focus Mk2 nie działa nawiew</span>
-    </a>
+ <a href="/ford-focus-mk2-nie-dziala-nawiew/" class="model-card">
+ <span class="brand">Ford</span>
+ <span class="model-name">Focus Mk2 nie działa nawiew</span>
+ </a>
 
-    <a href="/skoda-octavia-1z-nie-dziala-nawiew/" class="model-card">
-      <span class="brand">Skoda</span>
-      <span class="model-name">Octavia 1Z nie działa nawiew</span>
-    </a>
+ <a href="/skoda-octavia-1z-nie-dziala-nawiew/" class="model-card">
+ <span class="brand">Skoda</span>
+ <span class="model-name">Octavia 1Z nie działa nawiew</span>
+ </a>
 
-    <a href="/toyota-corolla-e12-nie-dziala-nawiew/" class="model-card">
-      <span class="brand">Toyota</span>
-      <span class="model-name">Corolla E12 nie działa nawiew</span>
-    </a>
+ <a href="/toyota-corolla-e12-nie-dziala-nawiew/" class="model-card">
+ <span class="brand">Toyota</span>
+ <span class="model-name">Corolla E12 nie działa nawiew</span>
+ </a>
 
-  </div>
+ </div>
 
-  <div class="section-label">Wkrótce — kolejka publikacji</div>
-  <div class="model-grid">
-    <div class="model-card coming-soon"><span class="brand">Opel</span><span class="model-name">Astra G nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Ford</span><span class="model-name">Mondeo Mk3 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Peugeot</span><span class="model-name">307 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Audi</span><span class="model-name">A4 B6 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">VW</span><span class="model-name">Passat B5 FL nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Honda</span><span class="model-name">Civic VIII UFO nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Opel</span><span class="model-name">Zafira B nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Renault</span><span class="model-name">Clio III nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Mercedes</span><span class="model-name">C-Class W203 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Fiat</span><span class="model-name">Punto II nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Audi</span><span class="model-name">A3 8P nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">VW</span><span class="model-name">Passat B6 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-    <div class="model-card coming-soon"><span class="brand">Toyota</span><span class="model-name">Yaris P2 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
-  </div>
+ <div class="section-label">Wkrótce — kolejka publikacji</div>
+ <div class="model-grid">
+ <div class="model-card coming-soon"><span class="brand">Opel</span><span class="model-name">Astra G nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Ford</span><span class="model-name">Mondeo Mk3 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Peugeot</span><span class="model-name">307 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Audi</span><span class="model-name">A4 B6 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">VW</span><span class="model-name">Passat B5 FL nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Honda</span><span class="model-name">Civic VIII UFO nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Opel</span><span class="model-name">Zafira B nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Renault</span><span class="model-name">Clio III nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Mercedes</span><span class="model-name">C-Class W203 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Fiat</span><span class="model-name">Punto II nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Audi</span><span class="model-name">A3 8P nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">VW</span><span class="model-name">Passat B6 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ <div class="model-card coming-soon"><span class="brand">Toyota</span><span class="model-name">Yaris P2 nie działa nawiew</span><span class="coming-soon-tag">wkrótce</span></div>
+ </div>
 
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div>© 2026 Poradnik Samochodowy · <a href="/">Strona główna</a> · <a href="/privacy.html">Polityka prywatności</a></div>
-    <div>Informacje mają charakter poglądowy. Zawsze weryfikuj w instrukcji obsługi.</div>
-  </div>
+ <div class="footer-inner">
+ <div>© 2026 Poradnik Samochodowy · <a href="/">Strona główna</a> · <a href="/privacy.html">Polityka prywatności</a></div>
+ <div>Informacje mają charakter poglądowy. Zawsze weryfikuj w instrukcji obsługi.</div>
+ </div>
 </footer>
 
 <style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>

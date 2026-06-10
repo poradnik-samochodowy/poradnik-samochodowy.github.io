@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -8,191 +8,191 @@
 <meta name="description" content="Praktyczne porady motoryzacyjne dla Polaków. Jak kupić używane auto, jak nie dać się oszukać, ubezpieczenia, naprawy i koszty eksploatacji.">
 <meta name="robots" content="index, follow">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f5f5f5; }
-  a { color: #c0392b; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f5f5f5; }
+ a { color: #c0392b; text-decoration: none; }
+ a:hover { text-decoration: underline; }
 
-  .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-  .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
-  .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
-  .topbar-nav { display: flex; gap: 18px; }
-  .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+ .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+ .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+ .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
+ .topbar-nav { display: flex; gap: 18px; }
+ .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
 
-  .hero { background: linear-gradient(135deg, #c0392b 0%, #922b21 100%); color: #fff; padding: 56px 20px 48px; text-align: center; }
-  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 14px; }
-  .hero p { font-size: 1.1rem; opacity: 0.92; max-width: 600px; margin: 0 auto 24px; }
-  .hero-tags { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-  .hero-tag { background: rgba(255,255,255,0.18); padding: 6px 16px; border-radius: 20px; font-size: 0.88rem; }
+ .hero { background: linear-gradient(135deg, #c0392b 0%, #922b21 100%); color: #fff; padding: 56px 20px 48px; text-align: center; }
+ .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 14px; }
+ .hero p { font-size: 1.1rem; opacity: 0.92; max-width: 600px; margin: 0 auto 24px; }
+ .hero-tags { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+ .hero-tag { background: rgba(255,255,255,0.18); padding: 6px 16px; border-radius: 20px; font-size: 0.88rem; }
 
-  .main-wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; }
-  @media(max-width:700px){ .main-wrap { grid-template-columns: 1fr; } .main-wrap aside { display: none; } }
+ .main-wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; }
+ @media(max-width:700px){ .main-wrap { grid-template-columns: 1fr; } .main-wrap aside { display: none; } }
 
-  .section-title { font-size: 1.3rem; font-weight: 700; color: #922b21; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e8c3c3; }
+ .section-title { font-size: 1.3rem; font-weight: 700; color: #922b21; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e8c3c3; }
 
-  .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-  .article-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); transition: transform 0.2s; }
-  .article-card:hover { transform: translateY(-3px); }
-  .card-body { padding: 18px; }
-  .card-category { font-size: 0.75rem; font-weight: 700; color: #c0392b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-  .card-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.4; }
-  .card-excerpt { font-size: 0.88rem; color: #555; margin-bottom: 12px; }
-  .card-link { font-size: 0.85rem; color: #c0392b; font-weight: 600; }
+ .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+ .article-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); transition: transform 0.2s; }
+ .article-card:hover { transform: translateY(-3px); }
+ .card-body { padding: 18px; }
+ .card-category { font-size: 0.75rem; font-weight: 700; color: #c0392b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+ .card-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.4; }
+ .card-excerpt { font-size: 0.88rem; color: #555; margin-bottom: 12px; }
+ .card-link { font-size: 0.85rem; color: #c0392b; font-weight: 600; }
 
-  .empty-state { background: #fff; border-radius: 10px; padding: 40px; text-align: center; color: #888; }
+ .empty-state { background: #fff; border-radius: 10px; padding: 40px; text-align: center; color: #888; }
 
-  .sidebar-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; }
-  .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #922b21; margin-bottom: 14px; }
-  .sidebar-links { list-style: none; }
-  .sidebar-links li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
-  .sidebar-links li:last-child { border: none; margin: 0; padding: 0; }
-  .sidebar-links a { font-size: 0.9rem; color: #333; }
+ .sidebar-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; }
+ .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #922b21; margin-bottom: 14px; }
+ .sidebar-links { list-style: none; }
+ .sidebar-links li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+ .sidebar-links li:last-child { border: none; margin: 0; padding: 0; }
+ .sidebar-links a { font-size: 0.9rem; color: #333; }
 
-  footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
-  .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
-  footer a { color: rgba(255,255,255,0.9); }
+ footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
+ .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+ footer a { color: rgba(255,255,255,0.9); }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="topbar-inner">
-    <a href="/" class="topbar-brand">🚗 Poradnik Samochodowy</a>
-    <nav class="topbar-nav">
-      <a href="/">Start</a>
-      <a href="/katalog/">Katalog</a>
-      <a href="/blog.html">Artykuły</a>
-      <a href="/about.html">O nas</a>
-      <a href="/contact.html">Kontakt</a>
-      <a href="/sitemap.html">Mapa strony</a>
-    </nav>
-  </div>
+ <div class="topbar-inner">
+ <a href="/" class="topbar-brand">🚗 Poradnik Samochodowy</a>
+ <nav class="topbar-nav">
+ <a href="/">Start</a>
+ <a href="/katalog/">Katalog</a>
+ <a href="/blog.html">Artykuły</a>
+ <a href="/about.html">O nas</a>
+ <a href="/contact.html">Kontakt</a>
+ <a href="/sitemap.html">Mapa strony</a>
+ </nav>
+ </div>
 </header>
 
 <section class="hero">
-  <h1>Poradnik Samochodowy</h1>
-  <p>Praktyczne porady motoryzacyjne — bez lania wody. Kupno, sprzedaż, naprawy, ubezpieczenia i koszty eksploatacji.</p>
-  <div class="hero-tags">
-    <span class="hero-tag">Kupno auta</span>
-    <span class="hero-tag">Używane samochody</span>
-    <span class="hero-tag">Naprawy</span>
-    <span class="hero-tag">Ubezpieczenia OC/AC</span>
-    <span class="hero-tag">Koszty eksploatacji</span>
-  </div>
+ <h1>Poradnik Samochodowy</h1>
+ <p>Praktyczne porady motoryzacyjne — bez lania wody. Kupno, sprzedaż, naprawy, ubezpieczenia i koszty eksploatacji.</p>
+ <div class="hero-tags">
+ <span class="hero-tag">Kupno auta</span>
+ <span class="hero-tag">Używane samochody</span>
+ <span class="hero-tag">Naprawy</span>
+ <span class="hero-tag">Ubezpieczenia OC/AC</span>
+ <span class="hero-tag">Koszty eksploatacji</span>
+ </div>
 </section>
 
 <div class="main-wrap">
-  <main>
-    <h2 class="section-title">Katalog modeli</h2>
-    <div class="article-grid">
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Audi · 8P</div>
-          <div class="card-title"><a href="/audi/a3-8p/">Audi A3 8P (2003–2013)</a></div>
-          <p class="card-excerpt">Wycieraczki, kody silników BKD/BWA, typowe usterki i checklista przed zakupem używanego auta.</p>
-          <a class="card-link" href="/audi/a3-8p/">Zobacz katalog →</a>
-        </div>
-      </article>
+ <main>
+ <h2 class="section-title">Katalog modeli</h2>
+ <div class="article-grid">
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Audi · 8P</div>
+ <div class="card-title"><a href="/audi/a3-8p/">Audi A3 8P (2003–2013)</a></div>
+ <p class="card-excerpt">Wycieraczki, kody silników BKD/BWA, typowe usterki i checklista przed zakupem używanego auta.</p>
+ <a class="card-link" href="/audi/a3-8p/">Zobacz katalog →</a>
+ </div>
+ </article>
 
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Diagnostyka · Nawiew</div>
-          <div class="card-title"><a href="/nie-dziala-nawiew/">Nie działa nawiew — 5 modeli</a></div>
-          <p class="card-excerpt">BMW E46, VW Golf 5, Ford Focus Mk2, Skoda Octavia, Toyota Corolla — bezpiecznik, rezystor, silniczek.</p>
-          <a class="card-link" href="/nie-dziala-nawiew/">Zobacz kategorię →</a>
-        </div>
-      </article>
-    </div>
-    <h2 class="section-title" style="margin-top:36px;">Najnowsze artykuły</h2>
-    <div class="article-grid" id="article-grid">
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Import · Audi A3</div>
-          <div class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 z USA — 2.0 TFSI: czy się opłaca?</a></div>
-          <p class="card-excerpt">Sprowadzenie A3 sedan z Ameryki: kody CZTA/CHHB, VIN, Carfax, koszty vs OTOMOTO.</p>
-          <a class="card-link" href="/audi-a3-import-usa-2-0-tfsi/">Czytaj artykuł →</a>
-        </div>
-      </article>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Diagnostyka · Nawiew</div>
+ <div class="card-title"><a href="/nie-dziala-nawiew/">Nie działa nawiew — 5 modeli</a></div>
+ <p class="card-excerpt">BMW E46, VW Golf 5, Ford Focus Mk2, Skoda Octavia, Toyota Corolla — bezpiecznik, rezystor, silniczek.</p>
+ <a class="card-link" href="/nie-dziala-nawiew/">Zobacz kategorię →</a>
+ </div>
+ </article>
+ </div>
+ <h2 class="section-title" style="margin-top:36px;">Najnowsze artykuły</h2>
+ <div class="article-grid" id="article-grid">
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Import · Audi A3</div>
+ <div class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 z USA — 2.0 TFSI: czy się opłaca?</a></div>
+ <p class="card-excerpt">Sprowadzenie A3 sedan z Ameryki: kody CZTA/CHHB, VIN, Carfax, koszty vs OTOMOTO.</p>
+ <a class="card-link" href="/audi-a3-import-usa-2-0-tfsi/">Czytaj artykuł →</a>
+ </div>
+ </article>
 
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">BMW E46 · Nawiew</div>
-          <div class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew</a></div>
-          <p class="card-excerpt">Bezpiecznik 30A, rezystor Endstufe, silniczek dmuchawy — trzy punkty diagnostyki w kolejności.</p>
-          <a class="card-link" href="/bmw-e46-nie-dziala-nawiew/">Czytaj →</a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">VW Golf 5 · Nawiew</div>
-          <div class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew</a></div>
-          <p class="card-excerpt">SC23 30A w kabinie, rezystor pod pasażerem — schemat naprawy dla Golf V (2003–2009).</p>
-          <a class="card-link" href="/volkswagen-golf-5-nie-dziala-nawiew/">Czytaj →</a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Ford Focus · Nawiew</div>
-          <div class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew</a></div>
-          <p class="card-excerpt">Moduł GEM, bezpiecznik pod maską, rezystor pod pasażerem — typowe przyczyny awarii.</p>
-          <a class="card-link" href="/ford-focus-mk2-nie-dziala-nawiew/">Czytaj →</a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Skoda · Nawiew</div>
-          <div class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew</a></div>
-          <p class="card-excerpt">SF27, rezystor za schowkiem, silniczek dmuchawy — schemat dla Octavii 1Z.</p>
-          <a class="card-link" href="/skoda-octavia-1z-nie-dziala-nawiew/">Czytaj →</a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="card-body">
-          <div class="card-category">Toyota · Nawiew</div>
-          <div class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew</a></div>
-          <p class="card-excerpt">Bezpiecznik 15A (AM2), silniczek 87103-02210, rezystor pod prawą deską.</p>
-          <a class="card-link" href="/toyota-corolla-e12-nie-dziala-nawiew/">Czytaj →</a>
-        </div>
-      </article>
-    </div>
-  </main>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">BMW E46 · Nawiew</div>
+ <div class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew</a></div>
+ <p class="card-excerpt">Bezpiecznik 30A, rezystor Endstufe, silniczek dmuchawy — trzy punkty diagnostyki w kolejności.</p>
+ <a class="card-link" href="/bmw-e46-nie-dziala-nawiew/">Czytaj →</a>
+ </div>
+ </article>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">VW Golf 5 · Nawiew</div>
+ <div class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew</a></div>
+ <p class="card-excerpt">SC23 30A w kabinie, rezystor pod pasażerem — schemat naprawy dla Golf V (2003–2009).</p>
+ <a class="card-link" href="/volkswagen-golf-5-nie-dziala-nawiew/">Czytaj →</a>
+ </div>
+ </article>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Ford Focus · Nawiew</div>
+ <div class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew</a></div>
+ <p class="card-excerpt">Moduł GEM, bezpiecznik pod maską, rezystor pod pasażerem — typowe przyczyny awarii.</p>
+ <a class="card-link" href="/ford-focus-mk2-nie-dziala-nawiew/">Czytaj →</a>
+ </div>
+ </article>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Skoda · Nawiew</div>
+ <div class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew</a></div>
+ <p class="card-excerpt">SF27, rezystor za schowkiem, silniczek dmuchawy — schemat dla Octavii 1Z.</p>
+ <a class="card-link" href="/skoda-octavia-1z-nie-dziala-nawiew/">Czytaj →</a>
+ </div>
+ </article>
+ <article class="article-card">
+ <div class="card-body">
+ <div class="card-category">Toyota · Nawiew</div>
+ <div class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew</a></div>
+ <p class="card-excerpt">Bezpiecznik 15A (AM2), silniczek 87103-02210, rezystor pod prawą deską.</p>
+ <a class="card-link" href="/toyota-corolla-e12-nie-dziala-nawiew/">Czytaj →</a>
+ </div>
+ </article>
+ </div>
+ </main>
 
-  <aside>
-    <div class="sidebar-card">
-      <div class="sidebar-title">Kategorie</div>
-      <ul class="sidebar-links">
-        <li><a href="/katalog/">Katalog części (modele)</a></li>
-        <li><a href="/audi/a3-8p/">Audi A3 8P</a></li>
-        <li><a href="/audi-a3-import-usa-2-0-tfsi/">Import A3 z USA</a></li>
-        <li><a href="/nie-dziala-nawiew/">Nie działa nawiew (hub)</a></li>
-        <li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a></li>
-        <li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a></li>
-        <li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a></li>
-        <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a></li>
-        <li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a></li>
-        <li><a href="/blog.html">Wszystkie artykuły →</a></li>
-      </ul>
-    </div>
-    <div class="sidebar-card" style="background:#fff5f5;border:1px solid #f5c6c6;">
-      <div class="sidebar-title">O poradniku</div>
-      <p style="font-size:0.88rem;color:#555;">Piszemy dla kierowców którzy chcą wiedzieć co robią. Bez sponsorowanych opinii.</p>
-      <a href="/about.html" style="font-size:0.85rem;color:#c0392b;font-weight:600;">Czytaj więcej →</a>
-    </div>
-  </aside>
+ <aside>
+ <div class="sidebar-card">
+ <div class="sidebar-title">Kategorie</div>
+ <ul class="sidebar-links">
+ <li><a href="/katalog/">Katalog części (modele)</a></li>
+ <li><a href="/audi/a3-8p/">Audi A3 8P</a></li>
+ <li><a href="/audi-a3-import-usa-2-0-tfsi/">Import A3 z USA</a></li>
+ <li><a href="/nie-dziala-nawiew/">Nie działa nawiew (hub)</a></li>
+ <li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a></li>
+ <li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a></li>
+ <li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a></li>
+ <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a></li>
+ <li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a></li>
+ <li><a href="/blog.html">Wszystkie artykuły →</a></li>
+ </ul>
+ </div>
+ <div class="sidebar-card" style="background:#fff5f5;border:1px solid #f5c6c6;">
+ <div class="sidebar-title">O poradniku</div>
+ <p style="font-size:0.88rem;color:#555;">Piszemy dla kierowców którzy chcą wiedzieć co robią. Bez sponsorowanych opinii.</p>
+ <a href="/about.html" style="font-size:0.85rem;color:#c0392b;font-weight:600;">Czytaj więcej →</a>
+ </div>
+ </aside>
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <span>© 2026 Poradnik Samochodowy</span>
-    <nav style="display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="/about.html">O nas</a>
-      <a href="/contact.html">Kontakt</a>
-      <a href="/disclosure.html">Przejrzystość</a>
-      <a href="/editorial-policy.html">Zasady redakcyjne</a>
-      <a href="/privacy.html">Prywatność</a>
-      <a href="/sitemap.html">Mapa strony</a>
-    </nav>
-  </div>
+ <div class="footer-inner">
+ <span>© 2026 Poradnik Samochodowy</span>
+ <nav style="display:flex;gap:16px;flex-wrap:wrap;">
+ <a href="/about.html">O nas</a>
+ <a href="/contact.html">Kontakt</a>
+ <a href="/disclosure.html">Przejrzystość</a>
+ <a href="/editorial-policy.html">Zasady redakcyjne</a>
+ <a href="/privacy.html">Prywatność</a>
+ <a href="/sitemap.html">Mapa strony</a>
+ </nav>
+ </div>
 </footer>
 
 <style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
