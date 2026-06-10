@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://poradnik-samochodowy.github.io/sitemap.xml
+Disallow: /admin/
+Disallow: /*.json$
+
+# Google Search Console verification file - must be accessible
+Allow: /googled82ff9901477ec4d.html
