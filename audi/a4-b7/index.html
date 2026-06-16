@@ -1,0 +1,429 @@
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi A4 B7 1.8T – typowe usterki i katalog | Poradnik Samochodowy</title>
+    <meta name="description" content="Kompletny katalog modelu Audi A4 B7 1.8T: dane silnika, usterki, wycieraczki, FAQ. Sprawdź najczęstsze problemy i porady ekspertów.">
+    <link rel="canonical" href="https://poradnik-samochodowy.github.io/audi/a4-b7/">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Jakie są najczęstsze usterki silnika 1.8T w Audi A4 B7?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Do typowych problemów należą: wadliwa pompa wody, pękające węże dolotu, uszkodzone zawory recyrkulacji spalin (EGR) oraz awarie czujnika ciśnienia doładowania."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Czy silnik 1.8T w A4 B7 ma problem z łańcuchem rozrządu?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Silnik 1.8T (kod: BFB) wyposażony jest w pasek rozrządu, nie łańcuch. Zaleca się wymianę paska co 90 000 km lub 5 lat."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Jakie są typowe usterki układu chłodzenia w Audi A4 B7 1.8T?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Najczęściej awarii ulega pompa wody (plastikowa turbina), termostat i czujnik temperatury. Objawem jest przegrzewanie lub nieszczelności."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Czy wycieraczki w Audi A4 B7 wymagają specjalnych piór?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Zalecane są pióra płaskie z adapterem. Długość – 26″ (kierowca) i 18″ (pasażer). Pasują wycieraczki z serii Bosch Aerotwin."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Dlaczego silnik 1.8T dymi na czarno?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Czarny dym świadczy o bogatej mieszance. Przyczyną może być uszkodzony przepływomierz, nieszczelny dolot, wadliwe wtryski lub lambda."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Jak sprawdzić cewki zapłonowe w A4 B7 1.8T?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Objaw uszkodzonej cewki to szarpanie i brak mocy. Sprawdź kod błędu – najczęściej P030X. Wymień wszystkie cztery na RG4 lub OEM."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Czy silnik 1.8T ma problem z olejem?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Silnik 1.8T ma wrażliwy układ smarowania. Stosuj olej 5W40, wymiana co 10 000 km. Często występuje wyciek z zaworu PCV."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Jakie są objawy uszkodzonego czujnika położenia wału?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Silnik gaśnie, nie chce zapalić, kontrolka silnika. Wymiana czujnika ~ 100 zł, dostęp od dołu silnika."
+                    }
+                }
+            ]
+        }
+    </script>
+    <style>
+        /* RESET i base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f7f7f7;
+            line-height: 1.6;
+            color: #1e1e1e;
+        }
+        /* Topbar */
+        .topbar {
+            background: #c0392b;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .topbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.2rem;
+            padding: 0.2rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .topbar a:hover {
+            border-bottom-color: rgba(255,255,255,0.7);
+        }
+        .topbar .logo {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .topbar .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.2rem;
+        }
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .breadcrumb a {
+            color: #c0392b;
+            text-decoration: none;
+        }
+        .breadcrumb span {
+            color: #555;
+        }
+        /* Hero */
+        .article-hero {
+            background: #1a1a2e;
+            color: #f0f0f0;
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            text-align: center;
+        }
+        .article-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-hero .lead {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        /* Content */
+        .content {
+            max-width: 1100px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem 2rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .content h2 {
+            color: #c0392b;
+            font-size: 1.6rem;
+            margin: 1.8rem 0 1rem;
+            border-left: 6px solid #c0392b;
+            padding-left: 0.8rem;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .content p {
+            margin-bottom: 1rem;
+        }
+        .content ul {
+            padding-left: 1.6rem;
+            margin: 0.8rem 0 1.2rem;
+        }
+        .content li {
+            margin-bottom: 0.3rem;
+        }
+        /* Tabele */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0 1.8rem;
+            font-size: 0.95rem;
+        }
+        th {
+            background: #c0392b;
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:nth-child(even) {
+            background: #fafafa;
+        }
+        /* Note */
+        .note {
+            background: #fef4e8;
+            border-left: 6px solid #c0392b;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .note strong {
+            color: #a32316;
+        }
+        .faq {
+            background: #f4f6f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0 0.5rem;
+        }
+        .faq h2 {
+            margin-top: 0.4rem;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #d8d8d8;
+            padding-bottom: 1rem;
+        }
+        .faq-item strong {
+            display: block;
+            color: #1e1e2a;
+            font-size: 1.05rem;
+        }
+        .faq-item p {
+            margin: 0.3rem 0 0 0.8rem;
+            color: #2c3e50;
+        }
+        /* Footer */
+        footer {
+            background: #1e1e1e;
+            color: #ccc;
+            text-align: center;
+            padding: 1.8rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 2.5rem;
+            border-top: 4px solid #c0392b;
+        }
+        footer a {
+            color: #e6a6a0;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsywność */
+        @media (max-width: 600px) {
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            .topbar .nav-links {
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .article-hero h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 1.2rem;
+            }
+            table {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="logo">🚗 Poradnik Samochodowy</div>
+    <div class="nav-links">
+        <a href="https://poradnik-samochodowy.github.io/">Start</a>
+        <a href="https://poradnik-samochodowy.github.io/katalog/">Katalog</a>
+        <a href="https://poradnik-samochodowy.github.io/audi/">Audi</a>
+        <a href="https://poradnik-samochodowy.github.io/artykuly/">Artykuły</a>
+    </div>
+</div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <a href="https://poradnik-samochodowy.github.io/">Start</a> <span>›</span>
+    <a href="https://poradnik-samochodowy.github.io/audi/">Audi</a> <span>›</span>
+    <span>A4 B7 1.8T</span>
+</div>
+
+<!-- Hero -->
+<section class="article-hero">
+    <h1>Audi A4 B7 1.8T – typowe usterki i katalog</h1>
+    <p class="lead">Sprawdź najważniejsze informacje, dane techniczne, listę wad i praktyczne porady. Kompendium wiedzy dla posiadaczy i mechaników.</p>
+</section>
+
+<!-- Content -->
+<main class="content">
+
+    <!-- Krótki wstęp -->
+    <p>Audi A4 B7 (2004–2008) z silnikiem 1.8T (BFB) to jedna z najpopularniejszych wersji. Mimo dobrej dynamiki, jednostka ma kilka charakterystycznych usterek. Poniżej znajdziesz tabelę silników, wycieraczek oraz zestawienie typowych problemów.</p>
+
+    <!-- Tabela silników -->
+    <h2>🔧 Dane silnika 1.8T – BFB</h2>
+    <table>
+        <thead>
+            <tr><th>Parametr</th><th>Wartość</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Kod silnika</td><td>BFB</td></tr>
+            <tr><td>Pojemność</td><td>1781 cm³</td></tr>
+            <tr><td>Moc maksymalna</td><td>120 kW (163 KM) przy 5700 obr/min</td></tr>
+            <tr><td>Moment obrotowy</td><td>225 Nm przy 1950–4700 obr/min</td></tr>
+            <tr><td>Układ rozrządu</td><td>Pasek (wymiana co 90 000 km / 5 lat)</td></tr>
+            <tr><td>Doładowanie</td><td>Turbosprężarka K03</td></tr>
+            <tr><td>Paliwo</td><td>benzyna Pb 95</td></tr>
+            <tr><td>Skrzynia biegów</td><td>5-biegowa manualna / 6-biegowa manualna / Multitronic</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Tabela wycieraczek -->
+    <h2>🧹 Wycieraczki – zalecane rozmiary</h2>
+    <table>
+        <thead>
+            <tr><th>Strona</th><th>Długość (cale)</th><th>Długość (mm)</th><th>Typ</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Kierowca (lewa)</td><td>26″</td><td>650 mm</td><td>płaskie (np. Bosch Aerotwin A930S)</td></tr>
+            <tr><td>Pasażer (prawa)</td><td>18″</td><td>450 mm</td><td>płaskie (np. Bosch Aerotwin A392S)</td></tr>
+            <tr><td>Tył (opcjonalnie)</td><td>12″</td><td>300 mm</td><td>klasyczne lub płaskie</td></tr>
+        </tbody>
+    </table>
+    <div class="note">
+        <strong>Porada:</strong> W modelach po liftingu (2005+) często pasują wycieraczki z adapterem uniwersalnym. Sprawdź typ ramienia.
+    </div>
+
+    <!-- Typowe usterki (tabela + lista) -->
+    <h2>⚠️ Typowe usterki – Audi A4 B7 1.8T</h2>
+    <p>Najczęściej zgłaszane problemy w warsztatach i na forach:</p>
+    <table>
+        <thead>
+            <tr><th>Usterka</th><th>Objawy</th><th>Przyczyna / rozwiązanie</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Pompa wody (plastikowa turbina)</td><td>Przegrzewanie, wyciek płynu</td><td>Wymiana na pompę z metalową turbiną</td></tr>
+            <tr><td>Pękające węże dolotu</td><td>Spadek mocy, błąd mieszanki</td><td>Wymiana węży silikonowych</td></tr>
+            <tr><td>Zawór EGR / PCV</td><td>Niestabilne obroty, dymienie</td><td>Czyszczenie lub wymiana zaworu</td></tr>
+            <tr><td>Uszkodzone cewki zapłonowe</td><td>Szarpanie, kontrolka silnika</td><td>Wymiana na RG4 lub oryginał</td></tr>
+            <tr><td>Czujnik ciśnienia doładowania</td><td>Brak mocy, tryb awaryjny</td><td>Wymiana (często za intercoolerem)</td></tr>
+            <tr><td>Wyciek oleju z pokrywy zaworów</td><td>Olej na kolektorze, zapach</td><td>Nowa uszczelka (zestaw + silikon)</td></tr>
+            <tr><td>Uszkodzony przepływomierz (MAF)</td><td>Nierówna praca, wzrost spalania</td><td>Czyszczenie lub wymiana</td></tr>
+            <tr><td>Korozja obejm stabilizatora</td><td>Stuki podczas jazdy</td><td>Wymiana tulei / drążków</td></tr>
+        </tbody>
+    </table>
+
+    <h3>🔎 Dodatkowe uwagi</h3>
+    <ul>
+        <li>Silnik 1.8T jest wrażliwy na jakość oleju – stosuj 5W40 spełniający normę VW 502.00.</li>
+        <li>Sprawdzaj napięcie paska rozrządu i pompy wody przy każdym serwisie.</li>
+        <li>Wtryski bezpośrednie (FSI) nie występują w 1.8T – to silnik MPI z wtryskiem do kolektora.</li>
+        <li>Częsty problem: pęknięty kolektor wydechowy – objaw buczenie i spadek mocy.</li>
+    </ul>
+
+    <div class="note">
+        <strong>Eksperci radzą:</strong> W Audi A4 B7 1.8T zawsze wymieniaj pompę wody razem z paskiem rozrządu. Kosztuje niewiele więcej, a oszczędza silnik.
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>❓ Najczęstsze pytania FAQ – Audi A4 B7 1.8T</h2>
+
+        <div class="faq-item">
+            <strong>Jakie są najczęstsze usterki silnika 1.8T w Audi A4 B7?</strong>
+            <p>Do typowych problemów należą: wadliwa pompa wody, pękające węże dolotu, uszkodzone zawory recyrkulacji spalin (EGR) oraz awarie czujnika ciśnienia doładowania.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Czy silnik 1.8T w A4 B7 ma problem z łańcuchem rozrządu?</strong>
+            <p>Silnik 1.8T (kod: BFB) wyposażony jest w pasek rozrządu, nie łańcuch. Zaleca się wymianę paska co 90 000 km lub 5 lat.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Jakie są typowe usterki układu chłodzenia w Audi A4 B7 1.8T?</strong>
+            <p>Najczęściej awarii ulega pompa wody (plastikowa turbina), termostat i czujnik temperatury. Objawem jest przegrzewanie lub nieszczelności.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Czy wycieraczki w Audi A4 B7 wymagają specjalnych piór?</strong>
+            <p>Zalecane są pióra płaskie z adapterem. Długość – 26″ (kierowca) i 18″ (pasażer). Pasują wycieraczki z serii Bosch Aerotwin.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Dlaczego silnik 1.8T dymi na czarno?</strong>
+            <p>Czarny dym świadczy o bogatej mieszance. Przyczyną może być uszkodzony przepływomierz, nieszczelny dolot, wadliwe wtryski lub lambda.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Jak sprawdzić cewki zapłonowe w A4 B7 1.8T?</strong>
+            <p>Objaw uszkodzonej cewki to szarpanie i brak mocy. Sprawdź kod błędu – najczęściej P030X. Wymień wszystkie cztery na RG4 lub OEM.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Czy silnik 1.8T ma problem z olejem?</strong>
+            <p>Silnik 1.8T ma wrażliwy układ smarowania. Stosuj olej 5W40, wymiana co 10 000 km. Często występuje wyciek z zaworu PCV.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Jakie są objawy uszkodzonego czujnika położenia wału?</strong>
+            <p>Silnik gaśnie, nie chce zapalić, kontrolka silnika. Wymiana czujnika ~ 100 zł, dostęp od dołu silnika.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 <a href="https://poradnik-samochodowy.github.io/">Poradnik Samochodowy</a> – praktyczne kompendium motoryzacyjne. Wszelkie prawa zastrzeżone.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem">Informacje o usterkach oparte na wieloletnim doświadczeniu mechaników i danych producenta.</p>
+</footer>
+
+</body>
+</html>
+```
