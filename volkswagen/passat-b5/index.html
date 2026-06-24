@@ -1,0 +1,355 @@
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passat B5 typowe usterki i katalog silników | Poradnik Samochodowy</title>
+    <meta name="description" content="Katalog modelu VW Passat B5 (1996–2005) – typowe usterki, dane techniczne silników, wycieraczki, problemy i FAQ. Sprawdź zanim kupisz.">
+    <link rel="canonical" href="https://poradnik-samochodowy.github.io/volkswagen/passat-b5/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+        a {
+            color: #c0392b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* TOPBAR */
+        .topbar {
+            background: #c0392b;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .topbar .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+        .topbar nav a {
+            color: white;
+            margin-left: 1.8rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .topbar nav a:hover {
+            opacity: 0.85;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .topbar {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+            .topbar nav a {
+                margin-left: 0;
+                margin-right: 1.2rem;
+            }
+        }
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .breadcrumb span {
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #c0392b;
+        }
+        /* HERO */
+        .article-hero {
+            background: #1e2a36;
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .article-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .article-hero .lead {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        /* CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 0.75rem 0;
+            border-left: 5px solid #c0392b;
+            padding-left: 1rem;
+            color: #1e2a36;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        .content p, .content li {
+            margin-bottom: 0.75rem;
+        }
+        .content ul {
+            padding-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        .note {
+            background: #fef3e9;
+            border-left: 6px solid #c0392b;
+            padding: 1rem 1.4rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+            font-weight: 500;
+        }
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin: 1.2rem 0 1.8rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        th {
+            background: #c0392b;
+            color: white;
+            font-weight: 600;
+            padding: 12px 10px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) {
+            background: #fafafa;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .faq-item strong {
+            color: #c0392b;
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+        footer {
+            background: #1e2a36;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            border-top: 4px solid #c0392b;
+        }
+        footer a {
+            color: #e6b0aa;
+        }
+        @media (max-width: 700px) {
+            .article-hero h1 { font-size: 1.8rem; }
+            .content h2 { font-size: 1.5rem; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jakie są najczęstsze usterki zawieszenia w Passacie B5?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Przede wszystkim łączniki stabilizatora (klekot przy nierównościach), wahacze przednie (tuleje szybko się zużywają) oraz amortyzatory – zwłaszcza tylnie. Częstym problemem jest też pękająca sprężyna tylna."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy silnik 1.9 TDI w Passacie B5 jest awaryjny?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Silnik 1.9 TDI (zwłaszcza PD) jest trwały, ale wymaga regularnej wymiany oleju i dbałości o pompę wtryskową. Typowe usterki to pękające węże dolotu, problemy z przepływomierzem i zatarte siłowniki turbiny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dlaczego w Passacie B5 wycieraczki zostawiają smugi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Najczęściej przez zużyte pióra wycieraczek lub brudną szybę. W B5 problemem bywa też poluzowany mechanizm wycieraczek i korozja ramion. Wymiana piór na 21″/21″ oraz czyszczenie listew szyb zalecane co sezon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kiedy występuje problem z zaparowaniem wnętrza w Passacie B5?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pojawia się głównie przez nieszczelną uszczelkę podszybia lub zatkany odpływ wody pod schowkiem. Woda przedostaje się do modułu komfortu i powoduje awarię centralnego zamka oraz wilgoć."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co oznacza kontrolka trójkąta w Passacie B5?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trójkąt z wykrzyknikiem (ostrzeżenie) sygnalizuje usterkę układu elektrycznego, np. przepaloną żarówkę, problem z ABS lub niskie ciśnienie oleju. W modelach przed liftingiem często jest to fałszywy alarm z czujnika hamulca."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jakie silniki benzynowe w B5 są najbardziej awaryjne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2.0 litrowy 20V (APK, AQY) – problemy z łańcuchem rozrządu (w niektórych seriach) i przepływomierzami. Również 1.8T (AEB) wymaga uwagi na turbosprężarkę i układ chłodzenia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy Passat B5 ma problem z korozją?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, szczególnie w nadkolach tylnych, progach oraz wokół klapy bagażnika. Po liftingu (2000) zabezpieczenie antykorozyjne było nieco lepsze, ale rdza wciąż pojawia się przy uszkodzonych lakierach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje wymiana rozrządu w Passacie B5 1.9 TDI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Koszt części (pasek, napinacz, pompa wody) i robocizny to około 800–1300 zł w zależności od warsztatu. W silnikach PD wymiana jest droższa ze względu na pompę oleju."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <span class="logo">🚗 Poradnik Samochodowy</span>
+        <nav>
+            <a href="#">Start</a>
+            <a href="#">Katalog</a>
+            <a href="#">Audi</a>
+            <a href="#">Artykuły</a>
+        </nav>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="#">Start</a> <span>›</span> <a href="#">Katalog</a> <span>›</span> <a href="#">Volkswagen</a> <span>›</span> Passat B5 – typowe usterki i dane
+    </div>
+
+    <!-- HERO -->
+    <section class="article-hero">
+        <h1>Volkswagen Passat B5 (1996–2005) — katalog i typowe usterki</h1>
+        <div class="lead">Kompendium wiedzy o modelu: sprawdzone awarie, katalog silników, wycieraczki, zawieszenie i odpowiedzi na najczęstsze pytania. Pomoc przy zakupie i eksploatacji.</div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <h2>Katalog silników Passat B5 (dane techniczne)</h2>
+        <p>Poniższa tabela przedstawia główne jednostki napędowe dostępne w Passacie B5 (wersje przed liftingiem i po liftingu). Wybrane parametry oraz uwagi.</p>
+        
+        <table>
+            <thead><tr><th>Silnik</th><th>Pojemność / moc</th><th>Lata produkcji</th><th>Typowe usterki</th></tr></thead>
+            <tbody>
+                <tr><td>1.6 8V (AHL, ALZ)</td><td>1595 cm³ / 101 KM</td><td>1996–2000</td><td>Przepustnica, uszczelki kolektora</td></tr>
+                <tr><td>1.8 20V (AEB, APT)</td><td>1781 cm³ / 125 KM</td><td>1996–2001</td><td> przepływomierz, cewki zapłonowe</td></tr>
+                <tr><td>1.8T 20V (AEB, AWL)</td><td>1781 cm³ / 150-180 KM</td><td>1997–2005</td><td>Turbo, układ chłodzenia, ciśnienie oleju</td></tr>
+                <tr><td>2.0 20V (APK, AQY)</td><td>1984 cm³ / 130 KM</td><td>1999–2005</td><td>Łańcuch rozrządu (nieliczne), czujnik spalania stukowego</td></tr>
+                <tr><td>2.3 V5 (AGZ, AQN)</td><td>2324 cm³ / 150-170 KM</td><td>1997–2003</td><td>Wypadanie zapłonu, wtryski, kosztowny rozrząd</td></tr>
+                <tr><td>2.8 V6 (ACK, APR)</td><td>2771 cm³ / 193 KM</td><td>1996–2001</td><td>Wycieki oleju, uszczelki pod pokrywą zaworów</td></tr>
+                <tr><td>1.9 TDI (AHU, AFN, AVG)</td><td>1896 cm³ / 90-110 KM</td><td>1996–2000</td><td>Wtryskiwacze, pompa wtryskowa, węże dolotu</td></tr>
+                <tr><td>1.9 TDI PD (BKC, BLS)</td><td>1896 cm³ / 100-130 KM</td><td>2000–2005</td><td>Pompa oleju, kosztowna wymiana rozrządu, wtryski</td></tr>
+                <tr><td>2.5 TDI (AFB, AKN)</td><td>2496 cm³ / 150-180 KM</td><td>1997–2003</td><td>Wtryskiwacze (koszt), koło dwumasowe, turbina</td></tr>
+                <tr><td>4.0 W8 (BDP)</td><td>3999 cm³ / 275 KM</td><td>2001–2004</td><td>Bardzo drogi w serwisie, problemy z elektroniką</td></tr>
+            </tbody>
+        </table>
+        <div class="note">⚠️ Wybierając Passata B5 z silnikiem 1.9 TDI (PD) zwróć uwagę na historię wymiany oleju – zaniedbany może mieć uszkodzoną pompę oleju.</div>
+
+        <h2>Typowe usterki – zawieszenie i wycieraczki</h2>
+        <p><strong>Zawieszenie przednie:</strong> najczęściej klekoczą łączniki stabilizatora (koszt wymiany ~80–150 zł). Wahacze przednie – tuleje gumowe szybko tracą sztywność. Amortyzatory przeciekają po 100–150 tys. km. W tylnym zawieszeniu częste są pęknięte sprężyny.</p>
+        
+        <h3>Wycieraczki – problemy i parametry</h3>
+        <table>
+            <thead><tr><th>Element</th><th>Długość / typ</th><th>Uwagi</th></tr></thead>
+            <tbody>
+                <tr><td>Pióro wycieraczki (lewe)</td><td>21″ (530 mm)</td><td>Najlepiej bezprzegubowe aero</td></tr>
+                <tr><td>Pióro wycieraczki (prawe)</td><td>21″ (530 mm)</td><td>Również 21″ – symetryczne</td></tr>
+                <tr><td>Wycieraczka tylna</td><td>12″ (300 mm) lub 14″</td><td>W wersji kombi – często zapominana</td></tr>
+                <tr><td>Mechanizm wycieraczek</td><td>Luzy na przegubach</td><td>Powoduje rozmazywanie i piszczenie</td></tr>
+                <tr><td>Silnik wycieraczek</td><td>Przedni – 2-biegowy</td><td>Awaria szczotek lub przekaźnika</td></tr>
+            </tbody>
+        </table>
+        <p>Jeśli wycieraczki zostawiają smugi, <strong>sprawdź ramiona</strong> – w B5 często korodują i nie dociskają pióra do szyby. Czystość szyby i wymiana piór co rok znacząco poprawia efekt.</p>
+
+        <h2>Katalog usterek – najczęstsze problemy</h2>
+        <ul>
+            <li><strong>Zapowietrzanie układu chłodzenia</strong> – charakterystyczne bulgotanie za deską rozdzielczą. Wina: nieszczelny zbiornik wyrównawczy lub korek.</li>
+            <li><strong>Korozja nadkoli i podłogi bagażnika</strong> – szczególnie w autach z lat 1997–2000. Sprawdź progi i okolice klapy.</li>
+            <li><strong>Awaria modułu komfortu</strong> (centralny zamek, elektryka szyb) – zalanie wodą przez zatkane odpływy podszybia.</li>
+            <li><strong>Usterka czujnika położenia wału</strong> – objaw: brak iskry, auto nie odpala. Typowe dla silników 1.8 20V.</li>
+            <li><strong>Pękające przewody wspomagania</strong> – wyciek płynu, piszczenie przy skręcie. Wymiana przewodów kosztuje ok. 300–500 zł.</li>
+            <li><strong>Problemy z klimatyzacją</strong> – uszkodzenie sprężarki lub parownika (praca w warsztacie od 1200 zł).</li>
+            <li><strong>Wypadanie zapłonu (V5)</strong> – uszkodzone cewki lub świece. W V5 wymiana cewek to wydatek rzędu 800–1000 zł.</li>
+        </ul>
+        <div class="note">📌 Przy zakupie Passata B5 zawsze wykonaj diagnostykę komputerową – wiele usterek elektrycznych nie daje oczywistych objawów.</div>
+
+        <h2>FAQ – pytania i odpowiedzi (najczęściej zadawane)</h2>
+        
+        <!-- FAQ lista (widoczna dla użytkownika) -->
+        <div class="faq-item"><strong>Jakie są najczęstsze usterki zawieszenia w Passacie B5?</strong> Przede wszystkim łączniki stabilizatora (klekot przy nierównościach), wahacze przednie (tuleje szybko się zużywają) oraz amortyzatory – zwłaszcza tylnie. Częstym problemem jest też pękająca sprężyna tylna.</div>
+        <div class="faq-item"><strong>Czy silnik 1.9 TDI w Passacie B5 jest awaryjny?</strong> Silnik 1.9 TDI (zwłaszcza PD) jest trwały, ale wymaga regularnej wymiany oleju i dbałości o pompę wtryskową. Typowe usterki to pękające węże dolotu, problemy z przepływomierzem i zatarte siłowniki turbiny.</div>
+        <div class="faq-item"><strong>Dlaczego w Passacie B5 wycieraczki zostawiają smugi?</strong> Najczęściej przez zużyte pióra wycieraczek lub brudną szybę. W B5 problemem bywa też poluzowany mechanizm wycieraczek i korozja ramion. Wymiana piór na 21″/21″ oraz czyszczenie listew szyb zalecane co sezon.</div>
+        <div class="faq-item"><strong>Kiedy występuje problem z zaparowaniem wnętrza w Passacie B5?</strong> Pojawia się głównie przez nieszczelną uszczelkę podszybia lub zatkany odpływ wody pod schowkiem. Woda przedostaje się do modułu komfortu i powoduje awarię centralnego zamka oraz wilgoć.</div>
+        <div class="faq-item"><strong>Co oznacza kontrolka trójkąta w Passacie B5?</strong> Trójkąt z wykrzyknikiem (ostrzeżenie) sygnalizuje usterkę układu elektrycznego, np. przepaloną żarówkę, problem z ABS lub niskie ciśnienie oleju. W modelach przed liftingiem często jest to fałszywy alarm z czujnika hamulca.</div>
+        <div class="faq-item"><strong>Jakie silniki benzynowe w B5 są najbardziej awaryjne?</strong> 2.0 litrowy 20V (APK, AQY) – problemy z łańcuchem rozrządu (w niektórych seriach) i przepływomierzami. Również 1.8T (AEB) wymaga uwagi na turbosprężarkę i układ chłodzenia.</div>
+        <div class="faq-item"><strong>Czy Passat B5 ma problem z korozją?</strong> Tak, szczególnie w nadkolach tylnych, progach oraz wokół klapy bagażnika. Po liftingu (2000) zabezpieczenie antykorozyjne było nieco lepsze, ale rdza wciąż pojawia się przy uszkodzonych lakierach.</div>
+        <div class="faq-item"><strong>Ile kosztuje wymiana rozrządu w Passacie B5 1.9 TDI?</strong> Koszt części (pasek, napinacz, pompa wody) i robocizny to około 800–1300 zł w zależności od warsztatu. W silnikach PD wymiana jest droższa ze względu na pompę oleju.</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Poradnik Samochodowy – vademecum kierowcy | <a href="#">Katalog modeli</a> | <a href="#">Regulamin</a></p>
+        <p>Passat B5 typowe usterki, katalog silników i porady. Strona nie jest powiązana z Volkswagen AG. Informacje zbierane od mechaników i użytkowników.</p>
+    </footer>
+
+</body>
+</html>
+```
