@@ -13,14 +13,14 @@
  a { color: #c0392b; text-decoration: none; }
  a:hover { text-decoration: underline; }
  .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
- .topbar-inner { max-width: 1040px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+ .topbar-inner { max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
  .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
  .topbar-nav { display: flex; gap: 18px; }
  .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
  .page-hero { background: #922b21; color: #fff; padding: 36px 20px; text-align: center; }
  .page-hero h1 { font-size: 1.8rem; font-weight: 800; }
  .page-hero p { opacity: 0.85; margin-top: 8px; }
- .wrap { max-width: 1040px; margin: 36px auto; padding: 0 20px; }
+ .wrap { max-width: 1120px; margin: 36px auto; padding: 0 20px; }
  .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
  @media(max-width:600px){ .article-grid { grid-template-columns: 1fr; } }
  .article-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
@@ -31,20 +31,33 @@
  .card-meta { font-size: 0.8rem; color: #888; }
  .empty-state { text-align: center; padding: 60px 20px; color: #888; background: #fff; border-radius: 10px; }
  footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
- .footer-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+ .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
  footer a { color: rgba(255,255,255,0.9); }
 </style>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-ancestors 'none';">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<style id="sc-font">body{font-family:'Segoe UI', Arial, sans-serif}body h1,body h2,body h3{font-family:'Segoe UI', Arial, sans-serif}</style>
+<style id="site-chrome">
+:where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
+[class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
+.sc-topbar{ background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.sc-topbar-inner{ max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+.sc-topbar-brand{ font-size: 1.15rem; font-weight: 700; color: #fff; }
+.sc-topbar-nav{ display: flex; gap: 18px; }
+.sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+.sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+.sc-topbar a,.sc-footer a{text-decoration:none}
+@media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
+</style>
 </head>
 <body>
-<header class="topbar">
- <div class="topbar-inner">
- <a href="/" class="topbar-brand">🚗 Poradnik Samochodowy</a>
- <nav class="topbar-nav">
+<header class="sc-topbar">
+ <div class="sc-topbar-inner">
+ <a href="/" class="sc-topbar-brand">🚗 Poradnik Samochodowy</a>
+ <nav class="sc-topbar-nav">
  <a href="/">Start</a>
+ <a href="/katalog/">Katalog</a>
  <a href="/blog.html">Artykuły</a>
  <a href="/about.html">O nas</a>
  <a href="/contact.html">Kontakt</a>
@@ -52,6 +65,8 @@
  </nav>
  </div>
 </header>
+
+
 <div class="page-hero">
  <h1>Wszystkie artykuły</h1>
  <p>Porady motoryzacyjne bez lania wody</p>
@@ -60,73 +75,111 @@
  <div class="article-grid" id="article-grid">
  <article class="article-card">
  <div class="card-category">Audi · Zakup używanego</div>
- <h2 class="card-title"><a href="/audi-a3-8v-vs-8p/">Audi A3 8V vs 8P: które wybrać i na co uważać</a></h2>
+ <h2 class="card-title"><a href="/peugeot-307-nie-dziala-nawiew/">Peugeot 307</a></h2>
  <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
- <p class="card-meta">Czerwiec 2026 · ~2100 słów</p>
+ <p class="card-meta">Peugeot 307 (2001–2008): nie działa nawiew. Sprawdź bezpiecznik 26 (30A), rezystor 6441L4 (Peugeot), 6441.L4, silnik dmuchawy. Poradnik krok po kroku.</p>
  </article>
- <article class="article-card">
- <div class="card-category">Audi · Start-stop</div>
- <h2 class="card-title"><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie start-stop Audi OBD2 bez VCDS: co działa, a co jest ryzykowne</a></h2>
- <p class="card-excerpt">Praktyczny poradnik dla kierowców Audi: aplikacje OBD2, kodowanie, moduł akumulatora i granice bezpiecznej modyfikacji.</p>
- <p class="card-meta">Czerwiec 2026 · ~2500 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/volkswagen/passat-b5/">Passat B5 typowe usterki i katalog silników</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Katalog modelu VW Passat B5 (1996–2005) – typowe usterki, dane techniczne silników, wycieraczki, problemy i FAQ. Sprawdź zanim kupisz.</p>
  </article>
- <article class="article-card">
- <div class="card-category">Import · Audi A3</div>
- <h2 class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 z USA — 2.0 TFSI: sprowadzenie, VIN i czy się opłaca</a></h2>
- <p class="card-excerpt">Silniki CZTA/CHHB, koszty importu krok po kroku, Carfax vs OTOMOTO — odpowiedź na pytania z Wykopu.</p>
- <p class="card-meta">Maj 2026 · ~3400 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/volkswagen-passat-b5-fl-nie-dziala-nawiew/">VW Passat B5 FL</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">VW Passat B5 FL nie działa nawiew? Rezystor OEM 3B0907521 — diagnostyka, tabela przyczyn, koszty naprawy. 65% usterek to rezystor. Instrukcja DIY i cena części.</p>
  </article>
-
- <article class="article-card">
- <div class="card-category">Katalog · Audi A3</div>
- <h2 class="card-title"><a href="/audi/a3-8p/">Audi A3 8P (2003–2013) — silniki, usterki, checklista zakupu</a></h2>
- <p class="card-excerpt">Kody silników 1.6/2.0 TDI i TFSI, rozmiary wycieraczek, najczęstsze usterki z forów i warsztatów.</p>
- <p class="card-meta">Maj 2026 · ~900 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/audi/a4-b7/">Audi A4 B7 1.8T</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Kompletny katalog Audi A4 B7 1.8T: dane techniczne, typowe usterki, harmonogram serwisu, części zamienne, koszty utrzymania. Porady dla właścicieli i…</p>
  </article>
- <article class="article-card">
- <div class="card-category">BMW · Nawiew</div>
- <h2 class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew: bezpiecznik, rezystor, silniczek</a></h2>
- <p class="card-excerpt">Bezpiecznik 30A, rezystor Endstufe, silniczek dmuchawy — trzy punkty do sprawdzenia w tej kolejności.</p>
- <p class="card-meta">Maj 2026 · ~1200 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/ford-mondeo-mk3-nie-dziala-nawiew/">Ford Mondeo Mk3</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Ford Mondeo Mk3 nie działa nawiew? Bezpiecznik F14 (30A), rezystor OEM 1S7H-18B647-AA — diagnostyka i wymiana DIY. Dane kosztów, przyczyny, gdzie kupić.</p>
  </article>
- <article class="article-card">
- <div class="card-category">VW · Nawiew</div>
- <h2 class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew: bezpiecznik, rezystor, moduł</a></h2>
- <p class="card-excerpt">SC23 30A w kabinie, rezystor pod pasażerem — sprawdzony schemat diagnostyczny dla Golf V (2003–2009).</p>
- <p class="card-meta">Maj 2026 · ~1200 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/opel-astra-g-nie-dziala-nawiew/">Opel Astra G</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Opel Astra G nie działa nawiew? Rezystor OEM 090127905D — dane diagnostyczne, tabela przyczyn, koszty naprawy. 85% usterek to rezystor. Instrukcja DIY i…</p>
  </article>
- <article class="article-card">
- <div class="card-category">Ford · Nawiew</div>
- <h2 class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew: GEM, rezystor, silniczek</a></h2>
- <p class="card-excerpt">Skrzynka bezpiecznikowa pod maską, moduł GEM i rezystor pod pasażerem — typowe przyczyny awarii.</p>
- <p class="card-meta">Maj 2026 · ~1200 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/audi-a3-8v-vs-8p/">Audi a3 8v vs 8p które wybrać</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Praktyczny poradnik: audi a3 8v vs 8p które wybrać — usterki, koszty, procedury.</p>
  </article>
- <article class="article-card">
- <div class="card-category">Skoda · Nawiew</div>
- <h2 class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew: SF27, rezystor, dmuchawa</a></h2>
- <p class="card-excerpt">Bezpiecznik SF27, rezystor za schowkiem pasażera, silniczek dmuchawy — schemat naprawy dla Octavii 1Z.</p>
- <p class="card-meta">Maj 2026 · ~1000 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Skoda Octavia 1Z nie działa nawiew? Rezystor opornika — wymiana DIY w 15 minut za ~100 PLN. Instrukcja krok po kroku.</p>
  </article>
- <article class="article-card">
- <div class="card-category">Toyota · Nawiew</div>
- <h2 class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew: bezpiecznik, silniczek</a></h2>
- <p class="card-excerpt">Bezpiecznik 15A (AM2), silniczek 87103-02210, rezystor pod prawą deską — diagnostyka krok po kroku.</p>
- <p class="card-meta">Maj 2026 · ~1000 słów</p>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Toyota Corolla E12 nie działa nawiew? Problem to najczęściej rezystor opornika. Diagnoza i wymiana DIY w 20 minut za 120 PLN. Instrukcja krok po kroku.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie Start-Stop Audi OBD2</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Wyłączenie Start-Stop Audi OBD2 krok po kroku bez VCDS. OBDEleven, CarScanner, modele A3/A4/A6/Q5, koszty i procedury diagnostyczne.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">BMW E46 nie działa nawiew? Bezpiecznik (skrzynka w kabinie, 30A), rezystor regulacji i silnik dmuchawy. Diagnostyka krok po kroku.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Ford Focus Mk2 (2004–2011) nie działa nawiew? Bezpiecznik F64 (30A) w skrzynce CJB. Rezystor za schowkiem pasażera. Diagnostyka krok po kroku + koszty.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">VW Golf 5 nie działa nawiew? Bezpiecznik SC23 (30A) pod deską kierowcy, rezystor za filtrem kabinowym. Diagnostyka krok po kroku + koszty naprawy.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 USA</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Importujesz A3 8V z USA? Całkowity koszt: 195 000–220 000 zł vs 210 000–250 000 zł na OTOMOTO. Silniki CZTA/CHHB, Carfax, cło i akcyza — krok po kroku.</p>
+ </article>
+        <article class="article-card">
+ <div class="card-category">Audi · Zakup używanego</div>
+ <h2 class="card-title"><a href="/audi/a3-8p/">Audi A3 8P</a></h2>
+ <p class="card-excerpt">Porównanie generacji A3 8P i 8V: silniki, diesle, S tronic, koszty utrzymania, komfort oraz checklista przed zakupem.</p>
+ <p class="card-meta">Audi A3 8P: kody nadwozia, lata produkcji, silniki (BKD, BWA, BLS), rozmiary wycieraczek, typowe usterki i co sprawdzić przed zakupem używanego auta.</p>
  </article>
  </div>
 </div>
+
+<style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
+<script src="/assets/router.js" defer></script>
 <footer>
- <div class="footer-inner">
+ <div class="sc-footer-inner">
  <span>© 2026 Poradnik Samochodowy</span>
  <nav style="display:flex;gap:16px;flex-wrap:wrap;">
  <a href="/about.html">O nas</a>
  <a href="/contact.html">Kontakt</a>
+ <a href="/disclosure.html">Przejrzystość</a>
+ <a href="/editorial-policy.html">Zasady redakcyjne</a>
  <a href="/privacy.html">Prywatność</a>
  <a href="/sitemap.html">Mapa strony</a>
  </nav>
  </div>
 </footer>
-<style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
-<script src="/assets/router.js" defer></script>
 </body>
 </html>
