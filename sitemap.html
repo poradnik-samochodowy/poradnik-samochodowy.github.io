@@ -35,6 +35,14 @@
 .sc-topbar-nav{ display: flex; gap: 18px; }
 .sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
 .sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+.reset,header.sc-topbar,footer.footer{box-sizing:border-box}
+.sc-topbar{ background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.sc-topbar-inner{ max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+.sc-topbar-brand{ font-size: 1.15rem; font-weight: 700; color: #fff; }
+.sc-topbar-nav{ display: flex; gap: 18px; }
+.sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+.sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+.sc-topbar a,.footer a{text-decoration:none}
 .sc-topbar a,.sc-footer a{text-decoration:none}
 @media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
 </style>
@@ -53,6 +61,8 @@
  </nav>
  </div>
 </header>
+
+
 
 <div class="topbar">
  <a href="/">🚗 Poradnik Samochodowy</a>
@@ -80,12 +90,12 @@
  <li><a href="/nie-dziala-nawiew/">Nie działa nawiew — wszystkie marki</a></li>
  </ul>
  <h2>Artykuły</h2>
- <ul id="articles-list"><li><a href="/peugeot-307-nie-dziala-nawiew/">Peugeot 307</a> <span style="color:#6b7280;">(2026-06-30)</span></li><li><a href="/volkswagen/passat-b5/">Passat B5 typowe usterki i katalog silników</a> <span style="color:#6b7280;">(2026-06-24)</span></li><li><a href="/volkswagen-passat-b5-fl-nie-dziala-nawiew/">VW Passat B5 FL</a> <span style="color:#6b7280;">(2026-06-18)</span></li><li><a href="/audi/a4-b7/">Audi A4 B7 1.8T</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/ford-mondeo-mk3-nie-dziala-nawiew/">Ford Mondeo Mk3</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/opel-astra-g-nie-dziala-nawiew/">Opel Astra G</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/audi-a3-8v-vs-8p/">Audi a3 8v vs 8p które wybrać</a> <span style="color:#6b7280;">(2026-06-11)</span></li><li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a> <span style="color:#6b7280;">(2026-06-10)</span></li><li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a> <span style="color:#6b7280;">(2026-06-10)</span></li><li><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie Start-Stop Audi OBD2</a> <span style="color:#6b7280;">(2026-06-03)</span></li><li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 USA</a> <span style="color:#6b7280;">(2026-05-20)</span></li><li><a href="/audi/a3-8p/">Audi A3 8P</a> <span style="color:#6b7280;">(2026-05-20)</span></li>
- </ul>
+ <ul id="articles-list"><li><a href="/peugeot-307-nie-dziala-nawiew/">Peugeot 307</a> <span style="color:#6b7280;">(2026-06-30)</span></li><li><a href="/volkswagen/passat-b5/">Passat B5 typowe usterki i katalog silników</a> <span style="color:#6b7280;">(2026-06-24)</span></li><li><a href="/volkswagen-passat-b5-fl-nie-dziala-nawiew/">VW Passat B5 FL</a> <span style="color:#6b7280;">(2026-06-18)</span></li><li><a href="/audi/a4-b7/">Audi A4 B7 1.8T</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/ford-mondeo-mk3-nie-dziala-nawiew/">Ford Mondeo Mk3</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/opel-astra-g-nie-dziala-nawiew/">Opel Astra G</a> <span style="color:#6b7280;">(2026-06-17)</span></li><li><a href="/audi-a3-8v-vs-8p/">Audi a3 8v vs 8p które wybrać</a> <span style="color:#6b7280;">(2026-06-11)</span></li><li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a> <span style="color:#6b7280;">(2026-06-10)</span></li><li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a> <span style="color:#6b7280;">(2026-06-10)</span></li><li><a href="/wylaczenie-start-stop-audi-obd2/">Wyłączenie Start-Stop Audi OBD2</a> <span style="color:#6b7280;">(2026-06-03)</span></li><li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a> <span style="color:#6b7280;">(2026-05-21)</span></li><li><a href="/audi-a3-import-usa-2-0-tfsi/">Audi A3 USA</a> <span style="color:#6b7280;">(2026-05-20)</span></li><li><a href="/audi/a3-8p/">Audi A3 8P</a> <span style="color:#6b7280;">(2026-05-20)</span></li></ul>
  </div>
 </div>
 
-<p style="margin-top: 20px; font-size: 0.9rem; color: #666;">Mapa strony umożliwia wygodne przeglądanie wszystkich artykułów i materiałów dostępnych na Poradniku Samochodowym. Używaj jej do znalezienia artykułów dotyczących konkretnego modelu samochodu, problemu technicznego lub poradników dotyczących napraw. Strona zawiera linki do katalogów marek samochodowych i kolekcji artykułów pogrupowanych tematycznie.</p><footer>
+<p style="margin-top: 20px; font-size: 0.9rem; color: #666;">Mapa strony umożliwia wygodne przeglądanie wszystkich artykułów i materiałów dostępnych na Poradniku Samochodowym. Używaj jej do znalezienia artykułów dotyczących konkretnego modelu samochodu, problemu technicznego lub poradników dotyczących napraw. Strona zawiera linki do katalogów marek samochodowych i kolekcji artykułów pogrupowanych tematycznie.</p>
+<footer>
  <div class="sc-footer-inner">
  <span>© 2026 Poradnik Samochodowy</span>
  <nav style="display:flex;gap:16px;flex-wrap:wrap;">

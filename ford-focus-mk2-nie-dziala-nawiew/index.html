@@ -163,6 +163,14 @@
 .sc-topbar-nav{ display: flex; gap: 18px; }
 .sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
 .sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+.reset,header.sc-topbar,footer.footer{box-sizing:border-box}
+.sc-topbar{ background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.sc-topbar-inner{ max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+.sc-topbar-brand{ font-size: 1.15rem; font-weight: 700; color: #fff; }
+.sc-topbar-nav{ display: flex; gap: 18px; }
+.sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+.sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
+.sc-topbar a,.footer a{text-decoration:none}
 .sc-topbar a,.sc-footer a{text-decoration:none}
 @media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
 </style>
@@ -182,6 +190,8 @@
  </nav>
  </div>
 </header>
+
+
 
 
 
@@ -400,6 +410,7 @@
 
 <style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
 <script src="/assets/router.js" defer></script>
+
 <footer>
  <div class="sc-footer-inner">
  <span>© 2026 Poradnik Samochodowy</span>
