@@ -5,3 +5,5 @@ Disallow: /*.json$
 
 # Google Search Console verification file - must be accessible
 Allow: /googled82ff9901477ec4d.html
+
+Sitemap: https://poradnik-samochodowy.github.io/sitemap.xml
