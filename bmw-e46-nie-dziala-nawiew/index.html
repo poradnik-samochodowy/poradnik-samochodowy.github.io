@@ -1,157 +1,53 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMW E46 — nie działa nawiew - rezystor, bezpiecznik, silnik</title>
-<meta name="description" content="BMW E46 nie działa nawiew? Bezpiecznik (skrzynka w kabinie, 30A), rezystor regulacji i silnik dmuchawy. Diagnostyka krok po kroku.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/">
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "Article",
- "headline": "BMW E46 nie działa nawiew — bezpiecznik, rezystor, silnik dmuchawy",
- "datePublished": "2026-05-21",
- "dateModified": "2026-05-21",
- "publisher": {
-  "@type": "Organization",
-  "name": "Poradnik Samochodowy"
- },
- "author": {
-  "@type": "Person",
-  "name": "Krzysztof Wilk"
- },
- "mainEntityOfPage": "https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/"
-}</script>
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Jaki bezpiecznik odpowiada za nawiew w BMW E46?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Bezpiecznik silnika dmuchawy w BMW E46 to element 30A w skrzynce bezpieczników w kabinie (po stronie pasażera, za tapicerką deski rozdzielczej). Dokładna pozycja zależy od rocznika — sprawdź naklejkę na klapce skrzynki lub instrukcję obsługi."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Działa tylko 4. bieg nawiewu — co jest zepsute?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Biegi 1–3 nie działają, 4 działa = uszkodzony rezystor (moduł końcowy, Endstufe). To najczęstsza usterka w E46. Koszt naprawy: część 60–140 PLN, robocizna 100–200 PLN."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Żaden bieg nawiewu nie działa w E46 — od czego zacząć?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Zaczynaj od bezpiecznika. Jeśli OK — sprawdź napięcie na złączu silnika dmuchawy (powinno być ~12V na najwyższym biegu). Brak napięcia = problem w sterowaniu lub rezystorze. Napięcie jest, dmuchawa nie kręci = wymiana silnika dmuchawy."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Gdzie jest rezystor dmuchawy w BMW E46?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Rezystor (moduł końcowy Endstufe) w BMW E46 znajduje się w kanale nawiewu za schowkiem pasażera. Demontaż: wyciągnij schowek (3 śruby), rezystor widoczny z prawej strony kanału powietrza, odłącz wtyczkę, wykręć 2 śruby mocujące."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Ile kosztuje naprawa nawiewu w BMW E46?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Rezystor (Endstufe): część 60–140 PLN, robocizna 100–200 PLN. Silnik dmuchawy: część 150–350 PLN, robocizna 200–400 PLN. Łącznie z diagnozą spodziewaj się 200–600 PLN w zależności od przyczyny."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy mogę sam wymienić rezystor w E46?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Tak, wymiana rezystora to zadanie dla każdego kto nie boi się demontażu schowka. Potrzebujesz klucza Torx T20, 30 minut czasu i zastępczego modułu (Hella, Valeo lub oryginał BMW)."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Nawiew działa losowo, czasem włącza się po wstrząsie — co to jest?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "To klasyczny objaw uszkodzonego styku w rezystorze lub przerwy w wiązce przewodów przy złączu. Sprawdź stan złącza wtykowego rezystora — korozja lub poluzowany styk to częsta przyczyna."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "E46 nie ma nawiewu po wymianie akumulatora — dlaczego?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Po odłączeniu akumulatora może dojść do resetu sterownika klimatyzacji. Spróbuj: odłącz ponownie akumulator na 5 minut, podłącz i uruchom silnik, ustaw klimę na auto. Jeśli nie pomaga — sprawdź bezpiecznik i napięcie na dmuchawie."
-   }
-  }
- ]
-}</script>
-<style>
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a2e; background: #f5f5f5; }
- a { color: #c0392b; text-decoration: none; }
- a:hover { text-decoration: underline; }
- .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
- .topbar-inner { max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
- .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
- .topbar-nav { display: flex; gap: 18px; flex-wrap: wrap; }
- .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
- .breadcrumb { max-width: 1120px; margin: 14px auto 0; padding: 0 20px; font-size: 0.85rem; color: #666; }
- .breadcrumb a { color: #c0392b; }
- .article-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); color: #fff; padding: 36px 20px; }
- .article-hero-inner { max-width: 1120px; margin: 0 auto; }
- .kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 8px; }
- .article-hero h1 { font-size: 1.9rem; font-weight: 800; line-height: 1.25; }
- .article-hero .lead { margin-top: 12px; opacity: 0.88; max-width: 700px; font-size: 1.05rem; }
- .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
- .spec-pill { background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.82rem; }
- .answer-box { background: #e8f5e9; border-left: 5px solid #2ecc71; padding: 18px 22px; margin: 24px 0 20px; border-radius: 0 8px 8px 0; }
- .answer-box strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #27ae60; margin-bottom: 8px; }
- .answer-box p { margin: 0; font-size: 1rem; color: #1a1a2e; }
- .wrap { max-width: 1120px; margin: 28px auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; }
- @media(max-width:720px){ .wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
- .content { background: #fff; border-radius: 10px; padding: 32px 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
- @media(max-width:600px){ .content { padding: 22px 18px; } }
- h2 { font-size: 1.3rem; color: #922b21; margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
- h2:first-of-type { margin-top: 0; }
- h3 { font-size: 1.05rem; color: #333; font-weight: 700; margin: 22px 0 10px; }
- p { margin-bottom: 14px; }
- ul, ol { margin: 0 0 16px 22px; }
- li { margin-bottom: 7px; }
- table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.93rem; }
- th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid #e8e8e8; }
- th { background: #922b21; color: #fff; font-weight: 600; }
- tr:nth-child(even) { background: #fafafa; }
- .note { background: #fff8e6; border-left: 4px solid #f39c12; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; border-radius: 0 6px 6px 0; }
- .danger { background: #fdecea; border-left: 4px solid #e74c3c; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; border-radius: 0 6px 6px 0; }
- .faq details { border: 1px solid #e8e8e8; border-radius: 8px; margin-bottom: 10px; }
- .faq summary { padding: 14px 18px; font-weight: 600; cursor: pointer; list-style: none; font-size: 0.97rem; }
- .faq summary::-webkit-details-marker { display: none; }
- .faq details[open] summary { border-bottom: 1px solid #eee; color: #922b21; }
- .faq .answer { padding: 14px 18px; font-size: 0.93rem; color: #444; }
- .related-links { list-style: none; margin: 0; padding: 0; }
- .related-links li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.93rem; }
- .related-links li:last-child { border: none; }
- .sidebar-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; }
- .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #922b21; margin-bottom: 14px; }
- .cta-box { background: linear-gradient(135deg, #922b21, #c0392b); color: #fff; border-radius: 10px; padding: 24px; margin-top: 32px; text-align: center; }
- .cta-box h3 { color: #fff; margin: 0 0 10px; font-size: 1.1rem; }
- .cta-box p { color: rgba(255,255,255,0.88); margin-bottom: 16px; font-size: 0.93rem; }
- .cta-btn { display: inline-block; background: #fff; color: #922b21; font-weight: 700; padding: 12px 28px; border-radius: 6px; font-size: 0.95rem; }
- footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
- .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
- footer a { color: rgba(255,255,255,0.9); }
-</style>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW E46 nie działa nawiew: bezpiecznik 50, rezystor, silnik</title>
+    <meta name="description" content="BMW E46 nie działa nawiew? Sprawdź bezpiecznik 50 (40 A) i 28, objawy padniętego stopnia końcowego pod deską i kiedy winny jest silnik dmuchawy. Krok po kroku.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/">
+    <meta property="og:title" content="BMW E46 nie działa nawiew: bezpiecznik 50, rezystor, silnik">
+    <meta property="og:description" content="BMW E46 nie działa nawiew? Sprawdź bezpiecznik 50 (40 A) i 28, objawy padniętego stopnia końcowego pod deską i kiedy winny jest silnik dmuchawy. Krok po kroku.">
+    <meta property="og:url" content="https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/">
+    <meta property="og:type" content="article">
+    
+    <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; }
+    .article-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); color: #fff; padding: 36px 20px; }
+    .article-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .spec-pill { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+    .content { max-width: 1040px; margin: 28px auto; padding: 0 20px; }
+    h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e8c3c3; padding-bottom: 10px; }
+    h3 { font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-top: 1.5em; margin-bottom: 0.8em; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    table th { background: #1a1a2e; color: white; padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+    table td { padding: 12px 15px; border-bottom: 1px solid #ddd; }
+    table tr:nth-child(even) { background: #f5f5f5; }
+    table tr:hover { background: #f0f0f0; }
+    .answer-box { background: #f0f4ff; border-left: 4px solid #1a1a2e; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .answer-box strong { color: #1a1a2e; }
+    a { color: #c0392b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .sidebar { max-width: 300px; margin-left:0; }
+    .sidebar-card { background: white; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 20px; }
+    .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
+    .sidebar-links { list-style: none; }
+    .sidebar-links li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+    .sidebar-links li:last-child { border: none; margin: 0; padding: 0; }
+    .sidebar-links a { font-size: 0.9rem; }
+    .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    strong { font-weight: 700; color: #1a1a2e; }
+    em { font-style: italic; }
+    ul, ol { margin: 15px 0; margin-left: 30px; }
+    li { margin-bottom: 8px; }
+    </style>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "BMW E46 — nie działa nawiew: stopień końcowy (rezystor), bezpiecznik i silnik dmuchawy", "description": "BMW E46 nie działa nawiew? Sprawdź bezpiecznik 50 (40 A) i 28, objawy padniętego stopnia końcowego pod deską i kiedy winny jest silnik dmuchawy. Krok po kroku.", "datePublished": "2026-05-21", "dateModified": "2026-10-14", "author": {"@type": "Person", "name": "Krzysztof Wilk"}, "publisher": {"@type": "Organization", "name": "Poradnik Samochodowy"}, "mainEntityOfPage": "https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/", "url": "https://poradnik-samochodowy.github.io/bmw-e46-nie-dziala-nawiew/", "inLanguage": "pl-PL"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jaki bezpiecznik odpowiada za nawiew w BMW E46?", "acceptedAnswer": {"@type": "Answer", "text": "Od 09.1999 obwód dmuchawy chroni bezpiecznik nr 50 (40 A), a sterownik ogrzewania i klimatyzacji nr 28 (5 A). W autach z lat 1998–1999 rolę bezpiecznika dmuchawy pełnił nr 37 (50 A). Panel jest w schowku pasażera."}}, {"@type": "Question", "name": "Gdzie jest rezystor dmuchawy w BMW E46?", "acceptedAnswer": {"@type": "Answer", "text": "Stopień końcowy znajduje się pod deską po stronie pasażera, przy tunelu środkowym, wsunięty w obudowę nagrzewnicy. Dostęp uzyskasz po wyjęciu schowka i dolnej osłony."}}, {"@type": "Question", "name": "Dlaczego dmuchawa w E46 chodzi po wyłączeniu silnika?", "acceptedAnswer": {"@type": "Answer", "text": "To typowy objaw uszkodzonego stopnia końcowego, który podaje napięcie na silnik mimo wyłączonego zapłonu. Do czasu naprawy wyjmij bezpiecznik obwodu dmuchawy, by nie rozładować akumulatora."}}, {"@type": "Question", "name": "Skąd wyjmuje się silnik dmuchawy w E46?", "acceptedAnswer": {"@type": "Answer", "text": "Od strony komory silnika, po zdjęciu obudowy filtra kabinowego, osłony dmuchawy i prawego zespołu klapy. Wycieraczki warto wcześniej ustawić pionowo."}}, {"@type": "Question", "name": "Ile trwa wymiana stopnia końcowego?", "acceptedAnswer": {"@type": "Answer", "text": "Pelican Parts szacuje ją na około godzinę z Torxem T20 i wkrętakami. W niektórych egzemplarzach trzeba dodatkowo zdjąć wspornik silniczka krokowego, co wydłuża pracę."}}, {"@type": "Question", "name": "Czy można wymienić tylko stopień końcowy, jeśli silnik piszczy?", "acceptedAnswer": {"@type": "Answer", "text": "Można, ale piszczący silnik zwykle pobiera więcej prądu i obciąża stopień. Gdy silnik jest zużyty, rozsądniej wymienić oba elementy naraz."}}, {"@type": "Question", "name": "Co, jeśli bezpiecznik dmuchawy przepala się ponownie?", "acceptedAnswer": {"@type": "Answer", "text": "Przerwij próby i nie wkładaj większego amperażu. Przyczyną może być zablokowany silnik, zwarcie w stopniu końcowym lub w wiązce — potrzebny jest pomiar."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "e46 BMW 330i Heater, AC Blower Motor Fan Replacement", "description": "Wymiana silnika dmuchawy nawiewu w BMW E46 330i: zdjęcie obudowy filtra kabinowego, dostęp do dmuchawy i wyjęcie silnika (kanał Dan T.).", "thumbnailUrl": "https://i.ytimg.com/vi/XrD9nLrjl30/hqdefault.jpg", "uploadDate": "2013-12-22", "embedUrl": "https://www.youtube-nocookie.com/embed/XrD9nLrjl30"}</script>
 <style id="site-chrome">
 :where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
 [class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
@@ -198,213 +94,206 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 
 
 
-<div class="breadcrumb">
- <a href="/">Strona główna</a> › <a href="/nie-dziala-nawiew/">Nie działa nawiew</a> › BMW E46
+
+
+
+
+<div class="breadcrumb" style="max-width:1040px;margin:14px auto 0;padding:0 20px;font-size:0.85rem;color:#666"><a href="/">Strona główna</a> › <a href="/nie-dziala-nawiew/">Nie działa nawiew</a> › BMW E46</div>
+
+<div class="article-hero"><div style="max-width:1040px;margin:0 auto;padding:0 20px"><h1>BMW E46 — nie działa nawiew: stopień końcowy (rezystor), bezpiecznik i silnik dmuchawy</h1><p>Diagnostyka według daty produkcji, objawu i miejsca montażu — zamiast kupowania części na próbę.</p>
+<div class="spec-pills"><span class="spec-pill">E46 1997–2006</span><span class="spec-pill">Sedan / Touring / Coupe / Cabrio / Compact</span><span class="spec-pill">IHKA i wersje z ręczną regulacją</span></div></div></div>
+
+<div class="content layout" style="display: grid; grid-template-columns: 1fr 300px; gap: 28px;">
+
+<main>
+<p>Gdy w BMW E46 nie działa nawiew, winny najczęściej okazuje się stopień końcowy dmuchawy (potocznie „rezystor”), rzadziej bezpiecznik albo sam silnik. Trzy podzespoły dają podobne objawy, ale siedzą w zupełnie innych miejscach: bezpieczniki w schowku, stopień końcowy pod deską po stronie pasażera, a silnik dmuchawy — co zaskakuje wielu właścicieli — dostępny jest od komory silnika. Poniżej nowe podejście do tej starej usterki: najpierw data produkcji i objaw, potem dopiero zakupy.</p>
+
+<div class="answer-box"><strong>Szybka odpowiedź (TL;DR):</strong> W E46 produkowanym od 09.1999 sprawdź w panelu w schowku bezpiecznik <strong>nr 50 (40 A)</strong> obwodu dmuchawy i <strong>nr 28 (5 A)</strong> sterownika ogrzewania/klimatyzacji. Jeśli są sprawne, a dmuchawa skacze z prędkościami, działa na jednym biegu, nie wyłącza się albo milczy — najbardziej prawdopodobny jest stopień końcowy (Final Stage Unit) pod deską pasażera, wymieniany śrubokrętem Torx T20 w około godzinę. Głośny, piszczący wentylator lub brak obrotów mimo zasilania wskazuje na silnik dmuchawy, który wyjmuje się od strony komory silnika, po zdjęciu obudowy filtra kabinowego.</div>
+
+<p>Poniższy diagnostyk zestawia datę produkcji Twojego egzemplarza z objawem i podpowiada, od czego zacząć. Wszystkie dane, na których się opiera, znajdziesz w kolejnych sekcjach.</p>
+
+<div id="e46-diag" style="border:2px solid #c0392b;padding:20px;border-radius:8px;margin:20px 0;background:#fff">
+<p style="margin-top:0"><strong>Diagnostyk nawiewu BMW E46</strong></p>
+<label for="e46-date">Data produkcji (z tabliczki lub dekodera VIN):</label><br>
+<select id="e46-date" style="width:100%;max-width:420px;padding:6px;margin:4px 0 12px">
+<option value="early">03.1998 – 09.1998</option>
+<option value="mid">09.1998 – 09.1999</option>
+<option value="late" selected>od 09.1999</option>
+<option value="unknown">Nie wiem</option>
+</select><br>
+<label for="e46-sym">Co dokładnie się dzieje?</label><br>
+<select id="e46-sym" style="width:100%;max-width:420px;padding:6px;margin:4px 0 12px">
+<option value="none">Żaden bieg nie działa, cisza</option>
+<option value="jumps">Prędkość sama skacze albo działa tylko jeden bieg</option>
+<option value="stuck">Dmuchawa nie wyłącza się / chodzi po wyłączeniu auta, akumulator się rozładowuje</option>
+<option value="noise">Dmuchawa piszczy, szumi lub stuka</option>
+<option value="weak">Dmuchawa wyraźnie pracuje, ale powietrza jest mało</option>
+<option value="panel">Panel klimatyzacji ciemny, nie reaguje</option>
+</select><br>
+<label><input type="checkbox" id="e46-fuse"> Bezpiecznik obwodu dmuchawy był już przepalony i przepala się ponownie</label>
+<div id="e46-out" role="status" aria-live="polite" style="margin-top:14px;padding:12px 14px;background:#f7f9fa;border-left:4px solid #c0392b"></div>
+<noscript>Bez JavaScript: od 09.1999 sprawdź bezpieczniki 50 (40 A) i 28 (5 A), następnie złącze i stopień końcowy pod deską pasażera.</noscript>
+</div>
+<script>
+(function(){
+var d=document.getElementById('e46-date'),s=document.getElementById('e46-sym'),f=document.getElementById('e46-fuse'),o=document.getElementById('e46-out');
+var fuse={early:'nr 37 (50 A) — w tym okresie zasila przekaźnik dmuchawy; oraz nr 28 (5 A)',mid:'nr 37 (50 A) — wyłącznik/stopień końcowy dmuchawy; oraz nr 28 (5 A)',late:'nr 50 (40 A) — wyłącznik/stopień końcowy dmuchawy; oraz nr 28 (5 A)',unknown:'nr 50 (40 A) lub nr 37 (50 A) zależnie od daty produkcji — porównaj z opisem na pokrywie panelu; oraz nr 28 (5 A)'};
+var sym={
+none:['Brak zasilania albo martwy podzespół','Najpierw bezpieczniki, potem napięcie i masa na złączu stopnia końcowego. Napięcie jest, a silnik stoi — podejrzany silnik dmuchawy lub sam stopień końcowy.'],
+jumps:['Stopień końcowy (Final Stage Unit)','To klasyczny objaw zużytego stopnia końcowego. Przy wymianie obejrzyj wtyczkę: przebarwione lub nadtopione piny trzeba naprawić, inaczej nowa część też się przegrzeje.'],
+stuck:['Stopień końcowy (Final Stage Unit)','Uszkodzony stopień potrafi zasilać dmuchawę także po wyłączeniu auta. Do czasu naprawy możesz wyjąć bezpiecznik obwodu dmuchawy, żeby nie rozładować akumulatora.'],
+noise:['Silnik dmuchawy (łożyska, wirnik)','Kurz zużywa łożyska i wentylator zaczyna piszczeć. Silnik wyjmuje się od komory silnika — sprawdź też, czy w obudowie nie ma liści.'],
+weak:['Filtr kabinowy, wlot powietrza, klapy','Elektryka działa, problemem jest przepływ. Zacznij od filtra kabinowego w komorze silnika i drożności wlotu pod podszybiem.'],
+panel:['Zasilanie panelu i sterownika','Sprawdź bezpiecznik nr 28 (5 A). Jeśli przepala się wielokrotnie, szukaj zwarcia w wiązce zamiast wkładać kolejne bezpieczniki.']};
+function run(){
+var r=sym[s.value];o.textContent='';
+var a=document.createElement('p');a.style.margin='0 0 8px';var b=document.createElement('strong');b.textContent='Najbardziej prawdopodobne: '+r[0];a.appendChild(b);o.appendChild(a);
+var p=document.createElement('p');p.style.margin='0 0 8px';p.textContent=r[1];o.appendChild(p);
+var q=document.createElement('p');q.style.margin='0';q.textContent='Bezpieczniki do sprawdzenia (panel w schowku): '+fuse[d.value]+'.';o.appendChild(q);
+if(f.checked){var w=document.createElement('p');w.style.margin='8px 0 0';w.style.color='#922b21';w.textContent='Ponowne przepalenie oznacza zwarcie lub zablokowany silnik. Nie wkładaj większego amperażu — zleć pomiar wiązki i poboru prądu dmuchawy.';o.appendChild(w);}
+}
+d.addEventListener('change',run);s.addEventListener('change',run);f.addEventListener('change',run);run();
+})();
+</script>
+
+<h2>Dlaczego w E46 „rezystor” to tak naprawdę stopień końcowy?</h2>
+<p>W E46 prędkością dmuchawy steruje elektroniczny stopień końcowy (Final Stage Unit, FSU), a nie prosty zestaw oporników. Dlatego objawy jego awarii są inne niż w starszych autach: zamiast „działa tylko czwarty bieg” częściej widać skakanie obrotów albo dmuchawę, która nie chce się wyłączyć.</p>
+<p>Poradnik techniczny <a href="https://www.pelicanparts.com/BMW/techarticles/BMW-3-Series-E46/57-ELEC-Blower_Motor_Final_Stage_Replacement/57-ELEC-Blower_Motor_Final_Stage_Replacement.htm">Pelican Parts o wymianie stopnia końcowego w E46</a> opisuje go jako element, który odbiera sygnał żądanej prędkości z panelu klimatyzacji i reguluje napięcie podawane na silnik. Autorzy nazywają go częścią o wysokiej awaryjności — nie tylko w E46, ale też w innych BMW z tego okresu. Typowe objawy według tego źródła to wahania prędkości od wysokiej do niskiej, całkowity brak pracy dmuchawy (a więc brak nawiewu zarówno przy ogrzewaniu, jak i klimatyzacji) oraz praca na jednej prędkości niezależnie od ustawienia.</p>
+<h3>Czwarty objaw, o którym mało kto mówi: rozładowany akumulator</h3>
+<p>Sprzedawcy części opisują jeszcze jeden scenariusz: uszkodzony stopień potrafi podawać napięcie na silnik po wyłączeniu zapłonu. Dmuchawa szumi na parkingu, a rano auto nie odpala. Jeśli słyszysz nawiew po zamknięciu samochodu, nie czekaj — to też jest „nie działa nawiew”, tylko w odwrotną stronę.</p>
+<h3>Skąd te awarie?</h3>
+<p>Najczęściej powodem jest wiek i ciepło. Element pracuje przy dużym prądzie i oddaje ciepło do strumienia powietrza w obudowie nawiewu. Uszkodzenie bywa też skutkiem awarii innego elementu układu. Dlatego przy wymianie warto od razu wymienić filtr kabinowy i sprawdzić pracę silnika dmuchawy — tak radzi m.in. BimmerWorld.</p>
+
+<table><thead><tr><th>Objaw</th><th>Najbardziej prawdopodobna przyczyna</th><th>Gdzie szukać</th><th>Pierwszy krok</th></tr></thead><tbody>
+<tr><td>Prędkość sama się zmienia</td><td>Stopień końcowy</td><td>Pod deską pasażera, przy tunelu</td><td>Oględziny wtyczki, wymiana FSU</td></tr>
+<tr><td>Działa tylko jedna prędkość</td><td>Stopień końcowy</td><td>Pod deską pasażera</td><td>Jak wyżej</td></tr>
+<tr><td>Dmuchawa chodzi po wyłączeniu auta</td><td>Stopień końcowy</td><td>Pod deską pasażera</td><td>Wyjęcie bezpiecznika do czasu naprawy</td></tr>
+<tr><td>Cisza na wszystkich ustawieniach</td><td>Bezpiecznik, zasilanie, FSU lub silnik</td><td>Panel w schowku, potem złącza</td><td>Bezpieczniki, napięcie i masa</td></tr>
+<tr><td>Pisk, szum łożysk, stukanie</td><td>Silnik dmuchawy</td><td>Za ścianą grodziową, od komory silnika</td><td>Oględziny wirnika, wymiana silnika</td></tr>
+<tr><td>Słaby przepływ przy pracującej dmuchawie</td><td>Filtr kabinowy, wlot, klapy</td><td>Komora silnika, obudowa nawiewu</td><td>Wymiana filtra, kontrola wlotu</td></tr>
+</tbody></table>
+
+<h2>Który bezpiecznik odpowiada za nawiew w BMW E46?</h2>
+<p>W egzemplarzach produkowanych od 09.1999 obwód dmuchawy chroni bezpiecznik nr 50 o wartości 40 A, a sterownik ogrzewania i klimatyzacji — bezpiecznik nr 28 (5 A). We wcześniejszych autach przypisanie jest inne, więc data produkcji ma tu kluczowe znaczenie.</p>
+<p>Zestawienie z <a href="https://www.bolidenforum.de/forum/threads/bmw-3-series-e46-1998-2006-fuses-and-relays.4682851/">wątku o bezpiecznikach E46 na forum Boliden</a>, zgodne z opisem na pokrywie panelu, wygląda tak:</p>
+<table><thead><tr><th>Bezpiecznik</th><th>Wartość</th><th>Okres produkcji</th><th>Obwód</th></tr></thead><tbody>
+<tr><td>28</td><td>5 A</td><td>cała produkcja</td><td>Sterownik ogrzewania i klimatyzacji, przekaźnik dmuchawy</td></tr>
+<tr><td>37</td><td>50 A</td><td>03.1998 – 09.1998</td><td>Przekaźnik dmuchawy</td></tr>
+<tr><td>37</td><td>50 A</td><td>09.1998 – 09.1999</td><td>Wyłącznik dmuchawy (IHS) / stopień końcowy (IHKA)</td></tr>
+<tr><td>50</td><td>25 A</td><td>do 09.1999</td><td>Stacyjka — nie dmuchawa</td></tr>
+<tr><td>50</td><td>40 A</td><td>od 09.1999</td><td>Wyłącznik / stopień końcowy dmuchawy</td></tr>
+</tbody></table>
+<h3>Jak dostać się do bezpieczników</h3>
+<p>Panel bezpieczników jest w schowku pasażera, a nie w bocznej ściance deski. Otwórz schowek, przekręć dwa zatrzaski u góry i opuść pokrywę z bezpiecznikami. Na jej wewnętrznej stronie powinna być naklejka z rozpiską — to ona rozstrzyga, gdy wyposażenie Twojego auta odbiega od tabeli. Druga skrzynka (z dużymi bezpiecznikami rzędu 100–200 A) znajduje się za schowkiem, a trzecia w komorze silnika przy podszybiu; obwodu dmuchawy zwykle tam nie szukasz.</p>
+<div class="warning"><strong>Nie zwiększaj amperażu.</strong> Jeśli nowy bezpiecznik 40 A przepala się od razu, coś pobiera za dużo prądu: zablokowany silnik, zwarcie w stopniu końcowym albo przetarta wiązka. Mocniejszy bezpiecznik przeniesie problem na przewody.</div>
+
+<h2>Gdzie jest stopień końcowy w BMW E46 i jak go wymienić?</h2>
+<p>Stopień końcowy siedzi pod deską rozdzielczą po stronie pasażera, przy tunelu środkowym, wsunięty w obudowę nagrzewnicy. Dostęp wymaga wyjęcia schowka i dolnej osłony, a sama wymiana to jedna śruba Torx T20 i zatrzask.</p>
+<p>Pelican Parts szacuje tę pracę na około godzinę, z narzędziami: Torx T20, wkrętak krzyżakowy i płaski. Kolejność według ich instrukcji:</p>
+<ol>
+<li>Opróżnij schowek. Usuń nit mocujący amortyzator schowka po lewej stronie i odepnij amortyzator.</li>
+<li>Usuń nit paska po prawej stronie i odepnij pasek.</li>
+<li>Wykręć pięć śrub krzyżakowych schowka, opuść go, odłącz wtyczkę lampki i wiązkę z tyłu, wyjmij schowek.</li>
+<li>Opuść dolną osłonę, odłącz oświetlenie przestrzeni na nogi i zdejmij osłonę.</li>
+<li>Po lewej stronie przestrzeni na nogi pasażera odłącz wtyczkę stopnia końcowego — ściśnij zaczepy z góry i z dołu.</li>
+<li>Wykręć śrubę T20, zwolnij zatrzask i wysuń stopień z obudowy.</li>
+<li>Nowy element wsuń do zatrzaśnięcia, dokręć T20, podłącz wtyczkę i złóż wszystko w odwrotnej kolejności.</li>
+</ol>
+<h3>Uwagi praktyków z komentarzy</h3>
+<p>Pod tym poradnikiem kilku właścicieli zgłosiło, że w ich autach musieli zdjąć jeszcze wspornik silniczka krokowego (dodatkowe śruby T20), a w wersji z kierownicą po prawej stronie dostęp był dużo trudniejszy. Przygotuj się więc na więcej niż jedną śrubę i nie podważaj zatrzasku na siłę, jeśli coś jeszcze trzyma.</p>
+<h3>Który numer części?</h3>
+<p>Sklep BimmerWorld przypisuje oryginalny numer 64 11 6 923 204 do E46 z lat 1999–2005 (m.in. 320i, 323i, 325i, 328i, 330i i M3). Mimo to zamiennik dobieraj po VIN — numery części BMW zmieniały się w trakcie produkcji. Przy okazji sprawdź piny we wtyczce — przebarwienia i nadtopiony plastik oznaczają, że złącze też wymaga naprawy.</p>
+
+<h2>Kiedy winny jest silnik dmuchawy?</h2>
+<p>Silnik jest głównym podejrzanym, gdy dmuchawa piszczy, szumi łożyskami albo stoi mimo dobrego bezpiecznika i poprawnego zasilania. W E46 wyjmuje się go od strony komory silnika, po zdjęciu obudowy filtra kabinowego i osłon przy ścianie grodziowej.</p>
+<p>Pelican Parts radzi, by przy awarii silnika wymienić jednocześnie stopień końcowy — żeby nie rozbierać wszystkiego drugi raz, gdy padnie kolejny element. Ma to sens także elektrycznie: zużyty, ciężko chodzący silnik pobiera więcej prądu i grzeje stopień końcowy.</p>
+<h3>Jak przebiega demontaż</h3>
+<p>Użytkownik forum NAM3 opisał w <a href="https://nam3forum.com/forums/forum/main-forum/e46-2001-2006/308025-blower-motor-replacement">wątku o wymianie dmuchawy w E46</a> metodę, którą dopracował po kilkukrotnym wyjmowaniu silnika. Najważniejsze punkty:</p>
+<ul>
+<li>W komorze silnika zdejmij obudowę filtra kabinowego i elementy, które zasłaniają ścianę grodziową (w jego M3 także rozpórkę i dolot).</li>
+<li>Ustaw wycieraczki pionowo: włącz zapłon, uruchom wycieraczki i wyłącz zapłon w połowie ruchu. Nie przestawiaj ramion ręcznie.</li>
+<li>Odkręć górną śrubę T20 osłony dmuchawy, zwolnij dwa dolne zaczepy i wyprowadź osłonę, obracając ją.</li>
+<li>Wykręć trzy śruby T20 prawego zespołu klapy, unieś blokadę i wyjmij zespół, nie ciągnąc go za mocno.</li>
+<li>Odłącz wtyczkę, odepnij ustalacz i wysuń silnik, uważając na łopatki wirnika.</li>
+</ul>
+<p>Sam autor przyznaje, że to wciąż mozolna robota. Przy montażu dopilnuj, by nowy silnik był ustawiony tak samo jak stary, a zespół klapy trafił w prowadnicę po lewej stronie.</p>
+<p>Na filmie Dana T. widać tę samą procedurę w E46 330i: zdjęcie obudowy filtra (od 0:00), dostęp do dmuchawy (od 1:36) i wyjęcie silnika (od 7:12).</p>
+<div style="position:relative;width:100%;aspect-ratio:16/9;margin:16px 0 22px"><iframe src="https://www.youtube-nocookie.com/embed/XrD9nLrjl30" loading="lazy" title="BMW E46 330i — wymiana silnika dmuchawy nawiewu" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+
+<h2>Jak odróżnić awarię silnika od awarii stopnia końcowego?</h2>
+<p>Pomiar rozstrzyga szybciej niż wymiana części na próbę: jeśli na silniku pojawia się napięcie, a on stoi lub ledwo się kręci, winny jest silnik; jeśli napięcia nie ma mimo sprawnych bezpieczników i sygnału z panelu, szukaj w stopniu końcowym lub w wiązce.</p>
+<p>W odpowiedzi na pytanie czytelnika serwis Pelican Parts zaleca przy braku nawiewu na wszystkich prędkościach najpierw sprawdzić bezpieczniki, a potem to, czy silnik dostaje zasilanie i masę po włączeniu. Przy usterkach pojawiających się po czasie (np. nawiew znika po 30 minutach) radzą obserwować sygnał sterujący do stopnia końcowego oraz jego zasilanie i masę w momencie wystąpienia problemu.</p>
+<h3>Nie podłączaj 12 V na ślepo</h3>
+<p>Krążąca w sieci rada „podepnij akumulator bezpośrednio do silnika” bywa skuteczna, ale tylko na zaciskach samego silnika, z przewodem zabezpieczonym bezpiecznikiem. Podanie napięcia na przypadkowe piny wtyczki stopnia końcowego może uszkodzić elektronikę panelu klimatyzacji. Trzymaj dłonie z dala od wirnika.</p>
+
+<h2>Jak to wygląda w porównaniu z innymi autami z tego okresu?</h2>
+<p>E46 jest nietypowy: elektroniczny stopień końcowy i silnik wyjmowany od komory silnika. W wielu kompaktach z tamtych lat do dmuchawy dostaje się od strony nóg pasażera — tak jest np. w Golfie 5.</p>
+<p>Dla porównania: w <a href="/volkswagen-golf-5-nie-dziala-nawiew/">Golfie 5 z niedziałającym nawiewem</a> różnica przebiega między Climatikiem z rezystorem a Climatronikiem z modułem elektronicznym, a w <a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skodzie Octavii 1Z</a> diagnostykę zaczyna się od konkretnego bezpiecznika SF27. Wspólny jest tylko schemat myślenia — od bezpiecznika, przez sterowanie, do silnika — który opisujemy w <a href="/nie-dziala-nawiew/">ogólnym poradniku o niedziałającym nawiewie</a>. Numery części i bezpieczników nie są przenoszalne między markami.</p>
+
+<h2>Checklista: kolejność diagnostyki krok po kroku</h2>
+<ol>
+<li><strong>Ustal datę produkcji</strong> — od niej zależy, czy sprawdzasz bezpiecznik 37 czy 50. E46 był produkowany od 1997 do 2006 r. (coupe i cabrio do sierpnia 2006, według <a href="https://en.wikipedia.org/wiki/BMW_3_Series_(E46)">Wikipedii</a>), a przypisanie bezpieczników zmieniało się w 1998 i 1999 r.</li>
+<li><strong>Opisz objaw</strong> — cisza, skakanie prędkości, praca po wyłączeniu, hałas czy słaby przepływ. To zawęża listę do jednego podzespołu.</li>
+<li><strong>Sprawdź bezpieczniki</strong> 28 i 50 (lub 37) w panelu w schowku; obejrzyj też gniazda pod kątem nadtopień.</li>
+<li><strong>Posłuchaj dmuchawy</strong> po wyłączeniu zapłonu — jeśli szumi, stopień końcowy jest niemal pewny.</li>
+<li><strong>Zdejmij schowek i dolną osłonę</strong>, obejrzyj wtyczkę stopnia końcowego.</li>
+<li><strong>Zmierz zasilanie i masę</strong> na silniku przy włączonym nawiewie.</li>
+<li><strong>Oceń filtr kabinowy</strong> i wlot powietrza, gdy elektryka działa, a powietrza brak.</li>
+<li><strong>Wymień część dobraną po VIN</strong> i sprawdź po naprawie wszystkie prędkości oraz wyłączanie dmuchawy.</li>
+</ol>
+<p>Jeśli to Twoje pierwsze BMW, przydatny będzie też nasz <a href="/katalog/">katalog modeli i usterek</a>, gdzie zbieramy typowe problemy innych aut.</p>
+
+<h2>Jakie błędy popełnia się najczęściej?</h2>
+<p>Największy błąd to kupowanie silnika dmuchawy, gdy objaw (skakanie obrotów, praca po wyłączeniu) wskazuje na stopień końcowy. Drugi — szukanie bezpiecznika nawiewu w bocznej ściance deski zamiast w schowku.</p>
+<ul>
+<li><strong>Kopiowanie numeru bezpiecznika z forum bez daty produkcji.</strong> Bezpiecznik 50 w aucie z 1999 r. sprzed września to 25 A stacyjki, a nie dmuchawa.</li>
+<li><strong>Nowy stopień końcowy na stare, nadtopione złącze.</strong> Przegrzany styk szybko uszkodzi nową część.</li>
+<li><strong>Wymiana samego silnika przy starym stopniu</strong> (lub odwrotnie) w aucie z dużym przebiegiem — kończy się drugą rozbiórką.</li>
+<li><strong>Ręczne przestawianie ramion wycieraczek</strong> przy demontażu dmuchawy. Ustaw je mechanizmem, wyłączając zapłon w połowie ruchu.</li>
+<li><strong>Jazda bez filtra kabinowego</strong> „bo lepiej dmucha”. Brud trafia wtedy prosto na wirnik i łożyska.</li>
+<li><strong>Uderzanie w deskę, żeby dmuchawa ruszyła.</strong> To objaw usterki, a nie naprawa — świadczy o zużytym silniku lub luźnym styku.</li>
+</ul>
+
+<h2>Najczęstsze pytania o nawiew w BMW E46</h2>
+<div class="faq">
+<details><summary><strong>Jaki bezpiecznik odpowiada za nawiew w BMW E46?</strong></summary><p>Od 09.1999 obwód dmuchawy chroni bezpiecznik nr 50 (40 A), a sterownik ogrzewania i klimatyzacji nr 28 (5 A). W autach z lat 1998–1999 rolę bezpiecznika dmuchawy pełnił nr 37 (50 A). Panel jest w schowku pasażera.</p></details>
+<details><summary><strong>Gdzie jest rezystor dmuchawy w BMW E46?</strong></summary><p>Stopień końcowy znajduje się pod deską po stronie pasażera, przy tunelu środkowym, wsunięty w obudowę nagrzewnicy. Dostęp uzyskasz po wyjęciu schowka i dolnej osłony.</p></details>
+<details><summary><strong>Dlaczego dmuchawa w E46 chodzi po wyłączeniu silnika?</strong></summary><p>To typowy objaw uszkodzonego stopnia końcowego, który podaje napięcie na silnik mimo wyłączonego zapłonu. Do czasu naprawy wyjmij bezpiecznik obwodu dmuchawy, by nie rozładować akumulatora.</p></details>
+<details><summary><strong>Skąd wyjmuje się silnik dmuchawy w E46?</strong></summary><p>Od strony komory silnika, po zdjęciu obudowy filtra kabinowego, osłony dmuchawy i prawego zespołu klapy. Wycieraczki warto wcześniej ustawić pionowo.</p></details>
+<details><summary><strong>Ile trwa wymiana stopnia końcowego?</strong></summary><p>Pelican Parts szacuje ją na około godzinę z Torxem T20 i wkrętakami. W niektórych egzemplarzach trzeba dodatkowo zdjąć wspornik silniczka krokowego, co wydłuża pracę.</p></details>
+<details><summary><strong>Czy można wymienić tylko stopień końcowy, jeśli silnik piszczy?</strong></summary><p>Można, ale piszczący silnik zwykle pobiera więcej prądu i obciąża stopień. Gdy silnik jest zużyty, rozsądniej wymienić oba elementy naraz.</p></details>
+<details><summary><strong>Co, jeśli bezpiecznik dmuchawy przepala się ponownie?</strong></summary><p>Przerwij próby i nie wkładaj większego amperażu. Przyczyną może być zablokowany silnik, zwarcie w stopniu końcowym lub w wiązce — potrzebny jest pomiar.</p></details>
 </div>
 
-<div class="article-hero">
- <div class="article-hero-inner">
- <div class="kicker">Diagnostyka · BMW E46</div>
- <h1>BMW E46 nie działa nawiew — bezpiecznik, rezystor i silnik dmuchawy</h1>
- <p class="lead">Krok po kroku: gdzie szukać bezpiecznika, jak rozpoznać czy to rezystor czy silnik, i ile kosztuje naprawa.</p>
- <div class="spec-pills">
- <span class="spec-pill">E46 1998–2006</span>
- <span class="spec-pill">316i / 318i / 320i / 320d / 330d</span>
- <span class="spec-pill">Sedan / Touring / Coupe / Cabrio</span>
- </div>
- </div>
-</div>
-
-<div class="wrap">
-<main class="content">
-
- <div class="answer-box">
- <strong>Szybka odpowiedź</strong>
- <p>Bezpiecznik dmuchawy w BMW E46: skrzynka bezpieczników w kabinie po stronie pasażera (za tapicerką przy desce rozdzielczej), bezpiecznik 30A. Najczęstsza przyczyna braku nawiewu to <strong>uszkodzony rezystor (Endstufe)</strong> za schowkiem pasażera — wymiana ~100–300 PLN łącznie.</p>
- </div>
-
- <h2>Objawy — jak rozpoznać problem z nawiewem</h2>
- <p>Zanim zaczniesz szukać bezpiecznika, ustal dokładnie co się dzieje. W E46 są trzy różne awarie z podobnymi objawami:</p>
-
- <table>
- <thead><tr><th>Objaw</th><th>Najbardziej prawdopodobna przyczyna</th></tr></thead>
- <tbody>
- <tr><td>Biegi 1–3 nie działają, bieg 4 działa normalnie</td><td>Uszkodzony rezystor (Endstufe) — najczęstszy przypadek</td></tr>
- <tr><td>Żaden bieg nie działa, klimatyzacja włączona normalnie</td><td>Przepalony bezpiecznik lub uszkodzony silnik dmuchawy</td></tr>
- <tr><td>Nawiew działa losowo, czasem włącza się po wstrząsie</td><td>Korozja lub poluzowany styk w złączu rezystora</td></tr>
- <tr><td>Nawiew działa tylko po uruchomieniu, potem gaśnie</td><td>Termiczny bezpiecznik w rezystorze — przegrzanie</td></tr>
- <tr><td>Słyszysz brzęczenie/szum, ale nie czuć powietrza</td><td>Silnik dmuchawy kręci się, klapki kierunkowe zablokowane</td></tr>
- </tbody>
- </table>
-
- <h2>Bezpiecznik nawiewu — gdzie jest w BMW E46</h2>
- <p>W BMW E46 są dwie skrzynki bezpieczników: jedna w komorze silnika (główna), druga w kabinie po stronie pasażera. Bezpiecznik silnika dmuchawy jest w <strong>skrzynce kabinowej</strong>.</p>
-
- <h3>Lokalizacja skrzynki kabinowej</h3>
- <ol>
- <li>Otwórz drzwi pasażera.</li>
- <li>Znajdź plastikową klapkę na boku deski rozdzielczej (od strony pasażera, przy słupku A).</li>
- <li>Podważ klapkę — otwiera się bez narzędzi lub z lekkim pociągnięciem.</li>
- <li>Bezpiecznik dmuchawy to element <strong>30A</strong> — kolor zielony.</li>
- <li>Na klapce lub w środku skrzynki powinna być naklejka z numeracją.</li>
- </ol>
-
- <div class="note">
- <strong>Uwaga:</strong> Dokładna pozycja bezpiecznika może się różnić w zależności od rocznika E46 (1998–2001 vs 2001–2006) i wersji wyposażenia (klimatyzacja manualna / automatyczna). Zawsze sprawdź naklejkę na klapce skrzynki. </div>
-
- <p>Jeśli bezpiecznik jest przepalony — przed wymianą na nowy sprawdź stan silnika dmuchawy. Przepalony bezpiecznik to często symptom przeciążenia (zablokowany silnik dmuchawy), a nie przyczyna awarii.</p>
-
- <h2>Rezystor dmuchawy (Endstufe) — najczęstsza usterka</h2>
- <p>Rezystor (w BMW nazywany <em>Endstufe</em> lub modułem końcowym) reguluje prędkość obrotową silnika dmuchawy. Kiedy się uszkadza, zazwyczaj przestają działać niższe biegi — zostaje tylko bieg 4 (zasilany bezpośrednio, z pominięciem rezystora).</p>
-
- <h3>Gdzie jest rezystor w E46</h3>
- <ol>
- <li>Otwórz schowek pasażera i opróżnij go.</li>
- <li>Wykręć 3 śruby Torx T20 mocujące schowek (2 od góry, 1 od spodu).</li>
- <li>Odchyl schowek — rezystor widoczny na obudowie nawiewu, z prawej strony.</li>
- <li>Odłącz wtyczkę elektryczną (naciśnij blokadę).</li>
- <li>Wykręć 2 śruby mocujące rezystor.</li>
- </ol>
-
- <h3>Numer katalogowy rezystora E46</h3>
- <table>
- <thead><tr><th>Producent</th><th>Numer</th><th>Cena orientacyjna</th></tr></thead>
- <tbody>
- <tr><td>BMW oryginał</td><td>64 11 8 374 994</td><td>150–250 PLN</td></tr>
- <tr><td>Hella (zamiennik)</td><td>9ML 351 321-281</td><td>60–100 PLN</td></tr>
- <tr><td>Valeo (zamiennik)</td><td>509230</td><td>55–90 PLN</td></tr>
- </tbody>
- </table>
-
- <div class="note">Numery katalogowe mogą się różnić w zależności od wersji klimatyzacji (manualna / Klimaautomatik). Przy zamawianiu podaj VIN lub rok + typ klimy. Aktualne ceny i dostępność zamienników znajdziesz wyszukując numer OEM na <a href="https://www.autodoc.pl" rel="nofollow noopener" target="_blank">autodoc.pl</a>.</div>
-
- <h2>Silnik dmuchawy — kiedy to on jest winny</h2>
- <p>Jeśli bezpiecznik jest OK, napięcie dochodzi do złącza, a dmuchawa nadal się nie kręci — winny jest silnik dmuchawy. W E46 silnik dmuchawy jest za schowkiem pasażera, w obudowie nawiewu.</p>
-
- <h3>Sprawdzenie silnika bez demontażu</h3>
- <ol>
- <li>Odłącz wtyczkę od rezystora (dostęp po demontażu schowka).</li>
- <li>Podepnij bezpośrednio +12V i masę do silnika dmuchawy (złącze 2-pinowe).</li>
- <li>Jeśli silnik się kręci — problem w sterowaniu (rezystor lub sterownik klimy).</li>
- <li>Jeśli silnik nie kręci — wymiana silnika dmuchawy.</li>
- </ol>
-
- <table>
- <thead><tr><th>Producent</th><th>Numer silnika dmuchawy</th><th>Cena orientacyjna</th></tr></thead>
- <tbody>
- <tr><td>BMW oryginał</td><td>64 11 6 923 204</td><td>300–500 PLN</td></tr>
- <tr><td>Hella zamiennik</td><td>8EW 009 144-181</td><td>150–250 PLN</td></tr>
- <tr><td>Valeo zamiennik</td><td>698 019</td><td>140–230 PLN</td></tr>
- </tbody>
- </table>
-
- <h2>Koszt naprawy — podsumowanie</h2>
- <table>
- <thead><tr><th>Naprawa</th><th>Część (DIY)</th><th>Robocizna w warsztacie</th><th>Łącznie</th></tr></thead>
- <tbody>
- <tr><td>Wymiana rezystora</td><td>55–250 PLN</td><td>100–200 PLN</td><td>155–450 PLN</td></tr>
- <tr><td>Wymiana silnika dmuchawy</td><td>140–500 PLN</td><td>200–400 PLN</td><td>340–900 PLN</td></tr>
- <tr><td>Wymiana bezpiecznika</td><td>2–5 PLN</td><td>0 (zrób sam)</td><td>2–5 PLN</td></tr>
- </tbody>
- </table>
-
- <div class="danger">
- <strong>Nie ryzykuj:</strong> Jeśli bezpiecznik przepala się ponownie po wymianie — nie wkładaj bezpiecznika o wyższej wartości. Szukaj przyczyny (zablokowany silnik, zwarcie w wiązce). Wyższy bezpiecznik może uszkodzić instalację elektryczną. </div>
-
- <h2>Kiedy warto iść do warsztatu</h2>
- <p>Sam możesz bezpiecznie: sprawdzić bezpiecznik, wymienić rezystor (30 minut, Torx T20). Do warsztatu warto pojechać gdy:</p>
- <ul>
- <li>Bezpiecznik przepala się wielokrotnie — potrzebna diagnostyka wiązki,</li>
- <li>Sterownik klimatyzacji (IHKA) pokazuje błędy — potrzebny skaner BMW,</li>
- <li>Dźwięki z obudowy nawiewu — możliwe zablokowanie klapek powietrznych.</li>
- </ul>
-
- <h2>Inne modele z tym samym problemem</h2>
- <p>Ten sam schemat diagnostyczny działa dla:</p>
- <ul>
- <li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">Volkswagen Golf 5 — nie działa nawiew</a></li>
- <li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2 — nie działa nawiew</a></li>
- <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew</a></li>
- <li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew</a></li>
- <li><a href="/nie-dziala-nawiew/">Wszystkie modele — indeks nie działa nawiew</a></li>
- </ul>
-
- <h2>Najczęstsze pytania (FAQ)</h2>
- <div class="faq">
- <details>
- <summary>Jaki bezpiecznik odpowiada za nawiew w BMW E46?</summary>
- <div class="answer">Bezpiecznik silnika dmuchawy to element 30A w skrzynce kabinowej po stronie pasażera. Dokładna pozycja zależy od rocznika — sprawdź naklejkę na klapce skrzynki.</div>
- </details>
- <details>
- <summary>Działa tylko 4. bieg nawiewu — co jest zepsute?</summary>
- <div class="answer">To klasyczny objaw uszkodzonego rezystora (Endstufe). Bieg 4 zasilany jest bezpośrednio z pominięciem rezystora, stąd działa mimo awarii. Wymiana rezystora rozwiązuje problem.</div>
- </details>
- <details>
- <summary>Żaden bieg nawiewu nie działa w E46 — od czego zacząć?</summary>
- <div class="answer">Zaczynaj od bezpiecznika 30A w skrzynce kabinowej. Jeśli OK — sprawdź napięcie na złączu silnika dmuchawy. Brak napięcia = problem w sterowaniu. Napięcie jest, dmuchawa nie kręci = wymiana silnika.</div>
- </details>
- <details>
- <summary>Gdzie jest rezystor dmuchawy w BMW E46?</summary>
- <div class="answer">Za schowkiem pasażera, na obudowie nawiewu. Demontaż: wyciągnij schowek (3 śruby Torx T20), rezystor widoczny po prawej stronie kanału powietrza.</div>
- </details>
- <details>
- <summary>Ile kosztuje naprawa nawiewu w BMW E46?</summary>
- <div class="answer">Rezystor: 155–450 PLN łącznie (część + robocizna). Silnik dmuchawy: 340–900 PLN. Sama wymiana bezpiecznika to kilka złotych i można zrobić samemu.</div>
- </details>
- <details>
- <summary>Czy mogę sam wymienić rezystor w E46?</summary>
- <div class="answer">Tak. Potrzebujesz klucza Torx T20 i ~30 minut. Demontaż schowka, odłączenie wtyczki, wymiana rezystora. Nie wymaga specjalistycznych narzędzi ani znajomości elektroniki.</div>
- </details>
- <details>
- <summary>Nawiew działa losowo, czasem włącza się po wstrząsie — co to jest?</summary>
- <div class="answer">Klasyczny objaw korozji lub poluzowanego styku w złączu rezystora. Sprawdź stan wtyczki przy rezystorze — wyczyść styki sprayem do kontaktów.</div>
- </details>
- <details>
- <summary>E46 nie ma nawiewu po wymianie akumulatora — dlaczego?</summary>
- <div class="answer">Możliwy reset sterownika IHKA. Odłącz akumulator na 5 minut, podłącz, uruchom silnik, ustaw klimę na AUTO. Jeśli nie pomaga — sprawdź bezpiecznik.</div>
- </details>
- </div>
-
- <div class="cta-box">
- <h3>Nie jesteś pewien co jest przyczyną?</h3>
- <p>Dobry warsztat zdiagnozuje problem skanerem BMW w 15 minut. Sprawdź warsztaty specjalizujące się w BMW w Twojej okolicy.</p>
- <a href="https://www.google.com/search?q=warsztat+BMW+E46+diagnoza" class="cta-btn" target="_blank" rel="nofollow noopener">Znajdź warsztat BMW</a>
- </div>
-
-
-<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div>
-</main>
+<h2>Podsumowanie</h2>
+<p>Gdy w BMW E46 nie działa nawiew, nie zaczynaj od zakupów. Ustal datę produkcji, sprawdź właściwy bezpiecznik w schowku (od 09.1999 nr 50, 40 A, plus nr 28, 5 A), a potem dopasuj objaw: skakanie prędkości i praca po wyłączeniu to stopień końcowy pod deską pasażera, pisk i hałas — silnik wyjmowany od komory silnika, słaby przepływ — filtr i wlot. Taka kolejność oszczędza czas i pieniądze.</p>
+<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div><p><small>Status redakcyjny: rozbudowa istniejącego artykułu przygotowana i zweryfikowana źródłowo z pomocą AI; przegląd człowieka przed połączeniem PR pozostaje wymagany. Etykieta autora pochodzi z szablonu bloga.</small></p></main>
 
 <aside class="sidebar">
- <div class="sidebar-card">
- <div class="sidebar-title">Inne modele — nawiew</div>
- <ul class="related-links">
- 
- 
- 
- 
- <li><a href="/nie-dziala-nawiew/">Wszystkie modele →</a></li>
- </ul>
- </div>
- <div class="sidebar-card">
- <div class="sidebar-title">BMW E46 — inne problemy</div>
- 
- </div>
- <div class="sidebar-card">
- <div class="sidebar-title">Dane techniczne</div>
- <ul class="related-links">
- <li>Produkcja: 1998–2006</li>
- <li>Bezpiecznik dmuchawy: 30A (skrzynka kabinowa)</li>
- <li>Rezystor: Endstufe, za schowkiem pasażera</li>
- </ul>
- </div>
+    <div class="sidebar-card">
+        <div class="sidebar-title">📋 Dane techniczne</div>
+        <ul class="sidebar-links">
+            <li><strong>Model:</strong> BMW 3 E46 (1997–2006)</li>
+            <li><strong>Bezpiecznik dmuchawy:</strong> nr 50, 40 A (od 09.1999)</li>
+            <li><strong>Sterownik klimy:</strong> nr 28, 5 A</li>
+            <li><strong>Stopień końcowy:</strong> pod deską pasażera, T20</li>
+            <li><strong>Silnik dmuchawy:</strong> dostęp od komory silnika</li>
+        </ul>
+    </div>
+
+    <div class="sidebar-card">
+        <div class="sidebar-title">🔧 Inne poradniki</div>
+        <ul class="sidebar-links">
+            <li><a href="/opel-astra-g-nie-dziala-nawiew/">Opel Astra G — nawiew</a></li>
+            <li><a href="/nie-dziala-nawiew/">Wszystkie modele — nawiew</a></li>
+        </ul>
+    </div>
 </aside>
+
 </div>
 
 
 
-<style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
-<script src="/assets/router.js" defer></script>
 
 <footer>
  <div class="sc-footer-inner">
@@ -419,5 +308,8 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
  </nav>
  </div>
 </footer>
+
+
+
 </body>
 </html>
