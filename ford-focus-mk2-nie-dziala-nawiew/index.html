@@ -1,159 +1,52 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ford Focus Mk2 — nawiew nie działa, rezystor</title>
-<meta name="description" content="Ford Focus Mk2 (2004–2011) nie działa nawiew? Bezpiecznik F64 (30A) w skrzynce CJB. Rezystor za schowkiem pasażera. Diagnostyka krok po kroku + koszty." | cut -c1-150>
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/">
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "Article",
- "headline": "Ford Focus Mk2 nie działa nawiew — bezpiecznik F64, rezystor, silnik dmuchawy",
- "datePublished": "2026-05-21",
- "dateModified": "2026-05-21",
- "publisher": {
-  "@type": "Organization",
-  "name": "Poradnik Samochodowy"
- },
- "author": {
-  "@type": "Person",
-  "name": "Krzysztof Wilk"
- },
- "mainEntityOfPage": "https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/"
-}</script>
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Jaki bezpiecznik odpowiada za nawiew w Ford Focus Mk2?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Bezpiecznik silnika dmuchawy w Ford Focus Mk2 to F64 (30A) w skrzynce CJB (Central Junction Box) pod deską rozdzielczą po stronie kierowcy. Dodatkowy bezpiecznik sterowania dmuchawy to F65 (mini). Pozycję zawsze weryfikuj w instrukcji obsługi — Focus Mk2 produkowano w kilku wariantach."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Focus Mk2 działa tylko najwyższy bieg nawiewu — co to jest?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Biegi 1–3 nie działają, bieg 4 (maksymalny) działa = uszkodzony rezystor dmuchawy. W Focus Mk2 rezystor jest przy silniku dmuchawy za schowkiem pasażera. Koszt wymiany: część 30–80 PLN, robocizna 80–150 PLN."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Gdzie jest rezystor dmuchawy w Ford Focus Mk2?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Rezystor (regulator prędkości dmuchawy) w Ford Focus Mk2 jest zamontowany na obudowie silnika dmuchawy, za schowkiem pasażera. Dostęp: demontaż schowka (3–4 śruby), rezystor widoczny z prawej strony obudowy nawiewu."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Focus Mk2 a Focus Mk1 — czy diagnostyka jest taka sama?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Nie. Focus Mk2 (2004–2011) i Mk1 (1998–2004) mają różne skrzynki bezpieczników i różne numery katalogowe rezystorów. W Google często pojawiają się wyniki dla Mk1 zamiast Mk2 — upewnij się, że szukasz danych dla właściwej generacji."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Ile kosztuje naprawa nawiewu Focus Mk2?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Wymiana rezystora: część 30–80 PLN + robocizna 80–150 PLN = 110–230 PLN. Wymiana silnika dmuchawy: część 100–280 PLN + robocizna 150–350 PLN = 250–630 PLN."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy mogę sam wymienić rezystor w Focus Mk2?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Tak. Potrzebujesz krzyżakowego śrubokręta lub klucza Torx, 20–40 minut czasu. Demontaż schowka, odłączenie wtyczki, wykręcenie 2 śrub, wymiana rezystora. Możliwe do wykonania samemu bez podnośnika."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Focus Mk2 nie działa żaden bieg nawiewu — od czego zacząć?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "1. Sprawdź bezpiecznik F64 (30A) w skrzynce CJB. 2. Jeśli OK — zmierz napięcie na złączu silnika dmuchawy przy biegu 4. 3. Brak napięcia = przekaźnik lub sterownik. Napięcie jest = wymiana silnika dmuchawy."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Focus Mk2 z automatyczną klimą — czy diagnostyka jest inna?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Focus Mk2 z automatyczną klimatyzacją (Climatic/Climate Control) może blokować dmuchawę przy błędach elektronicznych. Po wymianie rezystora warto skasować ewentualne błędy skanerem OBD2."
-   }
-  }
- ]
-}</script>
-<style>
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a2e; background: #f5f5f5; }
- a { color: #c0392b; text-decoration: none; }
- a:hover { text-decoration: underline; }
- .topbar { background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
- .topbar-inner { max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
- .topbar-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
- .topbar-nav { display: flex; gap: 18px; flex-wrap: wrap; }
- .topbar-nav a { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
- .breadcrumb { max-width: 1120px; margin: 14px auto 0; padding: 0 20px; font-size: 0.85rem; color: #666; }
- .breadcrumb a { color: #c0392b; }
- .article-hero { background: linear-gradient(135deg, #1a2a3e 0%, #2c4a6e 100%); color: #fff; padding: 36px 20px; }
- .article-hero-inner { max-width: 1120px; margin: 0 auto; }
- .kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 8px; }
- .article-hero h1 { font-size: 1.9rem; font-weight: 800; line-height: 1.25; }
- .article-hero .lead { margin-top: 12px; opacity: 0.88; max-width: 700px; font-size: 1.05rem; }
- .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
- .spec-pill { background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.82rem; }
- .answer-box { background: #e8f5e9; border-left: 5px solid #2ecc71; padding: 18px 22px; margin: 24px 0 20px; border-radius: 0 8px 8px 0; }
- .answer-box strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #27ae60; margin-bottom: 8px; }
- .answer-box p { margin: 0; font-size: 1rem; }
- .wrap { max-width: 1120px; margin: 28px auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; }
- @media(max-width:720px){ .wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
- .content { background: #fff; border-radius: 10px; padding: 32px 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
- @media(max-width:600px){ .content { padding: 22px 18px; } }
- h2 { font-size: 1.3rem; color: #922b21; margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #e8c3c3; }
- h2:first-of-type { margin-top: 0; }
- h3 { font-size: 1.05rem; color: #333; font-weight: 700; margin: 22px 0 10px; }
- p { margin-bottom: 14px; }
- ul, ol { margin: 0 0 16px 22px; }
- li { margin-bottom: 7px; }
- table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.93rem; }
- th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid #e8e8e8; }
- th { background: #922b21; color: #fff; font-weight: 600; }
- tr:nth-child(even) { background: #fafafa; }
- .note { background: #fff8e6; border-left: 4px solid #f39c12; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; border-radius: 0 6px 6px 0; }
- .danger { background: #fdecea; border-left: 4px solid #e74c3c; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; border-radius: 0 6px 6px 0; }
- .mk-compare { background: #f0f4ff; border: 1px solid #c5d0e8; border-radius: 8px; padding: 18px 22px; margin: 20px 0; }
- .mk-compare h3 { margin-top: 0; color: #2c4a6e; }
- .faq details { border: 1px solid #e8e8e8; border-radius: 8px; margin-bottom: 10px; }
- .faq summary { padding: 14px 18px; font-weight: 600; cursor: pointer; list-style: none; font-size: 0.97rem; }
- .faq summary::-webkit-details-marker { display: none; }
- .faq details[open] summary { border-bottom: 1px solid #eee; color: #922b21; }
- .faq .answer { padding: 14px 18px; font-size: 0.93rem; color: #444; }
- .related-links { list-style: none; margin: 0; padding: 0; }
- .related-links li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.93rem; }
- .related-links li:last-child { border: none; }
- .sidebar-card { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; }
- .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #922b21; margin-bottom: 14px; }
- .cta-box { background: linear-gradient(135deg, #922b21, #c0392b); color: #fff; border-radius: 10px; padding: 24px; margin-top: 32px; text-align: center; }
- .cta-box h3 { color: #fff; margin: 0 0 10px; font-size: 1.1rem; }
- .cta-box p { color: rgba(255,255,255,0.88); margin-bottom: 16px; font-size: 0.93rem; }
- .cta-btn { display: inline-block; background: #fff; color: #922b21; font-weight: 700; padding: 12px 28px; border-radius: 6px; font-size: 0.95rem; }
- footer { background: #922b21; color: rgba(255,255,255,0.8); padding: 28px 20px; margin-top: 40px; }
- .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
- footer a { color: rgba(255,255,255,0.9); }
-</style>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford Focus Mk2 nie działa nawiew: rezystor i bezpiecznik</title>
+    <meta name="description" content="Ford Focus Mk2 nie działa nawiew? Test przyczyny, bezpiecznik dmuchawy, pomiar rezystora i silnika, stopiona wtyczka i checklista naprawy krok po kroku.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/">
+    <meta property="og:title" content="Ford Focus Mk2 nie działa nawiew: rezystor i bezpiecznik">
+    <meta property="og:description" content="Ford Focus Mk2 nie działa nawiew? Test przyczyny, bezpiecznik dmuchawy, pomiar rezystora i silnika, stopiona wtyczka i checklista naprawy krok po kroku.">
+    <meta property="og:url" content="https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/">
+    <meta property="og:type" content="article">
+    
+    <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; }
+    .article-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); color: #fff; padding: 36px 20px; }
+    .article-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .spec-pill { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+    .content { max-width: 1040px; margin: 28px auto; padding: 0 20px; }
+    h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e8c3c3; padding-bottom: 10px; }
+    h3 { font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-top: 1.5em; margin-bottom: 0.8em; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    table th { background: #1a1a2e; color: white; padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+    table td { padding: 12px 15px; border-bottom: 1px solid #ddd; }
+    table tr:nth-child(even) { background: #f5f5f5; }
+    table tr:hover { background: #f0f0f0; }
+    .answer-box { background: #f0f4ff; border-left: 4px solid #1a1a2e; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .answer-box strong { color: #1a1a2e; }
+    a { color: #c0392b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .sidebar { max-width: 300px; margin-left:0; }
+    .sidebar-card { background: white; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 20px; }
+    .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
+    .sidebar-links { list-style: none; }
+    .sidebar-links li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+    .sidebar-links li:last-child { border: none; margin: 0; padding: 0; }
+    .sidebar-links a { font-size: 0.9rem; }
+    .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    strong { font-weight: 700; color: #1a1a2e; }
+    em { font-style: italic; }
+    ul, ol { margin: 15px 0; margin-left: 30px; }
+    li { margin-bottom: 8px; }
+    </style>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Ford Focus Mk2: nie działa nawiew — jak ustalić, czy winny jest rezystor, bezpiecznik czy silnik dmuchawy?", "description": "Ford Focus Mk2 nie działa nawiew? Test przyczyny, bezpiecznik dmuchawy, pomiar rezystora i silnika, stopiona wtyczka i checklista naprawy krok po kroku.", "datePublished": "2026-05-21", "dateModified": "2026-10-18", "author": {"@type": "Person", "name": "Krzysztof Wilk"}, "publisher": {"@type": "Organization", "name": "Poradnik Samochodowy"}, "mainEntityOfPage": "https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/", "url": "https://poradnik-samochodowy.github.io/ford-focus-mk2-nie-dziala-nawiew/", "inLanguage": "pl-PL"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Dlaczego w Focusie Mk2 działa tylko 4. bieg nawiewu?", "acceptedAnswer": {"@type": "Answer", "text": "Najwyższy bieg zasila silnik dmuchawy z pominięciem rezystora. Jeśli działa tylko on, rezystor lub jego bezpiecznik termiczny jest przerwany."}}, {"@type": "Question", "name": "Który bezpiecznik odpowiada za dmuchawę w Focusie Mk2?", "acceptedAnswer": {"@type": "Answer", "text": "Tabela fuseandrelay.com dla Focusa II podaje F10 (30 A) w skrzynce w komorze silnika. Przypisanie zależy jednak od rocznika i rynku, więc sprawdź schemat na pokrywie skrzynki."}}, {"@type": "Question", "name": "Dlaczego nowy rezystor szybko się przepalił?", "acceptedAnswer": {"@type": "Answer", "text": "Najczęściej przez przegrzewanie: ciężko chodzący silnik dmuchawy, zatkany filtr kabinowy lub nadtopioną wtyczkę. Sprawdź te trzy rzeczy przed kolejną wymianą."}}, {"@type": "Question", "name": "Czy mogę jeździć z niedziałającym nawiewem?", "acceptedAnswer": {"@type": "Answer", "text": "Technicznie tak, ale bez nawiewu szyby szybciej parują, co pogarsza widoczność. Działający 4. bieg wystarczy do osuszenia szyby, dopóki nie naprawisz rezystora."}}, {"@type": "Question", "name": "Skąd wiem, że to silnik dmuchawy, a nie rezystor?", "acceptedAnswer": {"@type": "Answer", "text": "Jeśli na wtyczce silnika jest napięcie na najwyższym biegu, a silnik stoi lub rusza dopiero po stuknięciu w obudowę, winny jest silnik."}}, {"@type": "Question", "name": "Czy wymienić wtyczkę rezystora razem z nim?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, jeśli ma ślady przegrzania: przebarwienia, stopiony plastik albo ciemne styki. Na takim złączu nowy rezystor też szybko się przegrzeje."}}]}</script>
 <style id="site-chrome">
 :where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
 [class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
@@ -200,220 +93,192 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 
 
 
-<div class="breadcrumb">
- <a href="/">Strona główna</a> › <a href="/nie-dziala-nawiew/">Nie działa nawiew</a> › Ford Focus Mk2
+
+
+
+
+<div class="article-hero"><div style="max-width:1040px;margin:0 auto;padding:0 20px"><h1>Ford Focus Mk2: nie działa nawiew — jak ustalić, czy winny jest rezystor, bezpiecznik czy silnik dmuchawy?</h1><p>Diagnostyka krok po kroku dla Focusa C307 (2004–2011): od objawu do konkretnej części, bez wymieniania wszystkiego na ślepo.</p></div></div>
+
+<div class="content" style="display: grid; grid-template-columns: 1fr 300px; gap: 28px;">
+
+<main>
+<p>Gdy w Fordzie Focusie Mk2 nie działa nawiew, przyczynę zwykle wskazuje to, które biegi dmuchawy pracują. Działa tylko najwyższy bieg? Prawie zawsze winny jest rezystor albo jego bezpiecznik termiczny. Nie działa nic? Zacznij od bezpiecznika i zasilania silnika dmuchawy.</p>
+
+<div class="answer-box"><strong>W skrócie:</strong>
+<ul>
+<li>Działa tylko 4. bieg → rezystor dmuchawy (lub jego bezpiecznik termiczny).</li>
+<li>Nie działa żaden bieg → bezpiecznik dmuchawy, zasilanie, silnik dmuchawy.</li>
+<li>Rezystor pada drugi raz z rzędu → sprawdź, czy silnik dmuchawy nie chodzi ciężko i czy filtr kabinowy nie jest zatkany.</li>
+<li>Numer i amperaż bezpiecznika zależą od rocznika i rynku — zawsze porównaj z opisem na pokrywie skrzynki.</li>
+</ul></div>
+
+<h2 id="tester">Który bieg działa? Szybki test przyczyny</h2>
+<p>Wybierz, jak zachowuje się dmuchawa w Twoim Focusie. Podpowiemy najbardziej prawdopodobną przyczynę i pierwszy krok sprawdzenia.</p>
+<div id="focus-diag" style="border:2px solid #c0392b;padding:20px;border-radius:8px;background:#fff">
+<label for="fd-sym" style="font-weight:700">Objaw nawiewu:</label><br>
+<select id="fd-sym" style="width:100%;padding:8px;margin:6px 0 10px">
+<option value="">— wybierz —</option>
+<option value="only4">Działa tylko najwyższy bieg (4)</option>
+<option value="none">Nie działa żaden bieg</option>
+<option value="some">Nie działa jeden bieg, reszta tak</option>
+<option value="stops">Działa, a po chwili przestaje lub czuć zapach przypalenia</option>
+<option value="weak">Dmuchawa kręci, ale z kratek leci mało powietrza</option>
+<option value="noise">Dmuchawa piszczy, buczy lub stuka</option>
+</select>
+<label style="display:block;margin:4px 0"><input type="checkbox" id="fd-new"> Rezystor był już niedawno wymieniany</label>
+<p id="fd-out" role="status" aria-live="polite" style="background:#f0f4ff;border-left:4px solid #1a1a2e;padding:12px 14px;margin:10px 0 0">Wybierz objaw z listy.</p>
+<noscript>Bez JavaScript: działa tylko 4. bieg = rezystor; nie działa nic = bezpiecznik i zasilanie silnika dmuchawy.</noscript>
 </div>
+<script>
+(function () {
+  var sel = document.getElementById('fd-sym'), chk = document.getElementById('fd-new'), out = document.getElementById('fd-out');
+  var txt = {
+    only4: 'Najpewniej rezystor dmuchawy lub jego bezpiecznik termiczny. Najwyższy bieg omija rezystor, dlatego wciąż działa. Krok 1: obejrzyj rezystor i jego wtyczkę (przebarwienia, stopiony plastik).',
+    none: 'Zacznij od bezpiecznika dmuchawy (opis na pokrywie skrzynki) i zasilania na wtyczce silnika. Gdy zasilanie jest, a silnik stoi — podejrzany jest silnik dmuchawy.',
+    some: 'Przerwana jedna sekcja rezystora albo styk w przełączniku biegów. Zmierz napięcie na wyjściach przełącznika dla każdego biegu.',
+    stops: 'Przegrzewanie: zablokowany lub ciężko chodzący silnik dmuchawy albo słaby przepływ powietrza (zatkany filtr kabinowy). Nie zostawiaj tego — sprawdź wtyczkę rezystora.',
+    weak: 'Najczęściej zatkany filtr kabinowy, liście w kanale lub źle ustawione klapy. To nie jest usterka elektryczna — zacznij od filtra.',
+    noise: 'Zużyte łożyska silnika dmuchawy lub ciało obce w wirniku. Ciężko chodzący silnik pobiera więcej prądu i może niszczyć rezystor.'
+  };
+  function run() {
+    var v = sel.value;
+    if (!v) { out.textContent = 'Wybierz objaw z listy.'; return; }
+    var m = txt[v];
+    if (chk.checked && (v === 'only4' || v === 'stops' || v === 'some')) m += ' Rezystor padł ponownie? To sygnał, że przyczyna leży w silniku dmuchawy lub przepływie powietrza, a nie w samym rezystorze.';
+    out.textContent = m;
+  }
+  sel.addEventListener('change', run); chk.addEventListener('change', run);
+})();
+</script>
 
-<div class="article-hero">
- <div class="article-hero-inner">
- <div class="kicker">Diagnostyka · Ford Focus Mk2 (2004–2011)</div>
- <h1>Ford Focus Mk2 — nie działa</h1>
- <p class="lead">Ważne: ta strona dotyczy Focus <strong>Mk2 (2004–2011)</strong>. Bezpieczniki i numery rezystorów różnią się od Mk1. Sprawdź rok produkcji przed zakupem części.</p>
- <div class="spec-pills">
- <span class="spec-pill">Focus Mk2 C307 2004–2011</span>
- <span class="spec-pill">1.4 / 1.6 / 1.8 / 2.0 / 1.6 TDCi / 2.0 TDCi</span>
- <span class="spec-pill">Hatchback / Sedan / Kombi / CC</span>
- </div>
- </div>
-</div>
+<h2 id="generacja">Jak upewnić się, że masz Focusa Mk2?</h2>
+<p>Focus Mk2 (kod C307) zadebiutował 25 września 2004 r. na salonie w Paryżu, a lifting w stylistyce Kinetic Design przeszedł w latach 2007–2008. Tak podaje <a href="https://en.wikipedia.org/wiki/Ford_Focus_(second_generation)">artykuł o drugiej generacji Focusa w Wikipedii</a>. Jego następca, Mk3, pojawił się na początku 2011 r.</p>
+<p>To ważne, bo instalacja i części różnią się między generacjami. Mk2 występował jako 3- i 5-drzwiowy hatchback oraz kombi. Od połowy 2005 r. był też sedan, a od 2007 r. coupé-kabriolet ze składanym dachem. Zanim kupisz rezystor czy silnik dmuchawy, dobierz część po numerze VIN, a nie po samym „Focus 2006”.</p>
+<p>Jeśli trafiłeś tu z Mondeo, układ jest podobny, ale części inne — zajrzyj do poradnika o tym, co zrobić, gdy w <a href="/ford-mondeo-mk3-nie-dziala-nawiew/">Fordzie Mondeo Mk3 nie działa nawiew</a>.</p>
 
-<div class="wrap">
-<main class="content">
+<h2 id="bezpiecznik">Gdzie jest bezpiecznik nawiewu w Focusie Mk2?</h2>
+<p>Według tabeli dla Focusa II (2004–2011) w serwisie <a href="https://fuseandrelay.com/?p=5787">fuseandrelay.com</a> silnik wentylatora nagrzewnicy zabezpiecza <strong>bezpiecznik F10 (30 A)</strong>. Siedzi on w skrzynce w komorze silnika, po lewej stronie pod osłoną. Ta sama tabela wymienia F5 (80 A) dla klimatyzacji, F27 (10 A) dla sprzęgła sprężarki i F29 (10 A) dla osobnego układu klimatyzacji. Skrzynki w kabinie nie mają według niej bezpiecznika dmuchawy.</p>
+<div class="warning"><strong>⚠️ Zawsze sprawdź pokrywę:</strong> serwis zaznacza, że przypisanie bezpieczników zależy od roku produkcji i kraju dostawy. Starsze opisy w sieci podają inne numery i miejsca. Decyduje schemat na pokrywie skrzynki albo instrukcja obsługi Twojego egzemplarza.</div>
+<h3>Jak sprawdzić bezpiecznik bez zgadywania</h3>
+<ol>
+<li>Wyłącz zapłon i zdejmij osłonę skrzynki w komorze silnika.</li>
+<li>Odszukaj na schemacie pozycję opisaną jako dmuchawa / heater blower.</li>
+<li>Wyjmij bezpiecznik i obejrzyj go pod światło albo zmierz ciągłość multimetrem.</li>
+<li>Przepalony? Wymień na identyczny amperaż. Jeśli nowy od razu się przepali, szukaj zwarcia w silniku lub wiązce — nie wkładaj mocniejszego.</li>
+</ol>
 
- <div class="answer-box">
- <strong>Szybka odpowiedź</strong>
- <p>Bezpiecznik nawiewu Ford Focus Mk2: <strong>F64 (30A)</strong> w skrzynce CJB pod deską po stronie kierowcy. Najczęstsza przyczyna to <strong>rezystor dmuchawy</strong> za schowkiem pasażera — wymiana 110–230 PLN łącznie.</p>
- </div>
+<h2 id="rezystor">Dlaczego działa tylko najwyższy bieg nawiewu?</h2>
+<p>Bo w układzie z rezystorem najwyższy bieg zasila silnik dmuchawy z pominięciem rezystora. Niższe biegi prowadzą prąd przez kolejne sekcje oporowe. Gdy rezystor lub jego bezpiecznik termiczny się przerwie, zostaje tylko „czwórka”.</p>
+<p>Rezystor dmuchawy to kilka stałych oporników z bezpiecznikiem termicznym. Tak opisuje go jeden z użytkowników brytyjskiego forum w <a href="https://autoshite.com/topic/22380-focus-heater-woes">wątku o grzaniu w Focusie z 2003 r.</a>. Z jego doświadczenia wynika, że przy tej usterce zwykle zawodził bezpiecznik termiczny, najczęściej z powodu ciężko chodzącego, a w jednym przypadku zatartego wentylatora. Wątek dotyczy poprzedniej generacji (Mk1), ale zasada działania rezystora jest ta sama.</p>
+<h3>Rezystor padł drugi raz? Szukaj przyczyny wyżej</h3>
+<p>W tym samym wątku autor wymienił rezystor, a po kilku tygodniach poczuł zapach spalenizny i znów działał tylko jeden bieg. Inny uczestnik wskazał przyczynę: gdy rezystor się topi, zwykle brakuje mu przepływu powietrza, więc trzeba sprawdzić kanał i filtr przeciwpyłkowy. Rezystor jest chłodzony strumieniem powietrza z dmuchawy. Ciężko chodzący silnik pobiera więcej prądu, a zatkany filtr ogranicza chłodzenie — oba czynniki przegrzewają rezystor.</p>
+<table><thead><tr><th>Objaw</th><th>Najbardziej prawdopodobna przyczyna</th><th>Pierwsze sprawdzenie</th></tr></thead><tbody>
+<tr><td><strong>Działa tylko 4. bieg</strong></td><td>Rezystor lub jego bezpiecznik termiczny</td><td>Oględziny rezystora i wtyczki</td></tr>
+<tr><td><strong>Nie działa żaden bieg</strong></td><td>Bezpiecznik dmuchawy, zasilanie, silnik</td><td>Bezpiecznik, napięcie na wtyczce silnika</td></tr>
+<tr><td><strong>Brak jednego biegu</strong></td><td>Sekcja rezystora lub przełącznik</td><td>Napięcie na każdym biegu</td></tr>
+<tr><td><strong>Zapach przypalenia, nawrót usterki</strong></td><td>Przegrzewanie: silnik dmuchawy lub słaby przepływ</td><td>Filtr kabinowy, opór wirnika</td></tr>
+<tr><td><strong>Słaby nawiew przy działającej dmuchawie</strong></td><td>Filtr kabinowy, kanał, klapy</td><td>Wymiana filtra</td></tr>
+<tr><td><strong>Hałas dmuchawy</strong></td><td>Łożyska silnika, ciało obce</td><td>Obracanie wirnika ręką</td></tr>
+</tbody></table>
 
- <div class="mk-compare">
- <h2>Focus Mk2 czy Mk1? — sprawdź rok produkcji</h2>
- <table>
- <thead><tr><th>Generacja</th><th>Lata produkcji</th><th>Bezpiecznik nawiewu</th></tr></thead>
- <tbody>
- <tr><td><strong>Focus Mk1</strong></td><td>1998–2004</td><td>Inny układ skrzynki CJB</td></tr>
- <tr><td><strong>Focus Mk2</strong></td><td>2004–2011</td><td>F64 (30A) w CJB</td></tr>
- <tr><td><strong>Focus Mk3</strong></td><td>2011–2018</td><td>Inna skrzynka — sprawdź osobno</td></tr>
- </tbody>
- </table>
- <p style="margin:0;font-size:0.9rem;">Ta strona dotyczy wyłącznie <strong>Mk2 (2004–2011)</strong>.</p>
- </div>
+<h3>Jak zmierzyć rezystor multimetrem — krok po kroku</h3>
+<p>Nie musisz od razu kupować części. Rezystor da się sprawdzić w kilka minut zwykłym multimetrem ustawionym na pomiar oporności (Ω) lub ciągłości.</p>
+<ol>
+<li><strong>Wyłącz zapłon</strong> i odłącz wtyczkę od rezystora. Pomiar oporności zawsze rób na odłączonym elemencie.</li>
+<li><strong>Znajdź pin wspólny.</strong> Zwykle jeden pin łączy się z silnikiem dmuchawy, a pozostałe prowadzą do przełącznika biegów.</li>
+<li><strong>Mierz kolejno między pinem wspólnym a każdym z pozostałych.</strong> Sprawny rezystor pokazuje niewielkie, różne wartości dla kolejnych biegów.</li>
+<li><strong>Odczyt „OL” lub „1” (nieskończoność)</strong> na wszystkich pinach oznacza zwykle przerwany bezpiecznik termiczny. Na jednym pinie — przerwaną jedną sekcję.</li>
+<li><strong>Obejrzyj spirale i płytkę.</strong> Przebarwienia, nadtopiony plastik i ślady łuku potwierdzają przegrzanie.</li>
+</ol>
+<p>Wynik zapisz. Jeśli rezystor jest sprawny, a biegi 1–3 nie działają, problem leży w przełączniku lub przewodach między przełącznikiem a rezystorem. Wtedy mierz napięcie na wtyczce rezystora przy włączonym zapłonie, przełączając kolejne biegi. Na każdym powinno pojawić się napięcie na innym pinie.</p>
+<h3>Klimatyzacja manualna czy automatyczna?</h3>
+<p>Opis w tym poradniku dotyczy klasycznego układu z pokrętłem biegów i rezystorem. Jeśli Twój Focus ma automatyczną klimatyzację, sterowanie prędkością dmuchawy może wyglądać inaczej. Zanim zamówisz część, sprawdź w katalogu po VIN, jaki element steruje dmuchawą w Twoim egzemplarzu, i porównaj wygląd starej części z nową.</p>
 
- <h2>Objawy — co się dzieje z nawiewem</h2>
+<h2 id="wtyczka">Czy stopiona wtyczka rezystora to częsty problem?</h2>
+<p>Przegrzanie obejmuje nie tylko sam rezystor, ale też jego złącze. Jeśli plastik wtyczki jest odbarwiony, nadtopiony albo styki są ciemne, nie zakładaj nowego rezystora na starą kostkę.</p>
+<p>Spalony styk ma podwyższoną oporność i sam się grzeje, więc nowa część szybko podzieli los starej. Bezpieczniej wymienić złącze z odcinkiem przewodów (lutowane i zaizolowane, nie „na skrętkę”). Przy okazji sprawdź, czy przewody przy wtyczce nie mają stwardniałej, popękanej izolacji.</p>
 
- <table>
- <thead><tr><th>Objaw</th><th>Najbardziej prawdopodobna przyczyna</th></tr></thead>
- <tbody>
- <tr><td>Biegi 1–3 nie działają, bieg 4 OK</td><td>Uszkodzony rezystor dmuchawy — najczęstszy</td></tr>
- <tr><td>Żaden bieg nie działa</td><td>Przepalony bezpiecznik F64 lub silnik dmuchawy</td></tr>
- <tr><td>Tylko 1 bieg nie działa (np. bieg 1)</td><td>Jeden z oporów w rezystorze przepalony</td></tr>
- <tr><td>Dmuchawa hałasuje, powietrze nie idzie do kabiny</td><td>Zablokowana klapka lub zatkany filtr kabinowy</td></tr>
- <tr><td>Nawiew działa, potem gaśnie po nagrzaniu</td><td>Termiczny bezpiecznik w rezystorze — przegrzewa się</td></tr>
- </tbody>
- </table>
+<h2 id="silnik">Jak sprawdzić silnik dmuchawy w Focusie Mk2?</h2>
+<p>Gdy bezpiecznik jest cały, a na żadnym biegu nic się nie dzieje, sprawdź, czy do silnika dociera napięcie. Jest napięcie, a silnik stoi — winny silnik. Brak napięcia — szukaj w przewodach, przełączniku lub rezystorze.</p>
+<ol>
+<li><strong>Pomiar na wtyczce silnika</strong> przy włączonym zapłonie i najwyższym biegu (najprostszy obwód, bez rezystora).</li>
+<li><strong>Próba ręczna:</strong> przy wyłączonym zapłonie obróć wirnik palcem. Powinien kręcić się lekko i równo. Opór, tarcie albo luz to znak zużytych łożysk.</li>
+<li><strong>Stuknięcie w obudowę</strong> przy włączonej dmuchawie. Jeśli silnik nagle ruszy, szczotki lub komutator są zużyte i silnik nadaje się do wymiany.</li>
+<li><strong>Pomiar poboru prądu</strong> (cęgi lub amperomierz). Porównaj z danymi części z katalogu — wyraźnie zawyżony pobór to sygnał, że silnik zabija rezystor.</li>
+</ol>
+<p>Ta sama logika diagnozy sprawdza się w wielu kompaktach z tamtych lat — por. opis w poradniku, gdy w <a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golfie 5 nie działa nawiew</a>, gdzie kolejność kroków jest bardzo podobna.</p>
 
- <h2>Bezpiecznik F64 — lokalizacja w Focus Mk2</h2>
- <p>Skrzynka bezpieczników CJB (Central Junction Box) w Ford Focus Mk2 jest pod deską rozdzielczą po stronie kierowcy — przy lewym kolanie. Otwarcie: podważ plastikową klapkę.</p>
+<h2 id="filtr">Czy zatkany filtr kabinowy może udawać awarię nawiewu?</h2>
+<p>Tak. Gdy dmuchawa wyraźnie pracuje, a z kratek leci niewiele powietrza, najpierw wymień filtr przeciwpyłkowy. To najtańsza czynność w całej diagnostyce.</p>
+<p>Filtr ma też znaczenie dla elektryki. Mniejszy przepływ oznacza słabsze chłodzenie rezystora, co na forum AutoShite wskazano jako przyczynę topienia się tej części. Jeśli rezystor wymieniałeś niedawno, a filtr nie był ruszany od lat — wymień go od razu.</p>
 
- <h3>Jak znaleźć bezpiecznik F64</h3>
- <ol>
- <li>Otwórz klapkę skrzynki CJB (po stronie kierowcy, przy lewym kolanie).</li>
- <li>Na klapce lub na wewnętrznej naklejce znajdź opis bezpieczników.</li>
- <li>Szukaj pozycji <strong>F64</strong> — opis: "Blower Motor" lub "Silnik dmuchawy".</li>
- <li>Bezpiecznik 30A — kolor zielony.</li>
- <li>Dodatkowy bezpiecznik sterowania: <strong>F65</strong> (mini, 7,5A lub 10A) — odpowiada za sygnał sterujący.</li>
- </ol>
+<h2 id="checklista">Checklista: naprawa nawiewu Focusa Mk2 w 6 krokach</h2>
+<ol>
+<li><strong>Potwierdź generację</strong> po VIN (Mk2 = 2004–2011).</li>
+<li><strong>Ustal objaw</strong> testerem na górze strony: które biegi działają?</li>
+<li><strong>Bezpiecznik dmuchawy</strong> — pozycja według pokrywy skrzynki (w tabeli fuseandrelay: F10, 30 A, komora silnika).</li>
+<li><strong>Rezystor i wtyczka</strong> — oględziny, ciągłość, ślady przegrzania.</li>
+<li><strong>Silnik dmuchawy</strong> — napięcie, lekkość obrotu, pobór prądu.</li>
+<li><strong>Filtr kabinowy i kanał</strong> — wymień filtr, usuń liście z podszybia.</li>
+</ol>
+<p>Ten schemat jest wspólny dla większości aut z rezystorem dmuchawy — zestawienie dla innych modeli znajdziesz na stronie <a href="/nie-dziala-nawiew/">nie działa nawiew — wszystkie marki</a>.</p>
 
- <div class="note">
- <strong>F64 vs F65:</strong> F64 (30A) zasila silnik dmuchawy. F65 (mini) zasila obwód sterowania. Kiedy przepali się F65 — dmuchawa nie reaguje na panel sterowania mimo sprawnego silnika. Sprawdź oba. </div>
+<h2 id="bledy">Jakich błędów unikać przy naprawie nawiewu?</h2>
+<ul>
+<li><strong>Mocniejszy bezpiecznik „żeby nie strzelał”.</strong> Bezpiecznik chroni wiązkę. Większy amperaż przy zwarciu grozi przegrzaniem przewodów.</li>
+<li><strong>Mostkowanie bezpiecznika termicznego w rezystorze.</strong> Odbierasz układowi jedyne zabezpieczenie przed przegrzaniem.</li>
+<li><strong>Nowy rezystor na stopioną wtyczkę.</strong> Spalony styk grzeje się dalej i szybko niszczy nową część.</li>
+<li><strong>Wymiana rezystora bez sprawdzenia silnika.</strong> Gdy silnik chodzi ciężko, nowy rezystor będzie tylko kolejnym „bezpiecznikiem”.</li>
+<li><strong>Kupowanie części „do Focusa” bez VIN.</strong> Mk1, Mk2 i Mk3 mają różne części, a lifting też potrafi coś zmienić.</li>
+<li><strong>Pomijanie filtra kabinowego.</strong> Najtańsza część, a wpływa i na przepływ, i na temperaturę rezystora.</li>
+</ul>
 
- <h2>Rezystor dmuchawy — najczęstsza usterka Mk2</h2>
- <p>Rezystor reguluje prędkość obrotową silnika dmuchawy poprzez zmianę oporności w obwodzie. Kiedy przepala się (najczęściej z powodu przeciążenia cieplnego), tracisz kontrolę nad biegami 1–3.</p>
+<h2 id="faq">FAQ — nawiew w Fordzie Focusie Mk2</h2>
+<details><summary><strong>Dlaczego w Focusie Mk2 działa tylko 4. bieg nawiewu?</strong></summary><p>Najwyższy bieg zasila silnik dmuchawy z pominięciem rezystora. Jeśli działa tylko on, rezystor lub jego bezpiecznik termiczny jest przerwany.</p></details>
+<details><summary><strong>Który bezpiecznik odpowiada za dmuchawę w Focusie Mk2?</strong></summary><p>Tabela fuseandrelay.com dla Focusa II podaje F10 (30 A) w skrzynce w komorze silnika. Przypisanie zależy jednak od rocznika i rynku, więc sprawdź schemat na pokrywie skrzynki.</p></details>
+<details><summary><strong>Dlaczego nowy rezystor szybko się przepalił?</strong></summary><p>Najczęściej przez przegrzewanie: ciężko chodzący silnik dmuchawy, zatkany filtr kabinowy lub nadtopioną wtyczkę. Sprawdź te trzy rzeczy przed kolejną wymianą.</p></details>
+<details><summary><strong>Czy mogę jeździć z niedziałającym nawiewem?</strong></summary><p>Technicznie tak, ale bez nawiewu szyby szybciej parują, co pogarsza widoczność. Działający 4. bieg wystarczy do osuszenia szyby, dopóki nie naprawisz rezystora.</p></details>
+<details><summary><strong>Skąd wiem, że to silnik dmuchawy, a nie rezystor?</strong></summary><p>Jeśli na wtyczce silnika jest napięcie na najwyższym biegu, a silnik stoi lub rusza dopiero po stuknięciu w obudowę, winny jest silnik.</p></details>
+<details><summary><strong>Czy wymienić wtyczkę rezystora razem z nim?</strong></summary><p>Tak, jeśli ma ślady przegrzania: przebarwienia, stopiony plastik albo ciemne styki. Na takim złączu nowy rezystor też szybko się przegrzeje.</p></details>
 
- <h3>Lokalizacja rezystora w Focus Mk2</h3>
- <ol>
- <li>Otwórz schowek pasażera (wciśnij boki i opuść).</li>
- <li>Za schowkiem, na obudowie silnika dmuchawy, znajduje się rezystor.</li>
- <li>Odłącz wtyczkę elektryczną — naciśnij zatrzask i wyciągnij złącze.</li>
- <li>Wykręć 2 śruby mocujące rezystor (krzyżak PH2).</li>
- <li>Wyciągnij rezystor — często ma wbudowany bezpiecznik termiczny (jednorazowy).</li>
- </ol>
+<h2 id="podsumowanie">Podsumowanie i plan działania</h2>
+<p>W Focusie Mk2 objaw prawie zawsze wskazuje kierunek. Działa tylko 4. bieg — rezystor. Nie działa nic — bezpiecznik i silnik. Rezystor pada ponownie — silnik dmuchawy lub przepływ powietrza.</p>
+<ul>
+<li><strong>Dzień 1 (15 minut):</strong> test objawów, sprawdzenie bezpiecznika według pokrywy skrzynki, oględziny filtra kabinowego.</li>
+<li><strong>Dzień 1–2:</strong> oględziny rezystora i wtyczki; zamówienie części po VIN.</li>
+<li><strong>Przy wymianie:</strong> kontrola lekkości obrotu silnika i nowy filtr kabinowy.</li>
+</ul>
+<p>Podobne poradniki dla innych aut znajdziesz w <a href="/katalog/">katalogu modeli</a>, np. gdy w <a href="/opel-astra-g-nie-dziala-nawiew/">Oplu Astrze G nie działa nawiew</a>.</p>
 
- <h3>Numery katalogowe rezystora Focus Mk2</h3>
- <table>
- <thead><tr><th>Producent</th><th>Numer katalogowy</th><th>Cena orientacyjna</th></tr></thead>
- <tbody>
- <tr><td>Ford oryginał</td><td>4M5H 18B647 AA/AB</td><td>120–200 PLN</td></tr>
- <tr><td>Hella zamiennik</td><td>9ML 351 321-661</td><td>30–60 PLN</td></tr>
- <tr><td>Valeo zamiennik</td><td>509536</td><td>28–55 PLN</td></tr>
- <tr><td>Nissens zamiennik</td><td>87105</td><td>25–50 PLN</td></tr>
- </tbody>
- </table>
-
- <div class="note">Focus Mk2 po faceliftingu (2007–2011) może mieć nieco zmieniony rezystor. Przy zamawianiu podaj pełny VIN lub rok produkcji i typ klimatyzacji. Praktyczne doświadczenia właścicieli Focusa Mk2 z tą usterką znajdziesz w wątkach na elektroda.pl.</div>
-
- <h2>Silnik dmuchawy — diagnoza i wymiana</h2>
- <p>Jeśli bezpieczniki OK, rezystor nowy, ale nawiew nadal nie działa — sprawdź silnik dmuchawy. W Focus Mk2 silnik jest w obudowie nawiewu za schowkiem pasażera.</p>
-
- <h3>Szybki test silnika dmuchawy</h3>
- <ol>
- <li>Przy odłączonym rezystorze odszukaj złącze silnika dmuchawy (2-pinowe).</li>
- <li>Podłącz bezpośrednio do akumulatora (+12V i masa).</li>
- <li>Silnik kręci się normalnie → problem w sterowaniu, nie w silniku.</li>
- <li>Silnik się nie kręci, słychać szum lub nic → wymiana silnika dmuchawy.</li>
- </ol>
-
- <table>
- <thead><tr><th>Producent</th><th>Numer silnika dmuchawy Mk2</th><th>Cena</th></tr></thead>
- <tbody>
- <tr><td>Ford oryginał</td><td>1 447 010 233 / 3M5H 18456 BC</td><td>300–550 PLN</td></tr>
- <tr><td>Hella zamiennik</td><td>8EW 009 144-531</td><td>100–200 PLN</td></tr>
- <tr><td>Valeo zamiennik</td><td>698 402</td><td>95–180 PLN</td></tr>
- </tbody>
- </table>
-
- <h2>Koszty naprawy Focus Mk2 — zestawienie</h2>
- <table>
- <thead><tr><th>Naprawa</th><th>Część</th><th>Robocizna</th><th>Łącznie</th></tr></thead>
- <tbody>
- <tr><td>Wymiana bezpiecznika F64/F65</td><td>2–5 PLN</td><td>0 (sam)</td><td>2–5 PLN</td></tr>
- <tr><td>Wymiana rezystora</td><td>25–200 PLN</td><td>80–150 PLN</td><td>105–350 PLN</td></tr>
- <tr><td>Wymiana silnika dmuchawy</td><td>95–550 PLN</td><td>150–350 PLN</td><td>245–900 PLN</td></tr>
- </tbody>
- </table>
-
- <div class="danger">
- <strong>Uwaga na Mk1 vs Mk2:</strong> Numery części dla Focus Mk1 i Mk2 są różne i NIE są zamienne. Przed zakupem rezystora potwierdź generację swojego Focusa na VIN (9. znak to rok produkcji). </div>
-
- <h2>Inne modele z tym samym problemem</h2>
- <ul>
- <li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46 — nie działa nawiew</a></li>
- <li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5 — nie działa nawiew</a></li>
- <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z — nie działa nawiew</a></li>
- <li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12 — nie działa nawiew</a></li>
- <li><a href="/nie-dziala-nawiew/">Wszystkie modele — indeks nie działa nawiew</a></li>
- </ul>
-
- <h2>Najczęstsze pytania (FAQ)</h2>
- <div class="faq">
- <details>
- <summary>Jaki bezpiecznik odpowiada za nawiew w Ford Focus Mk2?</summary>
- <div class="answer">F64 (30A) dla silnika dmuchawy i F65 (mini, 7,5–10A) dla sterowania — obydwa w skrzynce CJB pod deską po stronie kierowcy. Sprawdź oba.</div>
- </details>
- <details>
- <summary>Focus Mk2 działa tylko najwyższy bieg nawiewu — co to jest?</summary>
- <div class="answer">Uszkodzony rezystor. Najwyższy bieg (4) zasilany jest bezpośrednio z pominięciem rezystora — dlatego jako jedyny działa po awarii. Wymiana rezystora rozwiązuje problem.</div>
- </details>
- <details>
- <summary>Gdzie jest rezystor dmuchawy w Ford Focus Mk2?</summary>
- <div class="answer">Za schowkiem pasażera, zamontowany bezpośrednio na obudowie silnika dmuchawy. Dostęp: demontaż schowka (wciśnij boki, opuść), rezystor widoczny na obudowie nawiewu.</div>
- </details>
- <details>
- <summary>Focus Mk2 a Focus Mk1 — czy diagnostyka jest taka sama?</summary>
- <div class="answer">Nie. Mk1 (1998–2004) i Mk2 (2004–2011) mają różne skrzynki bezpieczników i różne numery katalogowe rezystorów. Zawsze sprawdź rok produkcji przed zakupem części.</div>
- </details>
- <details>
- <summary>Ile kosztuje naprawa nawiewu Focus Mk2?</summary>
- <div class="answer">Rezystor: 105–350 PLN łącznie. Silnik dmuchawy: 245–900 PLN. Bezpiecznik: kilka złotych, możesz sam.</div>
- </details>
- <details>
- <summary>Czy mogę sam wymienić rezystor w Focus Mk2?</summary>
- <div class="answer">Tak. Krzyżakowy śrubokręt PH2, 20–40 minut. Demontaż schowka, odłączenie wtyczki, wymiana. Nie potrzebujesz specjalistycznych narzędzi ani wiedzy o elektryce.</div>
- </details>
- <details>
- <summary>Focus Mk2 nie działa żaden bieg nawiewu — diagnoza?</summary>
- <div class="answer">1. Sprawdź F64 (30A) i F65. 2. Zmierz napięcie na złączu dmuchawy. 3. Brak napięcia → obwód sterowania. Napięcie jest → wymiana silnika.</div>
- </details>
- <details>
- <summary>Focus Mk2 z automatyczną klimą — czy jest różnica?</summary>
- <div class="answer">Focus Mk2 z Climatic/Climate Control może blokować dmuchawę przy błędach sterownika. Po wymianie rezystora skasuj ewentualne błędy skanerem OBD2.</div>
- </details>
- </div>
-
- <div class="cta-box">
- <h3>Wolisz oddać do warsztatu?</h3>
- <p>Wymiana rezystora Focus Mk2 to ok. 30 minut w warsztacie. Upewnij się że mechanik zamawiał część dla Mk2, nie Mk1.</p>
- <a href="https://www.google.com/search?q=warsztat+Ford+Focus+Mk2+nawiew+rezystor" class="cta-btn" target="_blank" rel="nofollow noopener">Znajdź warsztat Ford</a>
- </div>
-
-
-<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div>
+<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją. Stan weryfikacji źródeł: 18.10.2026.</div>
 </main>
 
 <aside class="sidebar">
- <div class="sidebar-card">
- <div class="sidebar-title">Inne modele — nawiew</div>
- <ul class="related-links">
- 
- 
- 
- 
- <li><a href="/nie-dziala-nawiew/">Wszystkie modele →</a></li>
- </ul>
- </div>
- <div class="sidebar-card">
- <div class="sidebar-title">Dane techniczne</div>
- <ul class="related-links">
- <li>Produkcja: 2004–2011</li>
- <li>Bezpiecznik: F64 (30A) + F65</li>
- <li>Skrzynka: CJB pod deską kierowcy</li>
- <li>Rezystor: 4M5H 18B647 AA</li>
- </ul>
- </div>
- <div class="sidebar-card">
- <div class="sidebar-title">Uwaga generacja</div>
- <ul class="related-links">
- <li>Mk1: 1998–2004 ≠ Mk2</li>
- <li>Mk2: 2004–2011 ← ta strona</li>
- <li>Mk3: 2011–2018 ≠ Mk2</li>
- </ul>
- </div>
+    <div class="sidebar-card">
+        <div class="sidebar-title">📋 Ford Focus Mk2 — nawiew</div>
+        <ul class="sidebar-links">
+            <li><strong>Generacja:</strong> C307, 2004–2011</li>
+            <li><strong>Lifting:</strong> 2007–2008</li>
+            <li><strong>Bezpiecznik dmuchawy:</strong> wg pokrywy skrzynki (tabela: F10, 30 A)</li>
+            <li><strong>Tylko 4. bieg:</strong> rezystor</li>
+        </ul>
+    </div>
+    <div class="sidebar-card">
+        <div class="sidebar-title">📑 Spis treści</div>
+        <ul class="sidebar-links">
+            <li><a href="#tester">Test przyczyny</a></li>
+            <li><a href="#bezpiecznik">Bezpiecznik</a></li>
+            <li><a href="#rezystor">Rezystor</a></li>
+            <li><a href="#silnik">Silnik dmuchawy</a></li>
+            <li><a href="#checklista">Checklista</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
 </aside>
+
 </div>
 
 
-
-<style>body.ps-nav-loading{opacity:.7;pointer-events:none;transition:opacity .15s}</style>
-<script src="/assets/router.js" defer></script>
 
 <footer>
  <div class="sc-footer-inner">
@@ -428,5 +293,8 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
  </nav>
  </div>
 </footer>
+
+
+
 </body>
 </html>
