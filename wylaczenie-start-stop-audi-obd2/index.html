@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wyłączenie start-stop w Audi przez OBD2 bez VCDS — metody i ryzyka</title>
-<meta name="description" content="Jak wyłączyć lub zapamiętać wyłączenie start-stop w Audi bez VCDS: przycisk, aplikacje OBDeleven, adaptacja w module 09. Kiedy system sam nie gasi silnika i co z akumulatorem — ze źródłami.">
+<meta name="description" content="Jak wyłączyć start-stop w Audi bez VCDS: przycisk, OBDeleven, adaptacja w module 09. Kiedy system sam nie gasi silnika i co z akumulatorem.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/">
 <style>
@@ -134,6 +134,9 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 @media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
+
+
+
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "BlogPosting",
@@ -239,7 +242,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 <div role="status" id="ss-out"></div>
 </div>
 
-<p>System start-stop w Audi gasi silnik tylko wtedy, gdy spełnionych jest kilka warunków naraz. W dokumentacji Audi dla serwisów, przedrukowanej przez branżowy portal Import Car, wśród warunków wymieniono m.in. <a href="https://www.import-car.com/audi-start-stop-system-information/" target="_blank" rel="noopener">wystarczające naładowanie akumulatora, minimalną temperaturę silnika i niewielką różnicę między temperaturą zadaną a rzeczywistą w kabinie</a>. Dlatego w zimie albo na krótkich trasach system często w ogóle się nie włącza.</p>
+<p>System start-stop w Audi gasi silnik tylko wtedy, gdy spełnionych jest kilka warunków naraz. W dokumentacji Audi dla serwisów, przedrukowanej przez branżowy portal Import Car, wśród warunków wymieniono m.in. <a href="https://www.import-car.com/audi-start-stop-system-information/" target="_blank" rel="noopener">wystarczające naładowanie akumulatora, minimalną temperaturę silnika i niewielką różnicę między temperaturą zadaną a rzeczywistą w kabinie</a>. Dlatego w zimie albo na krótkich trasach system często w ogóle się nie włącza. Start-stop jest blokowany także podczas <a href="/dpf-wypalanie-2-0-tdi-regeneracja/">wypalania filtra DPF w dieslach 2.0 TDI</a> — to jeden z objawów, że regeneracja właśnie trwa.</p>
 
 <p>Oficjalny film producenta OBDeleven pokazuje, jak wyłączyć start-stop w Audi i innych autach grupy VW funkcją One-Click App, bez ręcznego kodowania:</p>
 
@@ -281,6 +284,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 <li>Zawsze zapisz oryginalne wartości — pozwala to wrócić do ustawień fabrycznych.</li>
 <li>W aucie na gwarancji zapytaj serwis, jak traktuje zmiany kodowania.</li>
 <li>Nie koduj na słabym akumulatorze — przerwany zapis może zablokować moduł. Przy dłuższej pracy podłącz prostownik.</li>
+<li>Jeśli dopiero wybierasz używane Audi z start-stop, porównaj generacje w poradniku <a href="/audi-a3-8v-vs-8p/">Audi A3 8V czy 8P</a>.</li>
 <li>Jeśli Twoje Audi ma miękką hybrydę (MHEV), sprawdź, czy funkcja w aplikacji jest przewidziana dla tej wersji.</li>
 </ul>
 

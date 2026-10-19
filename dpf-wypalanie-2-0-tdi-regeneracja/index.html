@@ -128,6 +128,16 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 @media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "Audi A4/A5/Q5 B8 Wypalanie DPF podczas jazdy -VCDS- prodedura/ DPF regeneration",
+ "description": "AUDInts pokazuje, jak w Audi B8 z silnikiem 2.0 TDI uruchomić wypalanie DPF podczas jazdy przez VCDS i co obserwować.",
+ "thumbnailUrl": "https://i.ytimg.com/vi/QJ2tlRbajDQ/hqdefault.jpg",
+ "uploadDate": "2018-08-26T00:00:00+00:00",
+ "embedUrl": "https://www.youtube-nocookie.com/embed/QJ2tlRbajDQ",
+ "contentUrl": "https://www.youtube.com/watch?v=QJ2tlRbajDQ"
+}</script>
 </head>
 <body>
 <a class="skip" href="#content">Przejdź do treści</a>
@@ -195,6 +205,9 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 
 <h2 id="jak-dziala-wypalanie-dpf-w-silniku-2-0-tdi">Jak działa wypalanie DPF w silniku 2.0 TDI?</h2>
 <p>Filtr cząstek stałych zbiera sadzę, a co jakiś czas trzeba ją spalić. Gdy spaliny są wystarczająco gorące podczas jazdy, dzieje się to samoistnie; gdy nie są — sterownik sam podnosi ich temperaturę dodatkowym wtryskiem paliwa.</p>
+<p>Jak to wygląda w praktyce, pokazuje kanał AUDInts na przykładzie Audi B8 z 2.0 TDI — od uruchomienia wypalania w VCDS po obserwację parametrów w czasie jazdy:</p>
+<div class="yt-video" style="position:relative;width:100%;height:auto;padding:0;aspect-ratio:16/9;margin:16px 0"><iframe src="https://www.youtube-nocookie.com/embed/QJ2tlRbajDQ" title="Audi A4/A5/Q5 B8 Wypalanie DPF podczas jazdy -VCDS- prodedura/ DPF regeneration" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:8px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 <p>Ten podział na regenerację pasywną i aktywną opisuje <a href="https://en.wikipedia.org/wiki/Diesel_particulate_filter">hasło o filtrach DPF w Wikipedii</a>. Bez katalizatora sadza spala się dopiero powyżej 600°C. Przy aktywnej regeneracji paliwo trafia do cylindrów w suwie wydechu albo bezpośrednio do układu wydechowego i spala się w katalizatorze utleniającym, który podgrzewa filtr. Ta sama metoda ma swoją cenę: zbyt częsta regeneracja zwiększa zużycie paliwa, a układ najlepiej sprawdza się w autach, które jeżdżą dłuższe trasy z niewielką liczbą postojów.</p>
 <h3>Kiedy sterownik startuje regenerację?</h3>
 <p>Sterownik silnika liczy (modeluje) masę sadzy na podstawie m.in. ciśnienia różnicowego na filtrze. Warsztat KFZ Dietrich w swoim <a href="https://kfz-dietrich.com/blog/vw-golf7-dpf-regeneration-odis/">opisie regeneracji w Golfie 7 2.0 TDI EA288</a> podaje, że regeneracja w czasie jazdy rusza typowo po przekroczeniu ok. 40–50 g sadzy. Potrzebuje jazdy z prędkością ok. 60 km/h przez 10–20 minut, a temperatura spalin rośnie wtedy do 550–600°C. Przy ok. 80 g, gdy auto nie radzi sobie samo, potrzebna jest regeneracja serwisowa testerem, a przy ok. 130 g warsztat wskazuje próg wymiany filtra.</p>

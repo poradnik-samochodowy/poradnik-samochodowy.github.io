@@ -209,6 +209,16 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 @media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "Blower resistor replacement - VW Golf V 2.0TDI 2006 - only 4th gear works",
+ "description": "Wymiana rezystora dmuchawy w VW Golfie V 2.0 TDI z 2006 r., w którym działał tylko 4 bieg nawiewu.",
+ "thumbnailUrl": "https://i.ytimg.com/vi/WnCt9R4vIUk/hqdefault.jpg",
+ "uploadDate": "2021-01-06T00:00:00+00:00",
+ "embedUrl": "https://www.youtube-nocookie.com/embed/WnCt9R4vIUk",
+ "contentUrl": "https://www.youtube.com/watch?v=WnCt9R4vIUk"
+}</script>
 </head>
 <body>
 <a class="skip" href="#content">Przejdź do treści</a>
@@ -237,8 +247,64 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 <div class="wrap">
 
 <div class="answer-box"><strong>Szybka odpowiedź</strong><p>Jeżeli w Golfie 5 z ręcznym wyborem prędkości działa tylko bieg 4, sprawdź rezystor N24, jego zabezpieczenie termiczne i złącze. Jeżeli nie działa żaden bieg, zacznij od właściwego bezpiecznika, zasilania i masy. W Climatronicu prędkością steruje elektronika, więc diagnoza „wymień opornik” nie wystarcza. Numer bezpiecznika i część dobieraj do konkretnego samochodu.</p></div>
+<div class="ps-tool" id="g5-tool">
+<h2 id="sciezka-diagnozy">Twoja ścieżka diagnozy</h2>
+<p>Wybierz panel i objaw — dostaniesz kolejność kontroli i link do właściwej części poradnika.</p>
+<div class="ps-opts" role="group" aria-label="Panel nawiewu">
+<button type="button" class="g5-panel" data-v="climatic" aria-pressed="true">Pokrętło stopni (ogrzewanie / Climatic)</button>
+<button type="button" class="g5-panel" data-v="climatronic" aria-pressed="false">Climatronic z wyświetlaczem</button>
+</div>
+<p><label for="g5-sym">Objaw</label><br>
+<select id="g5-sym">
+<option value="only4">Działa tylko najwyższy bieg</option>
+<option value="none">Nie działa żaden bieg</option>
+<option value="weak">Dmuchawa kręci, ale powietrza jest mało</option>
+<option value="warm">Dmucha, ale nie chłodzi / nie grzeje</option>
+</select></p>
+<div role="status" id="g5-out"></div>
+</div>
+<script>
+(function(){
+  var paths = {
+    climatic: {
+      only4: [['Rezystor N24 i jego złącze', '#dziala-tylko-czwarty-bieg-rezystor-i-jego-otoczenie'], ['Czy wirnik dmuchawy kręci się swobodnie', '#gdzie-szukac-dmuchawy-regulatora-i-filtra']],
+      none: [['Bezpiecznik według schematu dla Twojej wersji', '#jaki-bezpiecznik-nawiewu-sprawdzic-w-golfie-5'], ['Zasilanie i masa pod obciążeniem', '#zaden-bieg-nie-dziala-jak-interpretowac-pomiary']],
+      weak: [['Filtr kabinowy i obudowa dmuchawy', '#gdzie-szukac-dmuchawy-regulatora-i-filtra']],
+      warm: [['To nie usterka dmuchawy — sprawdź klimatyzację lub ogrzewanie', '#najpierw-ustal-co-dokladnie-przestalo-dzialac']]
+    },
+    climatronic: {
+      only4: [['Odczyt błędów sterownika klimatyzacji', '#climatronic-i-odczyt-bledow-kod-nie-wskazuje-jednej-czesci'], ['Elektroniczny regulator dmuchawy zamiast rezystora', '#climatic-i-climatronic-rozne-sposoby-sterowania']],
+      none: [['Bezpiecznik według schematu dla Twojej wersji', '#jaki-bezpiecznik-nawiewu-sprawdzic-w-golfie-5'], ['Odczyt błędów sterownika klimatyzacji', '#climatronic-i-odczyt-bledow-kod-nie-wskazuje-jednej-czesci']],
+      weak: [['Filtr kabinowy i obudowa dmuchawy', '#gdzie-szukac-dmuchawy-regulatora-i-filtra']],
+      warm: [['To nie usterka dmuchawy — sprawdź klimatyzację lub ogrzewanie', '#najpierw-ustal-co-dokladnie-przestalo-dzialac']]
+    }
+  };
+  var panel = 'climatic', out = document.getElementById('g5-out');
+  function show(){
+    out.textContent = '';
+    var ol = document.createElement('ol');
+    paths[panel][document.getElementById('g5-sym').value].forEach(function(step){
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = step[1]; a.textContent = step[0]; li.appendChild(a); ol.appendChild(li);
+    });
+    out.appendChild(ol);
+  }
+  document.querySelectorAll('#g5-tool .g5-panel').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#g5-tool .g5-panel').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true'); panel = b.dataset.v; show();
+    });
+  });
+  document.getElementById('g5-sym').addEventListener('change', show);
+  show();
+})();
+</script>
+
 <h2 id="najpierw-ustal-co-dokladnie-przestalo-dzialac">Najpierw ustal, co dokładnie przestało działać</h2>
 <p>Gdy w VW Golf 5 nie działa nawiew, pierwszym krokiem jest rozróżnienie ciszy silnika od słabego przepływu powietrza. Włącz zapłon, otwórz kratki, wybierz nawiew na twarz i zwiększ prędkość. Zanotuj, czy słychać zmianę obrotów, czy powietrze dociera do innych wylotów oraz czy problem występuje stale, czy dopiero po rozgrzaniu wnętrza.</p>
+<p>Ten film pokazuje dokładnie ten przypadek — Golf V, w którym działa tylko 4 bieg, i wymianę rezystora:</p>
+<div class="yt-video" style="position:relative;width:100%;height:auto;padding:0;aspect-ratio:16/9;margin:16px 0"><iframe src="https://www.youtube-nocookie.com/embed/WnCt9R4vIUk" title="Blower resistor replacement - VW Golf V 2.0TDI 2006 - only 4th gear works" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:8px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 <p>Jeżeli wentylator pracuje, ale powietrze jest ciepłe zamiast zimnego, to inny problem niż brak nawiewu. Dmuchawa porusza powietrze niezależnie od tego, czy układ chłodniczy klimatyzacji skutecznie je schładza. Uzupełnianie czynnika nie naprawi nieruchomego silnika. Z kolei brak ciepła przy sprawnym przepływie kieruje uwagę na ogrzewanie i regulację temperatury.</p>
 <p>Przydatne jest porównanie z ogólnym poradnikiem <a href="/nie-dziala-nawiew/">diagnostyki niedziałającego nawiewu</a>, ale pozycje bezpieczników i części muszą pochodzić z dokumentacji Golfa. Zapis objawów przed wizytą w warsztacie często jest bardziej użyteczny niż zakup regulatora na podstawie krótkiego opisu sprzedawcy.</p>
 <h2 id="climatic-i-climatronic-rozne-sposoby-sterowania">Climatic i Climatronic: różne sposoby sterowania</h2>
@@ -289,7 +355,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 </div>
 </article>
 <aside class="sidebar">
-<nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#najpierw-ustal-co-dokladnie-przestalo-dzialac">Najpierw ustal, co dokładnie przestało działać</a></li><li><a href="#climatic-i-climatronic-rozne-sposoby-sterowania">Climatic i Climatronic: różne sposoby sterowania</a></li><li><a href="#jaki-bezpiecznik-nawiewu-sprawdzic-w-golfie-5">Jaki bezpiecznik nawiewu sprawdzić w Golfie 5?</a></li><li><a href="#dziala-tylko-czwarty-bieg-rezystor-i-jego-otoczenie">Działa tylko czwarty bieg: rezystor i jego otoczenie</a></li><li><a href="#gdzie-szukac-dmuchawy-regulatora-i-filtra">Gdzie szukać dmuchawy, regulatora i filtra?</a></li><li><a href="#zaden-bieg-nie-dziala-jak-interpretowac-pomiary">Żaden bieg nie działa: jak interpretować pomiary?</a></li><li><a href="#climatronic-i-odczyt-bledow-kod-nie-wskazuje-jednej-czesci">Climatronic i odczyt błędów: kod nie wskazuje jednej części</a></li><li><a href="#dmuchawa-szumi-ale-powietrza-jest-malo">Dmuchawa szumi, ale powietrza jest mało</a></li><li><a href="#jak-zlecic-naprawe-bez-kupowania-czesci-na-probe">Jak zlecić naprawę bez kupowania części na próbę?</a></li><li><a href="#najczestsze-pytania-o-nawiew-golfa-5">Najczęstsze pytania o nawiew Golfa 5</a></li></ol></nav>
+<nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#sciezka-diagnozy">Twoja ścieżka diagnozy</a></li><li><a href="#najpierw-ustal-co-dokladnie-przestalo-dzialac">Najpierw ustal, co dokładnie przestało działać</a></li><li><a href="#climatic-i-climatronic-rozne-sposoby-sterowania">Climatic i Climatronic: różne sposoby sterowania</a></li><li><a href="#jaki-bezpiecznik-nawiewu-sprawdzic-w-golfie-5">Jaki bezpiecznik nawiewu sprawdzić w Golfie 5?</a></li><li><a href="#dziala-tylko-czwarty-bieg-rezystor-i-jego-otoczenie">Działa tylko czwarty bieg: rezystor i jego otoczenie</a></li><li><a href="#gdzie-szukac-dmuchawy-regulatora-i-filtra">Gdzie szukać dmuchawy, regulatora i filtra?</a></li><li><a href="#zaden-bieg-nie-dziala-jak-interpretowac-pomiary">Żaden bieg nie działa: jak interpretować pomiary?</a></li><li><a href="#climatronic-i-odczyt-bledow-kod-nie-wskazuje-jednej-czesci">Climatronic i odczyt błędów: kod nie wskazuje jednej części</a></li><li><a href="#dmuchawa-szumi-ale-powietrza-jest-malo">Dmuchawa szumi, ale powietrza jest mało</a></li><li><a href="#jak-zlecic-naprawe-bez-kupowania-czesci-na-probe">Jak zlecić naprawę bez kupowania części na próbę?</a></li><li><a href="#najczestsze-pytania-o-nawiew-golfa-5">Najczęstsze pytania o nawiew Golfa 5</a></li></ol></nav>
 
  <div class="sidebar-card">
  <div class="sidebar-title">Inne modele — nawiew</div>
