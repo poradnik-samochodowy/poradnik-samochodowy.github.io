@@ -12,101 +12,142 @@
     <meta property="og:url" content="https://poradnik-samochodowy.github.io/dpf-wypalanie-2-0-tdi-regeneracja/">
     <meta property="og:type" content="article">
     
-    <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; }
-    .article-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); color: #fff; padding: 36px 20px; }
-    .article-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
-    .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .spec-pill { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
-    .content { max-width: 1040px; margin: 28px auto; padding: 0 20px; }
-    h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e8c3c3; padding-bottom: 10px; }
-    h3 { font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-top: 1.5em; margin-bottom: 0.8em; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    table th { background: #1a1a2e; color: white; padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
-    table td { padding: 12px 15px; border-bottom: 1px solid #ddd; }
-    table tr:nth-child(even) { background: #f5f5f5; }
-    table tr:hover { background: #f0f0f0; }
-    .answer-box { background: #f0f4ff; border-left: 4px solid #1a1a2e; padding: 20px; margin: 20px 0; border-radius: 4px; }
-    .answer-box strong { color: #1a1a2e; }
-    a { color: #c0392b; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .sidebar { max-width: 300px; margin-left:0; }
-    .sidebar-card { background: white; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 20px; }
-    .sidebar-title { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
-    .sidebar-links { list-style: none; }
-    .sidebar-links li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
-    .sidebar-links li:last-child { border: none; margin: 0; padding: 0; }
-    .sidebar-links a { font-size: 0.9rem; }
-    .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
-    strong { font-weight: 700; color: #1a1a2e; }
-    em { font-style: italic; }
-    ul, ol { margin: 15px 0; margin-left: 30px; }
-    li { margin-bottom: 8px; }
-    </style>
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wypalanie DPF w 2.0 TDI (VAG): jak rozpoznać regenerację i dlaczego spalanie chwilowe spada", "description": "Wypalanie DPF w 2.0 TDI: objawy regeneracji (obroty, wentylator, start-stop), wartości w VCDS, spadek spalania chwilowego i checklista jazdy. Checker objawów.", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "author": {"@type": "Person", "name": "Krzysztof Wilk"}, "publisher": {"@type": "Organization", "name": "Poradnik Samochodowy"}, "mainEntityOfPage": "https://poradnik-samochodowy.github.io/dpf-wypalanie-2-0-tdi-regeneracja/", "url": "https://poradnik-samochodowy.github.io/dpf-wypalanie-2-0-tdi-regeneracja/", "inLanguage": "pl-PL"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wypalanie DPF w 2.0 TDI (VAG): jak rozpoznać regenerację i dlaczego spalanie chwilowe spada", "description": "Wypalanie DPF w 2.0 TDI: objawy regeneracji (obroty, wentylator, start-stop), wartości w VCDS, spadek spalania chwilowego i checklista jazdy. Checker objawów.", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "author": {"@type": "Person", "name": "Krzysztof Wilk"}, "publisher": {"@type": "Organization", "name": "Poradnik Samochodowy"}, "mainEntityOfPage": "https://poradnik-samochodowy.github.io/dpf-wypalanie-2-0-tdi-regeneracja/", "url": "https://poradnik-samochodowy.github.io/dpf-wypalanie-2-0-tdi-regeneracja/", "inLanguage": "pl-PL"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jak długo trwa wypalanie DPF w 2.0 TDI?", "acceptedAnswer": {"@type": "Answer", "text": "Warsztat KFZ Dietrich podaje dla EA288 10–20 minut jazdy z prędkością ok. 60 km/h. Volkswagen Australia przy zapalonej kontrolce zaleca 25–30 minut jazdy powyżej 60 km/h i jeszcze 10 minut po jej zgaśnięciu."}}, {"@type": "Question", "name": "Czy mogę zgasić silnik w trakcie regeneracji?", "acceptedAnswer": {"@type": "Answer", "text": "Możesz, nic się nie zepsuje od razu. Sterownik spróbuje ponownie później. Częste przerywanie regeneracji sprzyja jednak przedostawaniu się paliwa do oleju, więc gdy to możliwe, dokończ jazdę."}}, {"@type": "Question", "name": "Czy wentylator pracujący po zgaszeniu to usterka?", "acceptedAnswer": {"@type": "Answer", "text": "Zwykle nie. Audi w biuletynie technicznym dla silników V6 TDI opisuje pracę wentylatorów do 10 minut po wyłączeniu silnika, m.in. po regeneracji DPF, jako normalną."}}, {"@type": "Question", "name": "Dlaczego start-stop nie działa podczas regeneracji?", "acceptedAnswer": {"@type": "Answer", "text": "Regeneracja wymaga pracy silnika i wysokiej temperatury spalin, więc start-stop jest wtedy blokowany. Użytkownicy VW opisują, że po zakończeniu wypalania obroty spadają do ok. 800 obr./min, a start-stop wraca."}}, {"@type": "Question", "name": "Czy regeneracja może ruszyć na zimnym silniku?", "acceptedAnswer": {"@type": "Answer", "text": "W wątku na Wykopie autor tak to opisuje, a jeden z komentujących twierdzi, że potrzeba ok. 80°C płynu chłodzącego. Nie potwierdziliśmy tego progu w dokumentacji — najlepiej sprawdzić temperatury i masę sadzy w diagnostyce w momencie objawów."}}, {"@type": "Question", "name": "Jak często 2.0 TDI wypala DPF?", "acceptedAnswer": {"@type": "Answer", "text": "Zależy od stylu jazdy i silnika. Jeden z użytkowników VW T6 2.0 TDI podaje co 100–150 mil (ok. 160–240 km). Przy krótkich trasach w mieście próby mogą być częstsze."}}]}</script>
-<style id="site-chrome">
-:where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
-[class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
-.sc-topbar{ background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-.sc-topbar-inner{ max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
-.sc-topbar-brand{ font-size: 1.15rem; font-weight: 700; color: #fff; }
-.sc-topbar-nav{ display: flex; gap: 18px; }
-.sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
-.sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
-.reset,header.sc-topbar,footer.footer{box-sizing:border-box}
-.sc-topbar{ background: #c0392b; color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-.sc-topbar-inner{ max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
-.sc-topbar-brand{ font-size: 1.15rem; font-weight: 700; color: #fff; }
-.sc-topbar-nav{ display: flex; gap: 18px; }
-.sc-topbar-nav a{ color: rgba(255,255,255,0.9); font-size: 0.9rem; }
-.sc-footer-inner{ max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; }
-.sc-topbar a,.footer a{text-decoration:none}
-.sc-topbar a,.sc-footer a{text-decoration:none}
-/* site name always readable on the bar, whatever the article CSS does with links (owner 2026-10-13) */
-.sc-topbar .sc-topbar-brand,.sc-topbar .sc-topbar-brand:visited,.sc-topbar .sc-topbar-brand:hover{color:#fff!important}
-/* links blue: the most recognisable clickable colour (owner 2026-10-13); not the bar, footer, buttons or cards */
-a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]){color:#0066cc!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):visited{color:#0052a3!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):hover{text-decoration:underline}
-@media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
+<link rel="icon" href="data:,">
+<style id="ps">
+:root{--bar:#1e2226;--accent:#f2b705;--ink:#14171a;--text:#1f2328;--muted:#4a5259;--line:#e1e4e8;--soft:#f4f5f6;--tag:#5b4a00;--link:#0066cc}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0!important;padding:0!important;font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important;font-size:17px;line-height:1.65;color:var(--text);background:#fff!important}
+a{color:var(--link)}a:visited{color:#0052a3}a:hover{color:#0052a3}
+h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:10px 14px;z-index:9}
+.sc-topbar{background:#1e2226;border-bottom:4px solid var(--accent);position:static;box-shadow:none}
+.sc-topbar-inner{max-width:1120px;margin:0 auto;padding:0 20px;min-height:60px;height:auto;display:flex;align-items:center;justify-content:space-between;gap:4px 16px;flex-wrap:wrap}
+.sc-topbar .sc-topbar-brand,.sc-topbar .sc-topbar-brand:visited{color:#fff!important;text-decoration:none;font-weight:800;font-size:19px;display:flex;align-items:center;gap:10px;min-height:44px}
+.sc-topbar-nav{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0}
+.sc-topbar-nav a,.sc-topbar-nav a:visited{color:#e6e8ea!important;text-decoration:none;padding:12px 11px;display:block;font-size:15px}
+.sc-topbar-nav a:hover,.sc-topbar-nav a[aria-current]{color:#fff!important;text-decoration:underline;text-underline-offset:4px}
+.ps-hero{background:var(--soft);border-bottom:1px solid var(--line)}
+.ps-in{max-width:1120px;margin:0 auto;padding:28px 20px 28px}
+.ps-home .ps-in{padding:44px 20px 36px}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;color:var(--muted);margin:0 0 12px;padding:0;background:none;border:0}
+.breadcrumb a,.breadcrumb a:visited{color:var(--muted)!important}
+.kicker{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tag)}
+.ps-hero h1{margin:0 0 10px;font-size:clamp(28px,4vw,40px);line-height:1.18;font-weight:800;max-width:860px}
+.ps-hero .lead{margin:0;font-size:19px;color:var(--muted);max-width:740px}
+.ps-meta{margin:0;font-size:15px;color:var(--muted)}
+.spec-pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.spec-pill{background:#fff;border:1px solid #d7dbe0;color:var(--text);padding:4px 12px;border-radius:999px;font-size:14px}
+.ps-layout{max-width:1120px;margin:0 auto;padding:30px 20px 56px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:44px;align-items:start}
+.ps-article{min-width:0;max-width:760px;font-size:18px;line-height:1.72}
+:where(.ps-article,.ps-page,.ps-main) h2{font-size:26px;line-height:1.25;font-weight:800;margin:40px 0 12px;padding:0;border:0;scroll-margin-top:16px}
+:where(.ps-article,.ps-page,.ps-main) h3{font-size:20px;margin:26px 0 10px;line-height:1.3}
+:where(.ps-article,.ps-page,.ps-main) :is(ul,ol){padding-left:24px;margin:12px 0}
+:where(.ps-article,.ps-page,.ps-main) li{margin:6px 0}
+:where(.ps-article,.ps-page,.ps-main) img{max-width:100%;height:auto}
+:where(.ps-article) table{width:100%;border-collapse:collapse;margin:22px 0;font-size:16px;display:block;overflow-x:auto;box-shadow:none;background:#fff}
+:where(.ps-article) th{text-align:left;background:var(--soft);color:var(--ink);padding:12px 14px;border:0;border-bottom:2px solid var(--bar)}
+:where(.ps-article) td{padding:12px 14px;border:0;border-bottom:1px solid var(--line);vertical-align:top}
+:where(.ps-article) tr{background:none}
+:where(.ps-article) blockquote{margin:22px 0;padding:16px 20px;background:var(--soft);border-radius:10px}
+:where(.ps-article) code{background:var(--soft);padding:1px 5px;border-radius:4px;font-size:.92em}
+:where(.ps-article) :is(select,input,button,textarea){font:inherit;font-size:16px}
+:where(.ps-article) :is(select,input[type=text],input[type=number]){min-height:44px;padding:0 10px;border:1px solid #b9bfc6;border-radius:8px;background:#fff;max-width:100%}
+:where(.ps-article) button{min-height:44px;padding:0 18px;margin:4px 6px 4px 0;border:0;border-radius:8px;background:var(--bar);color:#fff;font-weight:700;cursor:pointer}
+:where(.ps-article) fieldset{border:2px solid var(--bar);border-radius:12px;padding:18px 20px;margin:26px 0}
+:where(.ps-article) legend{padding:0 8px;font-weight:800;color:var(--ink)}
+.answer-box{background:#fff8db;border:0;border-radius:12px;padding:18px 20px;margin:0 0 26px}
+.answer-box strong:first-child{display:block;margin-bottom:4px;color:var(--ink)}
+.answer-box p{margin:0}
+.warning,.danger,.note{border:0;border-radius:12px;padding:16px 20px;margin:22px 0}
+.warning{background:#fff4e5}.danger{background:#fdecec}.note{background:var(--soft)}
+.faq{margin:10px 0}.faq-item{border-bottom:1px solid var(--line);padding:12px 0;margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:12px 0}
+.faq summary,.faq-item h3,.faq-item strong:first-child{cursor:pointer;font-weight:700;color:var(--ink);font-size:18px;margin:0}
+.faq .answer{padding-top:8px}
+.ai-note{font-size:15px!important;color:var(--muted)!important;background:var(--soft)!important;border:0!important;border-radius:10px;padding:14px 18px!important;margin:30px 0 0!important}
+.sidebar{position:sticky;top:16px;display:grid;gap:14px;max-height:calc(100vh - 32px);overflow:auto;max-width:none;margin:0}
+.sidebar-card,.sb-sidebar-card,.ps-panel{background:var(--soft);border:0;box-shadow:none;border-radius:12px;padding:16px 18px;margin:0;font-size:15px}
+.sidebar-title,.sb-sidebar-title,.ps-panel h3{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sidebar ul,.sidebar ol{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0;padding:4px 0;border:0}
+.sidebar p{margin:0 0 6px}
+.toc{background:#fff;border-left:3px solid var(--accent);border-radius:0;padding:4px 0 4px 16px}
+.toc a{display:block;padding:5px 0;text-decoration:none;line-height:1.4}.toc a:hover{text-decoration:underline}
+.related-links{list-style:none;padding:0}
+.ps-page{max-width:820px;margin:0 auto;padding:30px 20px 56px;font-size:18px}
+.ps-main{max-width:1120px;margin:0 auto;padding:34px 20px 56px}
+.ps-main>h2:first-child{margin-top:0}
+.section-lead{margin:0 0 16px;color:var(--muted)}
+.ps-search{max-width:720px}
+.ps-search label{display:block;font-weight:700;font-size:15px;margin:0 0 6px}
+.ps-search input{width:100%;min-height:52px;padding:0 16px;font:inherit;font-size:17px;border:2px solid var(--bar);border-radius:10px;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.chips button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid #b9bfc6;background:#fff;color:var(--text);font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--bar);border-color:var(--bar);color:#fff}
+.problems{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:0 0 40px;padding:0;list-style:none}
+.problems a{display:block;height:100%;padding:18px;border:1px solid #d7dbe0;border-radius:12px;text-decoration:none;color:var(--text)!important}
+.problems a:hover{border-color:var(--bar);background:var(--soft)}
+.problems strong{display:block;font-size:18px;color:var(--ink)}.problems span{font-size:15px;color:var(--muted)}
+.list-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin:0 0 8px}
+.list-head h2{margin:0}.list-head p{margin:0;font-size:15px;color:var(--muted)}
+.cards{border-top:1px solid var(--line);margin:0 0 40px}
+.card{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);gap:2px 20px;padding:16px 8px 16px 0;border-bottom:1px solid var(--line)}
+.card[hidden]{display:none}
+.card:hover{background:var(--soft)}
+.card .kicker{grid-row:1/4;margin:4px 0 0;font-size:12px}
+.card h2,.card h3{font-size:19px;font-weight:700;line-height:1.35;margin:0}
+.card h2 a,.card h3 a,.card h2 a:visited,.card h3 a:visited{color:var(--ink)!important;text-decoration:none}
+.card h2 a::after,.card h3 a::after{content:"";position:absolute;inset:0}
+.card:hover h2 a,.card:hover h3 a{text-decoration:underline;text-underline-offset:3px}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.card .card-date{font-size:14px}
+.ps-empty{padding:18px;background:var(--soft);border-radius:10px}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:0 0 40px}
+.group{border:1px solid #d7dbe0;border-radius:12px;padding:18px 20px}
+.group h2,.group h3{margin:0 0 8px;font-size:20px}
+.group ul{list-style:none;margin:0;padding:0}.group li{padding:5px 0;border-top:1px solid var(--line)}.group li:first-child{border:0}
+.diag{background:#fff8db;border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.diag h2{margin:0 0 8px;font-size:22px}.diag ul{margin:0;padding-left:20px}
+.about{background:var(--soft);border-radius:12px;padding:22px}
+.about h2{margin:0 0 6px;font-size:21px}.about p{margin:0 0 8px;color:var(--muted)}
+.sc-footer{background:#1e2226;color:#c9ced3;font-size:15px;margin:0;padding:0}
+.sc-footer-inner{max-width:1120px;margin:0 auto;padding:28px 20px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+.sc-footer-nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+.sc-footer a,.sc-footer a:visited{color:#fff!important}
+.sc-footer p{margin:0;max-width:560px}
+@media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
+@media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
-<style id="sc-font">body{font-family:'Segoe UI', Arial, sans-serif}body h1,body h2,body h3{font-family:'Segoe UI', Arial, sans-serif}</style>
 </head>
 <body>
+<a class="skip" href="#content">Przejdź do treści</a>
 <header class="sc-topbar">
- <div class="sc-topbar-inner">
- <a href="/" class="sc-topbar-brand">🚗 Poradnik Samochodowy</a>
- <nav class="sc-topbar-nav">
- <a href="/">Start</a>
- <a href="/katalog/">Katalog</a>
- <a href="/blog.html">Artykuły</a>
- <a href="/about.html">O nas</a>
- <a href="/contact.html">Kontakt</a>
- <a href="/sitemap.html">Mapa strony</a>
- </nav>
- </div>
+  <div class="sc-topbar-inner">
+    <a class="sc-topbar-brand" href="/"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f2b705" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>Poradnik Samochodowy</a>
+    <nav aria-label="Menu główne"><ul class="sc-topbar-nav"><li><a href="/blog.html">Poradniki</a></li><li><a href="/nie-dziala-nawiew/">Nie działa nawiew</a></li><li><a href="/katalog/">Katalog modeli</a></li><li><a href="/about.html">O nas</a></li><li><a href="/sitemap.html">Mapa strony</a></li></ul></nav>
+  </div>
 </header>
+<section class="ps-hero">
+  <div class="ps-in">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Strona główna</a><span aria-hidden="true">›</span><a href="/blog.html">Poradniki</a><span aria-hidden="true">›</span><span aria-current="page">Wypalanie DPF w 2.0 TDI (VAG): jak rozpoznać regenerację i d</span></nav>
+    <p class="kicker">DPF i wydech · Volkswagen</p>
+    <h1>Wypalanie DPF w 2.0 TDI (VAG): jak rozpoznać regenerację i dlaczego spalanie chwilowe spada</h1>
+    <p class="lead">Objawy, które mechanicy znają od lat, wartości do sprawdzenia w diagnostyce i checklista dla kierowcy Audi, VW, Skody i Seata.</p>
+    <p class="ps-meta">18.10.2026 · 10 min czytania</p>
+  </div>
+</section>
+<main class="ps-layout" id="content">
+<article class="ps-article">
+<div class="content">
 
-
-
-
-
-
-
-
-
-
-<div class="article-hero"><div style="max-width:1040px;margin:0 auto;padding:0 20px"><h1>Wypalanie DPF w 2.0 TDI (VAG): jak rozpoznać regenerację i dlaczego spalanie chwilowe spada</h1><p>Objawy, które mechanicy znają od lat, wartości do sprawdzenia w diagnostyce i checklista dla kierowcy Audi, VW, Skody i Seata.</p></div></div>
-
-<div class="content" style="display: grid; grid-template-columns: 1fr 300px; gap: 28px;">
-
-<main>
 <p>Wypalanie DPF w 2.0 TDI to proces, którego kierowca zwykle nie widzi na desce rozdzielczej — kontrolka zapala się dopiero wtedy, gdy coś poszło nie tak. Dlatego doświadczeni mechanicy od lat rozpoznają regenerację po drobnych objawach: wyższych obrotach biegu jałowego, wentylatorze pracującym po zgaszeniu i wyłączonym start-stopie. Poniżej zebraliśmy te sprawdzone sygnały i wyjaśniamy, co zrobić, gdy spalanie chwilowe podczas „wypalania” zamiast rosnąć — spada.</p>
 
 <div class="answer-box"><strong>Szybka odpowiedź:</strong> Trwającą regenerację najpewniej rozpoznasz po zestawie objawów naraz: obroty jałowe podniesione do ok. 1000 obr./min, nieaktywny start-stop, wentylator chłodnicy pracujący po zgaszeniu i zapach gorących elementów. Pojedynczy objaw — w tym spadek spalania chwilowego — niczego nie przesądza. Pewność daje dopiero odczyt w diagnostyce: masa sadzy, ciśnienie różnicowe i temperatury przed oraz za filtrem.</div>
 
-<h2>Czy w moim aucie właśnie trwa regeneracja DPF?</h2>
+<h2 id="czy-w-moim-aucie-wlasnie-trwa-regeneracja-dpf">Czy w moim aucie właśnie trwa regeneracja DPF?</h2>
 <p>Zaznacz to, co zauważasz w tej chwili. Checker liczy, ile typowych objawów aktywnej regeneracji się zgadza, i podpowiada kolejny krok. To pomoc w ocenie, nie diagnoza.</p>
 <div id="dpf-check" style="border:2px solid #c0392b;padding:20px;border-radius:8px;background:#fff">
 <div style="font-weight:700;margin-bottom:10px">🔎 Checker objawów regeneracji DPF (2.0 TDI)</div>
@@ -145,14 +186,14 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </script>
 <p>Wagi w checkerze to nasza ocena redakcyjna: najmocniejsze są objawy, które forumowicze i serwisy łączą z regeneracją, a zimny silnik i kontrolka zmieniają interpretację. Szczegóły i źródła znajdziesz w kolejnych sekcjach.</p>
 
-<h2>Jak działa wypalanie DPF w silniku 2.0 TDI?</h2>
+<h2 id="jak-dziala-wypalanie-dpf-w-silniku-2-0-tdi">Jak działa wypalanie DPF w silniku 2.0 TDI?</h2>
 <p>Filtr cząstek stałych zbiera sadzę, a co jakiś czas trzeba ją spalić. Gdy spaliny są wystarczająco gorące podczas jazdy, dzieje się to samoistnie; gdy nie są — sterownik sam podnosi ich temperaturę dodatkowym wtryskiem paliwa.</p>
 <p>Ten podział na regenerację pasywną i aktywną opisuje <a href="https://en.wikipedia.org/wiki/Diesel_particulate_filter">hasło o filtrach DPF w Wikipedii</a>. Bez katalizatora sadza spala się dopiero powyżej 600°C. Przy aktywnej regeneracji paliwo trafia do cylindrów w suwie wydechu albo bezpośrednio do układu wydechowego i spala się w katalizatorze utleniającym, który podgrzewa filtr. Ta sama metoda ma swoją cenę: zbyt częsta regeneracja zwiększa zużycie paliwa, a układ najlepiej sprawdza się w autach, które jeżdżą dłuższe trasy z niewielką liczbą postojów.</p>
 <h3>Kiedy sterownik startuje regenerację?</h3>
 <p>Sterownik silnika liczy (modeluje) masę sadzy na podstawie m.in. ciśnienia różnicowego na filtrze. Warsztat KFZ Dietrich w swoim <a href="https://kfz-dietrich.com/blog/vw-golf7-dpf-regeneration-odis/">opisie regeneracji w Golfie 7 2.0 TDI EA288</a> podaje, że regeneracja w czasie jazdy rusza typowo po przekroczeniu ok. 40–50 g sadzy. Potrzebuje jazdy z prędkością ok. 60 km/h przez 10–20 minut, a temperatura spalin rośnie wtedy do 550–600°C. Przy ok. 80 g, gdy auto nie radzi sobie samo, potrzebna jest regeneracja serwisowa testerem, a przy ok. 130 g warsztat wskazuje próg wymiany filtra.</p>
 <div class="warning"><strong>⚠️ Ważne:</strong> to wartości podane dla rodziny EA288. Silnik CJCB z wątku na Wykopie (Audi A4) należy do starszej generacji 2.0 TDI, więc progi w Twoim aucie mogą być inne. Porównuj odczyty z danymi dla swojego kodu silnika i wersji oprogramowania.</div>
 
-<h2>Jakie są objawy trwającej regeneracji?</h2>
+<h2 id="jakie-sa-objawy-trwajacej-regeneracji">Jakie są objawy trwającej regeneracji?</h2>
 <p>Najczęściej: obroty jałowe podniesione do ok. 1000 obr./min, wyłączony start-stop, wentylator po zgaszeniu i zapach gorących elementów. Kontrolka zwykle się nie zapala.</p>
 <p>Ten zestaw dobrze oddaje wątek z <a href="https://www.t6forum.com/threads/idle-speed-high-stopping-start-stop-working.35460">forum użytkowników VW T6 z silnikiem 2.0 TDI 150</a>. Autor opisuje bieg jałowy ok. 1000 obr./min i niedziałający start-stop, a po ponownym uruchomieniu — ok. 800 obr./min i działający start-stop. Odpowiadający łączą to z regeneracją: „1000 obr./min, wentylator i zapach gorących hamulców to DPF w trakcie wypalania”. Jeden z nich pisze, że jego auto robi to co 100–150 mil (ok. 160–240 km), a kontrolka zapala się dopiero po kilku nieudanych próbach regeneracji.</p>
 <table><thead><tr><th>Objaw</th><th>Co oznacza</th><th>Jak pewny to sygnał</th></tr></thead><tbody>
@@ -167,7 +208,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 <p>Zwykle normalny. W <a href="https://static.nhtsa.gov/odi/tsbs/2017/MC-10128196-9999.pdf">biuletynie technicznym Audi of America (2017) w bazie NHTSA</a> producent pisze, że wentylatory mogą pracować do 10 minut po wyłączeniu silnika, że ta funkcja jest powiązana m.in. z regeneracją DPF i że to normalna praca, bez wymiany części. Biuletyn dotyczy silników V6 TDI, ale dobrze pokazuje, jak producent podchodzi do tego objawu.</p>
 <p>Jeśli start-stop wyłącza się regularnie także poza regeneracją, warto sprawdzić jego warunki pracy — piszemy o tym w poradniku o <a href="/wylaczenie-start-stop-audi-obd2/">start-stopie w Audi i diagnostyce przez OBD2</a>.</p>
 
-<h2>Dlaczego spalanie chwilowe spada podczas wypalania DPF?</h2>
+<h2 id="dlaczego-spalanie-chwilowe-spada-podczas-wypalania-dpf">Dlaczego spalanie chwilowe spada podczas wypalania DPF?</h2>
 <p>Nie znaleźliśmy dokumentacji VAG, która by to wyjaśniała. Z zasady działania regeneracji wynika, że realne zużycie paliwa rośnie, więc spadek wskazania to sygnał, żeby sprawdzić, czy faktycznie trwa wypalanie.</p>
 <p>Pytanie wzięło się z <a href="https://wykop.pl/wpis/87302207">wpisu na Wykopie o Audi A4 2.0 TDI CJCB z przebiegiem 205 tys. km</a>. Autor pisze, że podczas wypalania spalanie zamiast rosnąć spada, na postoju i w czasie jazdy. Do tego DPF czasem zaczyna się wypalać na zimnym silniku chwilę po uruchomieniu. W komentarzach pojawiły się dwie uwagi. Według jednego użytkownika regeneracja nie startuje, dopóki płyn chłodzący nie osiągnie ok. 80°C (tej liczby nie potwierdziliśmy w dokumentacji). Drugi pyta wprost, czy autor nie myli wypalania z czymś innym, bo sterownik celowo zwiększa wtedy dawkę paliwa.</p>
 <h3>Co sprawdzić, zanim uznasz to za usterkę</h3>
@@ -178,7 +219,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 <li><strong>Licz spalanie „od tankowania do tankowania”.</strong> To stara, sprawdzona metoda, która nie zależy od algorytmu komputera pokładowego.</li>
 </ul>
 
-<h2>Jakie wartości sprawdzić w diagnostyce (VCDS / ODIS)?</h2>
+<h2 id="jakie-wartosci-sprawdzic-w-diagnostyce-vcds-odis">Jakie wartości sprawdzić w diagnostyce (VCDS / ODIS)?</h2>
 <p>Masę sadzy (wyliczoną i mierzoną), ciśnienie różnicowe na filtrze, temperatury przed katalizatorem, przed filtrem i za nim oraz zawartość popiołu. To one, a nie wskazania na desce, mówią, czy regeneracja trwa i czy się kończy.</p>
 <p>Warsztat KFZ Dietrich wymienia dla Golfa 7 2.0 TDI (EA288) grupę danych w module silnika (adres 01): ilości wtrysków dodatkowych, zadaną lambdę, ciśnienie różnicowe (czujnik G450), temperatury (G235, G506, G507), wyliczony ładunek sadzy i zawartość popiołu. Zaznacza, że sadza i popiół to wartości wyliczane przez model, a nie mierzone bezpośrednio.</p>
 <table><thead><tr><th>Parametr</th><th>Co obserwować w czasie regeneracji</th></tr></thead><tbody>
@@ -190,7 +231,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </tbody></table>
 <p>Jeśli diagnostyka to dla Ciebie nowość, zacznij od prostego interfejsu OBD2 i obserwacji kilku parametrów na postoju i w jeździe. Prosty interfejs OBD2 i aplikacja z odczytem parametrów silnika wystarczą, by zobaczyć, czy temperatura przed filtrem rośnie.</p>
 
-<h2>Jak pomóc filtrowi dokończyć wypalanie? Checklista krok po kroku</h2>
+<h2 id="jak-pomoc-filtrowi-dokonczyc-wypalanie-checklista-krok-po-kr">Jak pomóc filtrowi dokończyć wypalanie? Checklista krok po kroku</h2>
 <p>Najstarsza zasada dieslowców wciąż działa: daj silnikowi dłuższą, równą jazdę poza miastem. Oficjalne zalecenie <a href="https://www.volkswagen.com.au/en/owners-service/service-repairs-parts/diesel-particulate-filter.html">Volkswagena Australia na wypadek kontrolki DPF</a> to jazda powyżej 60 km/h przy wyższym obciążeniu (2500–3000 obr./min) przez ok. 25–30 minut. Po zgaśnięciu kontrolki trzeba jechać jeszcze 10 minut, a w automacie pomaga tryb Tiptronic. VW dodaje, że regeneracja nie ruszy, gdy w zbiorniku jest mniej niż 1/4 paliwa — wtedy zatankuj powyżej połowy i powtórz jazdę.</p>
 <ol>
 <li><strong>Sprawdź poziom paliwa.</strong> Mniej niż 1/4 zbiornika = brak regeneracji według VW.</li>
@@ -202,7 +243,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </ol>
 <p>Regularna kontrola oleju w dieslu to w ogóle dobry nawyk. Przy innych silnikach wysokoprężnych też potrafi uprzedzić drogą awarię, co opisujemy przy <a href="/opel-astra-j-uszczelka-smoka/">uszczelce smoka w Oplu 2.0 CDTI</a>.</p>
 
-<h2>Typowe błędy przy wypalaniu DPF</h2>
+<h2 id="typowe-bledy-przy-wypalaniu-dpf">Typowe błędy przy wypalaniu DPF</h2>
 <ul>
 <li><strong>Diagnoza „po spalaniu chwilowym”.</strong> To najmniej pewny objaw. Potwierdzaj regenerację temperaturami i masą sadzy.</li>
 <li><strong>Gaszenie silnika w środku regeneracji, raz za razem.</strong> Każda przerwana próba to dodatkowe paliwo, które może trafić do oleju.</li>
@@ -213,7 +254,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </ul>
 <p>Jeśli dopiero wybierasz auto z 2.0 TDI, styl jazdy ma znaczenie już przy zakupie. Porównanie generacji i wersji silnikowych znajdziesz w tekście <a href="/audi-a3-8v-vs-8p/">Audi A3 8V czy 8P</a>.</p>
 
-<h2>FAQ — wypalanie DPF w 2.0 TDI</h2>
+<h2 id="faq-wypalanie-dpf-w-2-0-tdi">FAQ — wypalanie DPF w 2.0 TDI</h2>
 <details><summary><strong>Jak długo trwa wypalanie DPF w 2.0 TDI?</strong></summary><p>Warsztat KFZ Dietrich podaje dla EA288 10–20 minut jazdy z prędkością ok. 60 km/h. Volkswagen Australia przy zapalonej kontrolce zaleca 25–30 minut jazdy powyżej 60 km/h i jeszcze 10 minut po jej zgaśnięciu.</p></details>
 <details><summary><strong>Czy mogę zgasić silnik w trakcie regeneracji?</strong></summary><p>Możesz, nic się nie zepsuje od razu. Sterownik spróbuje ponownie później. Częste przerywanie regeneracji sprzyja jednak przedostawaniu się paliwa do oleju, więc gdy to możliwe, dokończ jazdę.</p></details>
 <details><summary><strong>Czy wentylator pracujący po zgaszeniu to usterka?</strong></summary><p>Zwykle nie. Audi w biuletynie technicznym dla silników V6 TDI opisuje pracę wentylatorów do 10 minut po wyłączeniu silnika, m.in. po regeneracji DPF, jako normalną.</p></details>
@@ -221,13 +262,16 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 <details><summary><strong>Czy regeneracja może ruszyć na zimnym silniku?</strong></summary><p>W wątku na Wykopie autor tak to opisuje, a jeden z komentujących twierdzi, że potrzeba ok. 80°C płynu chłodzącego. Nie potwierdziliśmy tego progu w dokumentacji — najlepiej sprawdzić temperatury i masę sadzy w diagnostyce w momencie objawów.</p></details>
 <details><summary><strong>Jak często 2.0 TDI wypala DPF?</strong></summary><p>Zależy od stylu jazdy i silnika. Jeden z użytkowników VW T6 2.0 TDI podaje co 100–150 mil (ok. 160–240 km). Przy krótkich trasach w mieście próby mogą być częstsze.</p></details>
 
-<h2>Podsumowanie</h2>
+<h2 id="podsumowanie">Podsumowanie</h2>
 <p>Wypalanie DPF w 2.0 TDI rozpoznasz najpewniej po zestawie objawów: wyższych obrotach jałowych, nieaktywnym start-stopie i wentylatorze po zgaszeniu. Spalanie chwilowe to najsłabszy sygnał — jeśli spada, zamiast rosnąć, najpierw potwierdź diagnostyką, czy regeneracja w ogóle trwa. Sprawdzona recepta od lat jest ta sama: dłuższa, równa jazda poza miastem, paliwo powyżej 1/4 zbiornika i kontrola oleju. Więcej poradników znajdziesz w <a href="/katalog/">katalogu marek i modeli</a> oraz w dziale <a href="/audi/">Audi</a>.</p>
 
-<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją. Stan weryfikacji źródeł: 18.10.2026.</div>
-</main>
+<div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div>
 
+</div>
+</article>
 <aside class="sidebar">
+<nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#czy-w-moim-aucie-wlasnie-trwa-regeneracja-dpf">Czy w moim aucie właśnie trwa regeneracja DPF?</a></li><li><a href="#jak-dziala-wypalanie-dpf-w-silniku-2-0-tdi">Jak działa wypalanie DPF w silniku 2.0 TDI?</a></li><li><a href="#jakie-sa-objawy-trwajacej-regeneracji">Jakie są objawy trwającej regeneracji?</a></li><li><a href="#dlaczego-spalanie-chwilowe-spada-podczas-wypalania-dpf">Dlaczego spalanie chwilowe spada podczas wypalania DPF?</a></li><li><a href="#jakie-wartosci-sprawdzic-w-diagnostyce-vcds-odis">Jakie wartości sprawdzić w diagnostyce (VCDS / ODIS)?</a></li><li><a href="#jak-pomoc-filtrowi-dokonczyc-wypalanie-checklista-krok-po-kr">Jak pomóc filtrowi dokończyć wypalanie? Checklista krok po kroku</a></li><li><a href="#typowe-bledy-przy-wypalaniu-dpf">Typowe błędy przy wypalaniu DPF</a></li><li><a href="#faq-wypalanie-dpf-w-2-0-tdi">FAQ — wypalanie DPF w 2.0 TDI</a></li><li><a href="#podsumowanie">Podsumowanie</a></li></ol></nav>
+
     <div class="sidebar-card">
         <div class="sidebar-title">📋 Regeneracja DPF w skrócie</div>
         <ul class="sidebar-links">
@@ -247,27 +291,15 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
             <li><a href="/wylaczenie-start-stop-audi-obd2/">Start-stop Audi i OBD2</a></li>
         </ul>
     </div>
+
 </aside>
-
-</div>
-
-
-
-<footer>
- <div class="sc-footer-inner">
- <span>© 2026 Poradnik Samochodowy</span>
- <nav style="display:flex;gap:16px;flex-wrap:wrap;">
- <a href="/about.html">O nas</a>
- <a href="/contact.html">Kontakt</a>
- <a href="/disclosure.html">Przejrzystość</a>
- <a href="/editorial-policy.html">Zasady redakcyjne</a>
- <a href="/privacy.html">Prywatność</a>
- <a href="/sitemap.html">Mapa strony</a>
- </nav>
- </div>
+</main>
+<footer class="sc-footer">
+  <div class="sc-footer-inner">
+    <nav class="sc-footer-nav" aria-label="Stopka"><a href="/contact.html">Kontakt</a><a href="/editorial-policy.html">Zasady redakcyjne</a><a href="/disclosure.html">Przejrzystość</a><a href="/privacy.html">Prywatność</a><a href="/sitemap.html">Mapa strony</a></nav>
+    <p>&copy; 2026 Poradnik Samochodowy. Poradniki powstają z pomocą narzędzi AI na podstawie podlinkowanych źródeł i są sprawdzane według zasad redakcyjnych.</p>
+  </div>
 </footer>
-
-
 
 </body>
 </html>
