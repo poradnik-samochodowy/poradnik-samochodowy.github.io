@@ -78,6 +78,13 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 .toc{background:#fff;border-left:3px solid var(--accent);border-radius:0;padding:4px 0 4px 16px}
 .toc a{display:block;padding:5px 0;text-decoration:none;line-height:1.4}.toc a:hover{text-decoration:underline}
 .related-links{list-style:none;padding:0}
+.ps-video{aspect-ratio:16/9;margin:24px 0}.ps-video iframe{width:100%;height:100%;border:0;border-radius:10px}
+.ps-tool{border:2px solid var(--bar);border-radius:12px;padding:18px 20px;margin:26px 0}
+.ps-tool h2{margin:0 0 8px!important;font-size:21px!important}.ps-tool p{margin:0 0 10px}
+.ps-tool [role=status]{margin:14px 0 0;padding:14px 16px;background:#eef4ec;border-radius:8px;font-size:16px}
+.ps-tool [role=status]:empty{display:none}
+.ps-opts{display:flex;flex-wrap:wrap;gap:8px}
+.ps-tool .ps-opts button[aria-pressed=true]{background:var(--accent);color:var(--ink)}
 .ps-page{max-width:820px;margin:0 auto;padding:30px 20px 56px;font-size:18px}
 .ps-main{max-width:1120px;margin:0 auto;padding:34px 20px 56px}
 .ps-main>h2:first-child{margin-top:0}
@@ -257,7 +264,7 @@ d.addEventListener('change',run);s.addEventListener('change',run);f.addEventList
 </ul>
 <p>Sam autor przyznaje, że to wciąż mozolna robota. Przy montażu dopilnuj, by nowy silnik był ustawiony tak samo jak stary, a zespół klapy trafił w prowadnicę po lewej stronie.</p>
 <p>Na filmie Dana T. widać tę samą procedurę w E46 330i: zdjęcie obudowy filtra (od 0:00), dostęp do dmuchawy (od 1:36) i wyjęcie silnika (od 7:12).</p>
-<div style="position:relative;width:100%;aspect-ratio:16/9;margin:16px 0 22px"><iframe src="https://www.youtube-nocookie.com/embed/XrD9nLrjl30" loading="lazy" title="BMW E46 330i — wymiana silnika dmuchawy nawiewu" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+<div style="position:relative;width:100%;height:auto;padding:0;aspect-ratio:16/9;margin:16px 0 22px"><iframe src="https://www.youtube-nocookie.com/embed/XrD9nLrjl30" title="BMW E46 330i — wymiana silnika dmuchawy nawiewu" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:8px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <h2 id="jak-odroznic-awarie-silnika-od-awarii-stopnia-koncowego">Jak odróżnić awarię silnika od awarii stopnia końcowego?</h2>
 <p>Pomiar rozstrzyga szybciej niż wymiana części na próbę: jeśli na silniku pojawia się napięcie, a on stoi lub ledwo się kręci, winny jest silnik; jeśli napięcia nie ma mimo sprawnych bezpieczników i sygnału z panelu, szukaj w stopniu końcowym lub w wiązce.</p>
