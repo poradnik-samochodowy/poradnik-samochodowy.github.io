@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wyłączenie Start-Stop Audi OBD2 — bez VCDS</title>
-<meta name="description" content="Wyłączenie Start-Stop Audi OBD2 krok po kroku bez VCDS. OBDEleven, CarScanner, modele A3/A4/A6/Q5, koszty i procedury diagnostyczne.">
+<title>Wyłączenie start-stop w Audi przez OBD2 bez VCDS — metody i ryzyka</title>
+<meta name="description" content="Jak wyłączyć lub zapamiętać wyłączenie start-stop w Audi bez VCDS: przycisk, aplikacje OBDeleven, adaptacja w module 09. Kiedy system sam nie gasi silnika i co z akumulatorem — ze źródłami.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/">
 <style>
@@ -13,25 +13,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "BlogPosting",
- "headline": "Wyłączenie Start-Stop Audi OBD2",
- "description": "Wyłączenie Start-Stop Audi OBD2 krok po kroku bez VCDS. OBDEleven, CarScanner, modele A3/A4/A6/Q5, koszty i procedury diagnostyczne.",
- "datePublished": "2026-06-03",
- "dateModified": "2026-10-06",
- "author": {
-  "@type": "Person",
-  "name": "Krzysztof Wilk"
- },
- "publisher": {
-  "@type": "Organization",
-  "name": "🚗 Poradnik Samochodowy",
-  "url": "https://poradnik-samochodowy.github.io/"
- },
- "mainEntityOfPage": "https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/",
- "inLanguage": "pl"
-}</script>
+
 <style>
 .sb-sidebar-links{ list-style: none; }
 .sb-sidebar-links li{ margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
@@ -152,6 +134,73 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 @media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Wyłączenie start-stop w Audi przez OBD2 bez VCDS",
+ "description": "Wyłączenie Start-Stop Audi OBD2 krok po kroku bez VCDS. OBDEleven, CarScanner, modele A3/A4/A6/Q5, koszty i procedury diagnostyczne.",
+ "datePublished": "2026-06-03",
+ "dateModified": "2026-10-19",
+ "author": {
+  "@type": "Person",
+  "name": "Krzysztof Wilk"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "🚗 Poradnik Samochodowy",
+  "url": "https://poradnik-samochodowy.github.io/"
+ },
+ "mainEntityOfPage": "https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/",
+ "inLanguage": "pl"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Czy da się na stałe wyłączyć start-stop w Audi bez VCDS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak, aplikacją OBDeleven (gotowa funkcja dla wielu modeli) albo ręczną adaptacją w module 09 narzędziem, które obsługuje kodowanie VAG."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dlaczego start-stop w moim Audi czasem nie działa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "System gasi silnik tylko przy wystarczająco naładowanym akumulatorze, rozgrzanym silniku i ustabilizowanej temperaturze w kabinie. Blokują go też m.in. nawiew na szybę, odpięty pas kierowcy i otwarte drzwi lub maska."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy po wyłączeniu start-stop mogę kupić zwykły akumulator?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Auto nadal potrzebuje akumulatora EFB lub AGM, a nowy akumulator trzeba zarejestrować w module zarządzania energią."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy start-stop szybciej zużywa rozrusznik?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Auta ze start-stop mają wzmocnione rozruszniki. Bosch podaje, że jego rozruszniki do start-stop wytrzymują do 3,5 raza więcej cykli niż zwykłe."
+   }
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "How to deactivate Start/Stop system on Audi or VW with OBDeleven",
+ "description": "Oficjalny film OBDeleven: jak wyłączyć system start-stop w Audi, VW, Seacie lub Skodzie za pomocą funkcji One-Click App.",
+ "thumbnailUrl": "https://i.ytimg.com/vi/duewUIVWsYs/hqdefault.jpg",
+ "uploadDate": "2020-10-23T00:00:00+00:00",
+ "embedUrl": "https://www.youtube-nocookie.com/embed/duewUIVWsYs",
+ "contentUrl": "https://www.youtube.com/watch?v=duewUIVWsYs"
+}</script>
 </head>
 <body>
 <a class="skip" href="#content">Przejdź do treści</a>
@@ -165,252 +214,126 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
   <div class="ps-in">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Strona główna</a><span aria-hidden="true">›</span><a href="/blog.html">Poradniki</a><span aria-hidden="true">›</span><span aria-current="page">Wyłączenie start stop audi obd2 bez vcds</span></nav>
     <p class="kicker">Elektryka i wyposażenie · Audi</p>
-    <h1>Wyłączenie start stop audi obd2 bez vcds</h1>
-    <p class="lead">Praktyczny poradnik: wyłączenie start stop audi obd2 bez vcds — usterki, koszty, procedury.</p>
-    <p class="ps-meta">03.06.2026 · 8 min czytania</p>
+    <h1>Wyłączenie start-stop w Audi przez OBD2 bez VCDS</h1>
+    <p class="lead">Start-stop w Audi da się wyłączyć na trzy sposoby: <strong>przyciskiem przy każdej jeździe</strong>, <strong>gotową funkcją w aplikacji OBDeleven</strong> albo <strong>zmianą adaptacji w module 09</strong>. Zanim cokolwiek zakodujesz, sprawdź, czy system nie jest po prostu nieaktywny z powodu akumulatora lub temperatury.</p>
+    <p class="ps-meta">03.06.2026 · 4 min czytania</p>
   </div>
 </section>
 <main class="ps-layout" id="content">
 <article class="ps-article">
-<div class="sc-layout">
-<div class="content">
-<!-- PORADNIK_CONTENT_START -->
-<h2 id="dlaczego-wylaczenie-start-stop-w-audi-jest-wazne">Dlaczego wyłączenie start stop w Audi jest ważne?</h2>
-<p>System Start-Stop w samochodach Audi, choć ekologiczny i teoretycznie oszczędny, bywa frustrujący w codziennym użytkowaniu. Wielu kierowców skarży się na opóźnienia przy ruszaniu ze skrzyżowań, drgania podczas ponownego uruchamiania silnika oraz dodatkowe obciążenie rozrusznika i akumulatora. Co więcej, w korkach miejskich system wyłącza silnik na kilka sekund, co prowadzi do szybszego zużycia elementów układu rozruchowego. Automatyczne wyłączanie silnika bywa też niebezpieczne podczas manewrów parkingowych, gdy nagle tracimy wspomaganie kierownicy. Dlatego coraz więcej właścicieli Audi decyduje się na trwałe wyłączenie tej funkcji, szukając metod niezależnych od drogiego interfejsu VCDS czy wizyt w serwisie.</p>
-<p>Alternatywą dla programowego wyłączenia przez VCDS jest wykorzystanie tańszych narzędzi OBD2 lub fizycznych emulatorów. W tym poradniku pokażę Ci, jak wyłączyć Start-Stop w Audi za pomocą urządzenia OBD2 <strong>bez VCDS</strong>, krok po kroku. Dowiesz się, które modele wspierają tę metodę, jakie są zagrożenia i jak uniknąć błędów. Artykuł jest skierowany do posiadaczy Audi z silnikami benzynowymi i Diesla wyposażonych w system Start-Stop.</p>
-<div class="note">
-<p><strong>Uwaga!</strong> Modyfikacja ustawień fabrycznych może wpłynąć na gwarancję oraz wyniki przeglądu technicznego. W niektórych krajach wyłączenie Start-Stop uznawane jest za naruszenie homologacji. Działaj na własną odpowiedzialność.</p>
+<div class="wrap">
+<div class="answer-box">
+<strong>SZYBKA ODPOWIEDŹ</strong>
+<p>Bez VCDS najprościej wyłączyć start-stop w Audi <strong>aplikacją OBDeleven</strong> — dla wielu modeli jest gotowa funkcja wyłączenia jednym kliknięciem. Alternatywa to <strong>adaptacja w module 09</strong> (elektronika centralna) programem, który obsługuje kodowanie VAG. Jeśli system tylko czasem nie gasi silnika, to zwykle nie usterka: start-stop działa dopiero, gdy akumulator, temperatura i ustawienia klimatyzacji na to pozwalają.</p>
 </div>
 
-<h2 id="metody-wylaczenia-start-stop-bez-vcds-w-audi">Metody wyłączenia Start-Stop bez VCDS w Audi</h2>
-<p>Istnieją trzy główne sposoby na pozbycie się uciążliwego wyłączania silnika w Audi, które nie wymagają interfejsu VCDS. Pierwsza to zakup emulatora Start-Stop podłączanego do wiązki elektrycznej. Druga to użycie uniwersalnego skanera OBD2 z dedykowaną aplikacją (np. Car Scanner, OBD Eleven). Trzecia to ingerencja mechaniczna, np. odłączenie czujnika napięcia akumulatora. Każda z tych metod ma swoje wady i zalety, które szczegółowo omówimy.</p>
-<p>Wybór odpowiedniej metody zależy od modelu i rocznika Twojego Audi. W nowszych autach (od 2018+) często wymagane jest programowe wyłączenie przez aplikację, podczas gdy w starszych (2012-2017) sprawdza się prostszy emulator. Jeśli nie chcesz ingerować w elektronikę, możesz skorzystać z fizycznego wyłącznika montowanego w miejscu oryginalnego przycisku – to rozwiązanie jest w pełni odwracalne.</p>
+<div class="ps-tool" id="ss-tool">
+<h2 id="dlaczego-nie-gasi">Dlaczego start-stop nie gasi silnika?</h2>
+<p>Zaznacz, co pasuje do sytuacji na postoju. Jeśli trafisz na warunek blokujący, system działa poprawnie.</p>
+<p><label><input type="checkbox" class="ss-q" value="cold"> Silnik jeszcze się nie rozgrzał</label></p>
+<p><label><input type="checkbox" class="ss-q" value="hvac"> Klimatyzacja intensywnie grzeje lub chłodzi kabinę</label></p>
+<p><label><input type="checkbox" class="ss-q" value="defrost"> Włączony nawiew na przednią szybę</label></p>
+<p><label><input type="checkbox" class="ss-q" value="belt"> Kierowca nie ma zapiętego pasa / otwarte drzwi lub maska</label></p>
+<p><label><input type="checkbox" class="ss-q" value="battery"> Krótkie trasy, akumulator niedoładowany lub niedawno wymieniony</label></p>
+<p><label><input type="checkbox" class="ss-q" value="trailer"> Podpięta przyczepa</label></p>
+<div role="status" id="ss-out"></div>
+</div>
 
-<h3>Metoda 1: Emulator Start-Stop (hardware)</h3>
-<p>Emulator to małe urządzenie podłączane szeregowo do wiązki przycisku Start-Stop lub bezpośrednio do modułu sterującego. Symuluje on naciśnięcie przycisku wyłączającego system przy każdym uruchomieniu silnika. Instalacja trwa ok. 30 minut i nie wymaga lutowania – wystarczy złącze "krokodyl". Taki emulator jest kompatybilny z większością modeli Audi A3, A4, A5, Q2, Q3, Q5 z lat 2012-2021.</p>
+<p>System start-stop w Audi gasi silnik tylko wtedy, gdy spełnionych jest kilka warunków naraz. W dokumentacji Audi dla serwisów, przedrukowanej przez branżowy portal Import Car, wśród warunków wymieniono m.in. <a href="https://www.import-car.com/audi-start-stop-system-information/" target="_blank" rel="noopener">wystarczające naładowanie akumulatora, minimalną temperaturę silnika i niewielką różnicę między temperaturą zadaną a rzeczywistą w kabinie</a>. Dlatego w zimie albo na krótkich trasach system często w ogóle się nie włącza.</p>
 
-<h3>Metoda 2: Aplikacja OBD2 z kodem adaptacyjnym</h3>
-<p>Korzystając z niedrogiego skanera OBD2 (np. ELM327 lub Vgate iCar Pro) oraz aplikacji "Car Scanner" (dostępna na iOS/Android), możesz wejść w tryb adaptacji i zmienić parametr odpowiedzialny za Start-Stop. W niektórych modelach wystarczy ustawić wartość z "1" na "0" w kanale "Start-Stop function active". To najszybsza metoda, ale wymaga znajomości kodów dostępu do konkretnego modułu (np. 09 - Central Electrics).</p>
+<p>Oficjalny film producenta OBDeleven pokazuje, jak wyłączyć start-stop w Audi i innych autach grupy VW funkcją One-Click App, bez ręcznego kodowania:</p>
 
+<div class="yt-video" style="position:relative;width:100%;height:auto;padding:0;aspect-ratio:16/9;margin:16px 0"><iframe src="https://www.youtube-nocookie.com/embed/duewUIVWsYs" title="How to deactivate Start/Stop system on Audi or VW with OBDeleven" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:8px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<h2 id="metody">Trzy sposoby na wyłączenie</h2>
 <table>
-<caption>Porównanie metod wyłączenia Start-Stop bez VCDS</caption>
-<thead>
-<tr><th>Metoda</th><th>Koszt</th><th>Model Audi</th><th>Czas instalacji</th><th>Odwracalność</th></tr>
-</thead>
+<thead><tr><th>Metoda</th><th>Czego potrzebujesz</th><th>Trwałość</th></tr></thead>
 <tbody>
-<tr><td>Emulator hardware</td><td>40-80 zł</td><td>A3 8V, A4 B9, Q5 (2012-2021)</td><td>30 min</td><td>Tak (odłączenie)</td></tr>
-<tr><td>Aplikacja OBD2</td><td>50-150 zł (skaner)</td><td>Audi z modułem 09 (2018+)</td><td>5 min</td><td>Tak (przywrócenie wartości)</td></tr>
-<tr><td>Fizyczny wyłącznik</td><td>20-50 zł</td><td>Uniwersalny</td><td>20 min</td><td>Tak (wymiana przycisku)</td></tr>
+<tr><td>Przycisk start-stop</td><td>Nic</td><td>Do wyłączenia zapłonu</td></tr>
+<tr><td>Gotowa funkcja OBDeleven</td><td>Adapter OBDeleven, aplikacja, kredyty</td><td>Na stałe, do cofnięcia w aplikacji</td></tr>
+<tr><td>Adaptacja w module 09</td><td>Narzędzie z kodowaniem VAG (np. OBDeleven PRO)</td><td>Na stałe lub „pamięć ostatniego ustawienia”</td></tr>
 </tbody>
 </table>
 
-<h2 id="jak-wylaczyc-start-stop-przez-obd2-bez-vcds-instrukcja-krok-">Jak wyłączyć Start-Stop przez OBD2 bez VCDS – instrukcja krok po kroku</h2>
-<p>Poniżej znajdziesz szczegółową instrukcję dla metody z aplikacją OBD2. Potrzebujesz: adaptera OBD2 Bluetooth (zalecany Vgate iCar Pro 2.0 lub OBDLink CX), telefonu/tabletu z aplikacją Car Scanner Pro (zakup wersji premium nie jest konieczny, ale ułatwia dostęp do adaptacji).</p>
-<p>Krok 1: Podłącz skaner do gniazda OBD2 (znajduje się pod deską rozdzielczą po stronie kierowcy). Włącz zapłon (silnik nie musi być uruchomiony). Krok 2: Sparuj skaner z telefonem przez Bluetooth (kod parowania 1234 lub 0000). Krok 3: Otwórz aplikację Car Scanner, wybierz "Diagnostic" → "Audi" → "A3 8V (2012-2020)" (lub odpowiedni dla Twojego modelu). Krok 4: Przejdź do zakładki "Coding/Adaptation" i wybierz moduł 09 (Central Electrics). Krok 5: Znajdź kanał "Start/stop function active" lub "Start_Stop_activation". Zmień wartość z 1 na 0. Krok 6: Zapisz zmiany i wyłącz zapłon na 30 sekund. Po ponownym uruchomieniu system Start-Stop będzie wyłączony.</p>
+<h3>1. Gotowa funkcja w OBDeleven</h3>
+<p>OBDeleven to adapter OBD2 z aplikacją na telefon, który dla aut grupy VW ma gotowe funkcje kodowania „jednym kliknięciem”. Lista funkcji zależy od modelu — na przykład dla Audi A3 8V zestawienie VAG Coding wymienia <a href="https://www.vag-coding.net/tutorials-information/obdeleven-one-click-apps-list/obdeleven-one-click-apps-a3-8v-list/" target="_blank" rel="noopener">„Start/Stop deactivation (via battery voltage)”</a>, a sam producent dodaje kolejne modele w comiesięcznych aktualizacjach, np. <a href="https://obdeleven.com/new-one-click-apps-added-in-february-2025" target="_blank" rel="noopener">wyłączenie start-stop dla Audi A5 2019–2023</a>. Przed zakupem sprawdź w aplikacji, czy funkcja jest dostępna dla Twojego VIN.</p>
+<p>Dopisek „via battery voltage” sugeruje, że ta funkcja działa przez próg napięcia akumulatora, przy którym system pozwala zgasić silnik — start-stop formalnie zostaje w aucie, ale przestaje się włączać.</p>
 
-<div class="note">
-<p><strong>Ważne!</strong> W niektórych rocznikach Audi (np. A4 B9 po FL) zmiana wartości może nie być trwała i system wraca do ustawień fabrycznych po resecie modułu. W takiej sytuacji konieczne jest zastosowanie emulatora lub modyfikacja kodu długiego modułu 09 – to już wymaga bardziej zaawansowanej wiedzy.</p>
-</div>
+<h3>2. Adaptacja w module 09</h3>
+<p>Ręczna zmiana wymaga narzędzia z dostępem do adaptacji (np. OBDeleven PRO). Na forum Audizine właściciel Audi opisał procedurę dla <a href="https://audizine.com/threads/2017-a7-auto-stop-start.944977/" target="_blank" rel="noopener">modułu 09 i kanału adaptacji, w którym można wybrać wyłączenie, zapamiętanie ostatniego ustawienia albo odwrócenie działania przycisku</a>. To opis użytkownika dla konkretnego modelu, a nazwy kanałów różnią się między rocznikami, więc przed zapisem zrób kopię oryginalnej wartości.</p>
+<ol>
+<li>Podłącz adapter do gniazda OBD2 pod deską po stronie kierowcy i włącz zapłon.</li>
+<li>Zapisz kopię kodowania modułu 09 (elektronika centralna).</li>
+<li>W adaptacjach znajdź kanał dotyczący start-stop i zanotuj obecną wartość.</li>
+<li>Wybierz wyłączenie albo zapamiętanie ostatniego ustawienia, zapisz i wyłącz zapłon na kilkadziesiąt sekund.</li>
+<li>Sprawdź działanie na kilku postojach z rozgrzanym silnikiem.</li>
+</ol>
 
-<h2 id="najczestsze-modele-audi-i-kompatybilnosc">Najczęstsze modele Audi i kompatybilność</h2>
-<p>Nie wszystkie Audi wspierają wyłączenie Start-Stop przez OBD2. Poniższa tabela pokazuje, które modele i roczniki można bezpiecznie zmodyfikować bez VCDS. W większości przypadków metoda działa na autach z modułem elektryki centralnej (J519) w wersji od 2018 roku wzwyż.</p>
+<h2 id="rozrusznik">Czy start-stop niszczy rozrusznik?</h2>
+<p>Częsty argument za wyłączeniem to „zużycie rozrusznika”. Auta z start-stop mają jednak wzmocnione rozruszniki. Bosch, który je produkuje, podaje, że jego rozruszniki do start-stop są projektowane na <a href="https://fleetowner.com/equipment/article/21689831/bosch-offering-aftermarket-starters-for-start-stop-systems" target="_blank" rel="noopener">do 3,5 raza więcej cykli niż zwykłe, dzięki wzmocnionym łożyskom, przekładni i mechanizmowi zazębiania</a>. To dane producenta, ale pokazują, że układ jest liczony na częste rozruchy.</p>
 
-<table>
-<caption>Kompatybilność wyłączenia Start-Stop przez OBD2 w Audi</caption>
-<thead>
-<tr><th>Model</th><th>Rocznik</th><th>Metoda OBD2</th><th>Emulator</th><th>Uwagi</th></tr>
-</thead>
-<tbody>
-<tr><td>A3 (8V)</td><td>2012-2020</td><td>Tak (moduł 09)</td><td>Tak</td><td>Wymaga kodu długiego w niektórych wersjach</td></tr>
-<tr><td>A4 (B9)</td><td>2016-2023</td><td>Tak (2018+)</td><td>Tak</td><td>W B9.5 tylko emulator</td></tr>
-<tr><td>A5 (F5)</td><td>2016-2023</td><td>Ograniczona</td><td>Tak</td><td>Często blokada w module 09</td></tr>
-<tr><td>Q5 (80A)</td><td>2016-2024</td><td>Nie (2016-2020)</td><td>Tak</td><td>W Q5 2021+ możliwe przez OBD2</td></tr>
-<tr><td>A6 (C8)</td><td>2018-2024</td><td>Nie</td><td>Tak</td><td>Wymaga emulatora lub VCDS</td></tr>
-</tbody>
-</table>
+<h2 id="akumulator">Akumulator — nie zmieniaj typu po wyłączeniu</h2>
+<p>Wyłączenie start-stop nie oznacza, że można założyć zwykły akumulator. Auto nadal ma system zarządzania energią dobrany do akumulatora EFB lub AGM. Producent akumulatorów Banner ostrzega, że zwykły akumulator w aucie z start-stop <a href="https://bannerbatterien.com/en/Battery-knowledge/130-Start-Stop-FAQ" target="_blank" rel="noopener">może się rozładować w ciągu kilku miesięcy, nawet przy wyłączonej funkcji start-stop</a>. Varta opisuje akumulatory EFB jako przeznaczone do <a href="https://www.varta-automotive.com/en-gb/products/automotive/blue-dynamic-efb" target="_blank" rel="noopener">aut ze start-stop i standardową elektroniką</a>, a AGM do aut z odzyskiem energii hamowania.</p>
+<p>Po wymianie akumulatora w Audi trzeba go zarejestrować w module zarządzania energią. Bez rejestracji moduł nie zna parametrów nowego akumulatora, a start-stop może nie gasić silnika.</p>
 
-<h2 id="zagrozenia-i-skutki-uboczne-wylaczenia-start-stop">Zagrożenia i skutki uboczne wyłączenia Start-Stop</h2>
-<p>Choć wyłączenie Start-Stop wydaje się nieszkodliwe, może wpłynąć na inne systemy pojazdu. W niektórych Audi z trybem "Coasting" (żeglowanie) wyłączenie Start-Stop powoduje, że silnik nie wyłącza się podczas jazdy bez gazu, co zwiększa zużycie paliwa. Ponadto, w autach z układem miękkiej hybrydy (MHEV) odłączenie systemu może spowodować błąd w module zarządzania energią.</p>
-<p>Kolejnym ryzykiem jest utrata możliwości automatycznego restartu silnika w sytuacji awaryjnej (np. gdy samochód nagle się zatrzyma). Niektórzy producenci emulatorów ostrzegają, że ich urządzenia mogą zakłócać działanie czujnika deszczu i świateł do jazdy dziennej. Zawsze testuj działanie po modyfikacji, najlepiej na postoju.</p>
+<h2 id="ryzyka">O czym pamiętać przed kodowaniem</h2>
+<ul>
+<li>Zawsze zapisz oryginalne wartości — pozwala to wrócić do ustawień fabrycznych.</li>
+<li>W aucie na gwarancji zapytaj serwis, jak traktuje zmiany kodowania.</li>
+<li>Nie koduj na słabym akumulatorze — przerwany zapis może zablokować moduł. Przy dłuższej pracy podłącz prostownik.</li>
+<li>Jeśli Twoje Audi ma miękką hybrydę (MHEV), sprawdź, czy funkcja w aplikacji jest przewidziana dla tej wersji.</li>
+</ul>
 
-<h2 id="linki-wewnetrzne-i-zewnetrzne-gdzie-szukac-wiecej-informacji">Linki wewnętrzne i zewnętrzne – gdzie szukać więcej informacji</h2>
-<p>Jeśli interesuje Cię szersze spektrum modyfikacji OBD2 w Audi, zajrzyj do naszego <a href="/katalog/">katalogu procedur</a>, gdzie znajdziesz instrukcje dla innych modułów. W dziale <a href="/audi/">Audi</a> opublikowaliśmy poradnik dotyczący wyłączenia ostrzeżeń o niskim ciśnieniu w oponach oraz kodowania świateł do jazdy dziennej. Na <a href="/blog.html">blogu</a> znajdziesz artykuły o diagnostyce VAG bez VCDS oraz o emulatorach systemów asystujących.</p>
-<p>Dodatkowo polecam sprawdzić zaufane źródła zewnętrzne: na AutoCentrum znajdziesz analizę wpływu Start-Stop na żywotność rozrusznika, a na <a href="https://www.wykop.pl/tag/startstop/">Wykopie</a> trwa dyskusja kierowców o problemach z tym systemem. Oficjalną dokumentację techniczną VAG znajdziesz na <a href="https://erwin.audiusa.com/">erwin.audiusa.com</a> (płatny dostęp).</p>
-
-<h2 id="alternatywne-metody-programowe-car-scanner-obd-eleven">Alternatywne metody programowe – Car Scanner, OBD Eleven</h2>
-<p>Oprócz Car Scanner, popularną aplikacją do wyłączenia Start-Stop jest <strong>OBDeleven</strong>, szczególnie wśród posiadaczy Audi z lat 2020-2023. Aplikacja ta oferuje gotowe "aplikacje" (jednoklikowe modyfikacje), w tym "Disable Start-Stop". Koszt to ok. 20 zł za kredyty w aplikacji. Niestety OBDeleven jest dostępny tylko na Androida i <a href="/nie-dziala-nawiew/">nie działa</a> z tanimi adapterami – wymaga własnego interfejsu (ok. 300 zł).</p>
-<p>Inną opcją jest <strong>VAG DP</strong> (Pro) – darmowe narzędzie na PC, które łączy się z OBDLink CX. Umożliwia ono modyfikację kodów długich w module 09 bez znajomości poszczególnych bitów. To rozwiązanie dla zaawansowanych, ale w 100% darmowe. Pamiętaj jednak, że nieprawidłowa zmiana kodów może unieruchomić moduł, więc zawsze rób kopię zapasową oryginalnego kodowania.</p>
-
-<div class="faq">
-<h2 id="faq-najczesciej-zadawane-pytania-o-wylaczenie-start-stop-w-a">FAQ – Najczęściej zadawane pytania o wyłączenie Start-Stop w Audi</h2>
-
-<details class="faq">
-<summary>Czy wyłączenie Start-Stop przez OBD2 bez VCDS jest bezpieczne?</summary>
-<p>Tak, jeśli postępujesz zgodnie z instrukcją i nie modyfikujesz innych ustawień. W większości przypadków jest to odwracalne. Zalecamy jednak wykonanie kopii zapasowej kodowania modułu 09 przed zmianami.</p>
+<h2 id="faq">FAQ — start-stop w Audi</h2>
+<section class="faq">
+<details>
+<summary><strong>Czy da się na stałe wyłączyć start-stop w Audi bez VCDS?</strong></summary>
+<div class="answer">Tak, aplikacją OBDeleven (gotowa funkcja dla wielu modeli) albo ręczną adaptacją w module 09 narzędziem, które obsługuje kodowanie VAG.</div>
 </details>
-
-<details class="faq">
-<summary>Które modele Audi obsługują wyłączenie Start-Stop przez Car Scanner?</summary>
-<p>Najlepiej działają modele A3 8V (2012-2020), A4 B9 (2018+), Q2 i Q3 (2018+). W A6 C8 i A5 F5 często występują blokady – wtedy konieczny jest emulator.</p>
+<details>
+<summary><strong>Dlaczego start-stop w moim Audi czasem nie działa?</strong></summary>
+<div class="answer">System gasi silnik tylko przy wystarczająco naładowanym akumulatorze, rozgrzanym silniku i ustabilizowanej temperaturze w kabinie. Blokują go też m.in. nawiew na szybę, odpięty pas kierowcy i otwarte drzwi lub maska.</div>
 </details>
-
-<details class="faq">
-<summary>Czy po wyłączeniu Start-Stop rośnie spalanie?</summary>
-<p>W rzeczywistych testach wzrost spalania jest pomijalny (około 0,1-0,2 l/100 km), ale może być odczuwalny w intensywnym ruchu miejskim. System Start-Stop oszczędza głównie na postojach – bez niego silnik pracuje na biegu jałowym.</p>
+<details>
+<summary><strong>Czy po wyłączeniu start-stop mogę kupić zwykły akumulator?</strong></summary>
+<div class="answer">Nie. Auto nadal potrzebuje akumulatora EFB lub AGM, a nowy akumulator trzeba zarejestrować w module zarządzania energią.</div>
 </details>
-
-<details class="faq">
-<summary>Jak przywrócić fabryczne ustawienia Start-Stop?</summary>
-<p>Wystarczy ponownie wejść w adaptację modułu 09 i ustawić wartość z 0 na 1. W przypadku emulatora – odłącz go od wiązki. Fizyczny wyłącznik wymaga demontażu.</p>
+<details>
+<summary><strong>Czy start-stop szybciej zużywa rozrusznik?</strong></summary>
+<div class="answer">Auta ze start-stop mają wzmocnione rozruszniki. Bosch podaje, że jego rozruszniki do start-stop wytrzymują do 3,5 raza więcej cykli niż zwykłe.</div>
 </details>
+</section>
 
-<details class="faq">
-<summary>Czy potrzebuję specjalnego adaptera OBD2?</summary>
-<p>Do aplikacji Car Scanner wystarczy każdy adapter ELM327 w wersji 1.5 lub nowszej. Zalecamy jednak Vgate iCar Pro (ok. 80 zł) – jest stabilniejszy i szybszy. Nie używaj adapterów za 15 zł z AliExpress – często nie obsługują protokołów VAG.</p>
-</details>
+<h2 id="podsumowanie">Podsumowanie</h2>
+<p>Zanim wyłączysz start-stop, sprawdź w narzędziu wyżej, czy system nie jest po prostu nieaktywny. Jeśli chcesz go wyłączyć na stałe bez VCDS, najprostsza jest gotowa funkcja w OBDeleven. Niezależnie od wyboru zostań przy akumulatorze EFB/AGM. Inne poradniki o Audi znajdziesz w dziale <a href="/audi/">Audi</a>.</p>
 
-<details class="faq">
-<summary>Czy wyłączenie Start-Stop wpływa na gwarancję?</summary>
-<p>Teoretycznie tak – każda modyfikacja oprogramowania może skutkować odmową naprawy gwarancyjnej. W praktyce, jeśli przywrócisz ustawienia przed wizytą w serwisie, nikt się nie zorientuje. Emulatory hardware są łatwe do ukrycia.</p>
-</details>
-
-<details class="faq">
-<summary>Dlaczego po zmianie w Car Scanner system nadal działa?</summary>
-<p>Może to wynikać z innej nazwy kanału adaptacji. W nowszych modelach parametr może nazywać się "Start_Stop_activation_soft" lub "Start_Stop_comfort". Spróbuj przeszukać listę wszystkich kanałów w module 09. Jeśli to nie pomoże, użyj metody z emulatorem.</p>
-</details>
-
-<details class="faq">
-<summary>Czy mogę wyłączyć Start-Stop w Audi Q5 2021?</summary>
-<p>W Q5 z rocznika 2021+ (model 80A) metoda OBD2 nie działa – moduł 09 jest zablokowany przez producenta. Jedynym rozwiązaniem jest emulator lub wizyta w serwisie z VCDS.</p>
-</details>
-
-<details class="faq">
-<summary>Ile kosztuje emulator Start-Stop do Audi?</summary>
-<p>Ceny wahają się od 30 zł (proste chińskie emulatory) do 150 zł (markowe, np. "Start-Stop Eliminator"). Te droższe mają lepsze ekranowanie i nie powodują błędów Check Engine. Polecamy modele z regulacją czasu opóźnienia (0-30 sekund).</p>
-</details>
-
-<details class="faq">
-<summary>Czy mogę zainstalować emulator samodzielnie?</summary>
-<p>Tak, instalacja jest prosta – zazwyczaj polega na wpięciu w konektor przycisku Start-Stop. W większości Audi nie wymaga demontażu całej deski wystarczy zdjąć osłonę dźwigni zmiany biegów. Instrukcje video znajdziesz na <a href="/blog.html">naszym blogu</a>.</p>
-</details>
-</div>
-
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Czy wyłączenie Start-Stop przez OBD2 bez VCDS jest bezpieczne?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Tak, jeśli postępujesz zgodnie z instrukcją i nie modyfikujesz innych ustawień. W większości przypadków jest to odwracalne. Zalecamy jednak wykonanie kopii zapasowej kodowania modułu 09 przed zmianami."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Które modele Audi obsługują wyłączenie Start-Stop przez Car Scanner?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Najlepiej działają modele A3 8V (2012-2020), A4 B9 (2018+), Q2 i Q3 (2018+). W A6 C8 i A5 F5 często występują blokady – wtedy konieczny jest emulator."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy po wyłączeniu Start-Stop rośnie spalanie?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "W rzeczywistych testach wzrost spalania jest pomijalny (około 0,1-0,2 l/100 km), ale może być odczuwalny w intensywnym ruchu miejskim. System Start-Stop oszczędza głównie na postojach – bez niego silnik pracuje na biegu jałowym."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Jak przywrócić fabryczne ustawienia Start-Stop?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Wystarczy ponownie wejść w adaptację modułu 09 i ustawić wartość z 0 na 1. W przypadku emulatora – odłącz go od wiązki. Fizyczny wyłącznik wymaga demontażu."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy potrzebuję specjalnego adaptera OBD2?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Do aplikacji Car Scanner wystarczy każdy adapter ELM327 w wersji 1.5 lub nowszej. Zalecamy jednak Vgate iCar Pro (ok. 80 zł) – jest stabilniejszy i szybszy."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy wyłączenie Start-Stop wpływa na gwarancję?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Teoretycznie tak – każda modyfikacja oprogramowania może skutkować odmową naprawy gwarancyjnej. W praktyce, jeśli przywrócisz ustawienia przed wizytą w serwisie, nikt się nie zorientuje."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Dlaczego po zmianie w Car Scanner system nadal działa?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Może to wynikać z innej nazwy kanału adaptacji. Spróbuj przeszukać listę wszystkich kanałów w module 09. Jeśli to nie pomoże, użyj metody z emulatorem."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy mogę wyłączyć Start-Stop w Audi Q5 2021?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "W Q5 z rocznika 2021+ (model 80A) metoda OBD2 nie działa – moduł 09 jest zablokowany przez producenta. Jedynym rozwiązaniem jest emulator lub wizyta w serwisie z VCDS."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Ile kosztuje emulator Start-Stop do Audi?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Ceny wahają się od 30 zł (proste chińskie emulatory) do 150 zł (markowe). Polecamy modele z regulacją czasu opóźnienia."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Czy mogę zainstalować emulator samodzielnie?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Tak, instalacja jest prosta – zazwyczaj polega na wpięciu w konektor przycisku Start-Stop. Instrukcje video znajdziesz na naszym blogu."
-   }
+<script>
+(function(){
+  var why = {
+    cold: 'Silnik nie osiągnął minimalnej temperatury — system czeka na rozgrzanie.',
+    hvac: 'Duża różnica między temperaturą zadaną a rzeczywistą w kabinie — silnik pracuje, dopóki kabina się nie nagrzeje lub nie schłodzi.',
+    defrost: 'Nawiew na szybę blokuje start-stop, żeby szyba się nie zaparowała.',
+    belt: 'Odpięty pas kierowcy, otwarte drzwi lub maska blokują wyłączenie silnika.',
+    battery: 'Za niski poziom naładowania akumulatora albo nowy akumulator jeszcze niezarejestrowany — system chroni możliwość ponownego rozruchu.',
+    trailer: 'Podpięta elektrycznie przyczepa blokuje start-stop.'
+  };
+  var out = document.getElementById('ss-out');
+  function show(){
+    var list = [];
+    document.querySelectorAll('#ss-tool .ss-q').forEach(function(c){ if (c.checked) list.push(why[c.value]); });
+    out.textContent = list.length ? list.join(' ') + ' To normalne działanie systemu, nie usterka.' : 'Jeśli żaden z warunków nie pasuje, a silnik nigdy się nie wyłącza, sprawdź stan akumulatora i odczytaj błędy modułu 09 lub zarządzania energią.';
   }
- ]
-}</script>
-<!-- PORADNIK_CONTENT_END -->
- </div>
+  document.querySelectorAll('#ss-tool .ss-q').forEach(function(c){ c.addEventListener('change', show); });
+})();
+</script>
 
 <div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div>
 </div>
 </article>
 <aside class="sidebar">
-<nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#dlaczego-wylaczenie-start-stop-w-audi-jest-wazne">Dlaczego wyłączenie start stop w Audi jest ważne?</a></li><li><a href="#metody-wylaczenia-start-stop-bez-vcds-w-audi">Metody wyłączenia Start-Stop bez VCDS w Audi</a></li><li><a href="#jak-wylaczyc-start-stop-przez-obd2-bez-vcds-instrukcja-krok-">Jak wyłączyć Start-Stop przez OBD2 bez VCDS – instrukcja krok po kroku</a></li><li><a href="#najczestsze-modele-audi-i-kompatybilnosc">Najczęstsze modele Audi i kompatybilność</a></li><li><a href="#zagrozenia-i-skutki-uboczne-wylaczenia-start-stop">Zagrożenia i skutki uboczne wyłączenia Start-Stop</a></li><li><a href="#linki-wewnetrzne-i-zewnetrzne-gdzie-szukac-wiecej-informacji">Linki wewnętrzne i zewnętrzne – gdzie szukać więcej informacji</a></li><li><a href="#alternatywne-metody-programowe-car-scanner-obd-eleven">Alternatywne metody programowe – Car Scanner, OBD Eleven</a></li><li><a href="#faq-najczesciej-zadawane-pytania-o-wylaczenie-start-stop-w-a">FAQ – Najczęściej zadawane pytania o wyłączenie Start-Stop w Audi</a></li></ol></nav>
-
- <div class="sb-sidebar-card">
- <div class="sb-sidebar-title">Kategorie</div>
- <ul class="sb-sidebar-links">
- <li><a href="/katalog/">Katalog części (modele)</a></li>
- <li><a href="/audi/a3-8p/">Audi A3 8P</a></li>
- <li><a href="/audi-a3-import-usa-2-0-tfsi/">Import A3 z USA</a></li>
- <li><a href="/nie-dziala-nawiew/">Nie działa nawiew (hub)</a></li>
- <li><a href="/bmw-e46-nie-dziala-nawiew/">BMW E46</a></li>
- <li><a href="/volkswagen-golf-5-nie-dziala-nawiew/">VW Golf 5</a></li>
- <li><a href="/ford-focus-mk2-nie-dziala-nawiew/">Ford Focus Mk2</a></li>
- <li><a href="/skoda-octavia-1z-nie-dziala-nawiew/">Skoda Octavia 1Z</a></li>
- <li><a href="/toyota-corolla-e12-nie-dziala-nawiew/">Toyota Corolla E12</a></li>
- <li><a href="/blog.html">Wszystkie artykuły →</a></li>
- </ul>
- </div>
- <div class="sb-sidebar-card" style="background:#fff5f5;border:1px solid #f5c6c6;">
- <div class="sb-sidebar-title">O poradniku</div>
- <p style="font-size:0.88rem;color:#555;">Piszemy dla kierowców którzy chcą wiedzieć co robią. Bez sponsorowanych opinii.</p>
- <a href="/about.html" style="font-size:0.85rem;color:#c0392b;font-weight:600;">Czytaj więcej →</a>
- </div>
- 
+<nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#dlaczego-nie-gasi">Dlaczego start-stop nie gasi silnika?</a></li><li><a href="#metody">Trzy sposoby na wyłączenie</a></li><li><a href="#rozrusznik">Czy start-stop niszczy rozrusznik?</a></li><li><a href="#akumulator">Akumulator — nie zmieniaj typu po wyłączeniu</a></li><li><a href="#ryzyka">O czym pamiętać przed kodowaniem</a></li><li><a href="#faq">FAQ — start-stop w Audi</a></li><li><a href="#podsumowanie">Podsumowanie</a></li></ol></nav>
+<div class="ps-panel"><h3>W skrócie</h3><ul><li><strong>Najprościej:</strong> przycisk, przy każdej jeździe</li><li><strong>Na stałe bez VCDS:</strong> aplikacja OBDeleven</li><li><strong>Ręcznie:</strong> adaptacja w module 09</li><li><strong>Nie gasi silnika:</strong> akumulator, temperatura, pasy, nawiew na szybę</li><li><strong>Akumulator:</strong> zawsze EFB/AGM, nawet po wyłączeniu</li></ul></div>
+<div class="ps-panel"><h3>Audi w poradniku</h3><ul><li><a href="/audi/">Audi — wszystkie poradniki</a></li><li><a href="/audi/a3-8p/">Audi A3 8P — usterki</a></li><li><a href="/audi-a3-8v-vs-8p/">Audi A3 8V czy 8P</a></li><li><a href="/audi/a4-b7/">Audi A4 B7 1.8T</a></li></ul></div>
 </aside>
 </main>
 <footer class="sc-footer">
