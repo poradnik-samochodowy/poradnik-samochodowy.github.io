@@ -7,10 +7,10 @@
 <meta name="description" content="Lista wszystkich poradników: nawiew, silnik i olej, DPF, elektryka, zakup i import. Filtr po temacie.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://poradnik-samochodowy.github.io/blog.html">
-<meta property="og:title" content="Wszystkie poradniki samochodowe, od najnowszych | Poradnik Samochodowy">
-<meta property="og:description" content="Lista wszystkich poradników: nawiew, silnik i olej, DPF, elektryka, zakup i import. Filtr po temacie.">
-<meta property="og:url" content="https://poradnik-samochodowy.github.io/blog.html">
-<meta property="og:type" content="website">
+
+
+
+
 <link rel="icon" href="data:,">
 <style id="ps">
 :root{--bar:#1e2226;--accent:#f2b705;--ink:#14171a;--text:#1f2328;--muted:#4a5259;--line:#e1e4e8;--soft:#f4f5f6;--tag:#5b4a00;--link:#0066cc}
@@ -125,6 +125,43 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 @media (max-width:900px){.ps-layout{grid-template-columns:minmax(0,1fr);gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:minmax(0,1fr)}.card .kicker{grid-row:auto}.ps-in{padding:22px 16px}.ps-layout,.ps-main,.ps-page{padding-left:16px;padding-right:16px}.sc-topbar-inner,.sc-footer-inner{padding-left:16px;padding-right:16px}}
 </style>
+
+<style id="sidebar-follow-20261025">
+[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
+height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
+min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
+[data-follow-parent]{overflow:visible!important;align-items:start}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
+width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
+[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
+.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
+background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
+.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
+.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
+overflow-wrap:anywhere;line-height:1.45}
+@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
+max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
+.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
+</style>
+
+<!-- social-cards:start -->
+<meta property="og:title" content="Wszystkie poradniki samochodowe, od najnowszych | Poradnik Samochodowy">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://poradnik-samochodowy.github.io/blog.html">
+<meta property="og:description" content="Lista wszystkich poradników: nawiew, silnik i olej, DPF, elektryka, zakup i import. Filtr po temacie.">
+<meta property="og:image" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:secure_url" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Nowoczesny samochód z otwartą maską w uporządkowanym garażu z narzędziami">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wszystkie poradniki samochodowe, od najnowszych | Poradnik Samochodowy">
+<meta name="twitter:description" content="Lista wszystkich poradników: nawiew, silnik i olej, DPF, elektryka, zakup i import. Filtr po temacie.">
+<meta name="twitter:image" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta name="twitter:image:alt" content="Nowoczesny samochód z otwartą maską w uporządkowanym garażu z narzędziami">
+<!-- social-cards:end -->
 </head>
 <body>
 <a class="skip" href="#content">Przejdź do treści</a>
@@ -142,7 +179,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
     <div class="chips" role="group" aria-label="Temat"><button type="button" data-t="all" aria-pressed="true">Wszystkie</button><button type="button" data-t="nawiew" aria-pressed="false">Nawiew</button><button type="button" data-t="silnik" aria-pressed="false">Silnik i olej</button><button type="button" data-t="dpf" aria-pressed="false">DPF i wydech</button><button type="button" data-t="elektryka" aria-pressed="false">Elektryka i wyposażenie</button><button type="button" data-t="zakup" aria-pressed="false">Zakup i import</button><button type="button" data-t="modele" aria-pressed="false">Modele i usterki</button></div>
   </div>
 </section>
-<main class="ps-main" id="content">
+<div class="follow-sidebar-layout"><main class="ps-main" id="content" data-follow-content="true">
 <div class="cards">
 <article class="card" data-brand="volkswagen" data-topic="dpf">
   <p class="kicker">DPF i wydech</p>
@@ -253,7 +290,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
   <p>Audi A3 8P: wycieraczki i usterki bez wymiany części w ciemno. Sprawdź dobór piór, pozycję serwisową, kod 00153 i kolejność kontroli. Skorzystaj z checkera.</p>
 </article>
 </div>
-</main>
+</main><aside data-follow-sidebar="added" aria-label="Panel boczny"><section class="follow-sidebar-panel"><h2>Przeglądaj</h2><ul><li><a href="/">Strona główna</a></li><li><a href="/blog.html">Wszystkie poradniki</a></li><li><a href="/about.html">O blogu</a></li><li><a href="/contact.html">Kontakt</a></li></ul></section></aside></div>
 <script>(function(){var b=document.querySelectorAll('.chips button'),c=document.querySelectorAll('.cards .card');function f(t){t=t||'all';b.forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.t===t))});c.forEach(function(x){x.hidden=!(t==='all'||x.dataset.topic===t)})}b.forEach(function(x){x.addEventListener('click',function(){f(x.dataset.t);history.replaceState(null,'',x.dataset.t==='all'?location.pathname:'#'+x.dataset.t)})});window.addEventListener('hashchange',function(){f(location.hash.slice(1))});f(location.hash.slice(1))})();</script>
 <footer class="sc-footer">
   <div class="sc-footer-inner">

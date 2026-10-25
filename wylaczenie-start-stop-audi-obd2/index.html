@@ -204,6 +204,43 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
  "embedUrl": "https://www.youtube-nocookie.com/embed/duewUIVWsYs",
  "contentUrl": "https://www.youtube.com/watch?v=duewUIVWsYs"
 }</script>
+
+<style id="sidebar-follow-20261025">
+[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
+height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
+min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
+[data-follow-parent]{overflow:visible!important;align-items:start}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
+width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
+[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
+.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
+background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
+.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
+.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
+overflow-wrap:anywhere;line-height:1.45}
+@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
+max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
+.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
+</style>
+
+<!-- social-cards:start -->
+<meta property="og:title" content="Wyłączenie start-stop w Audi przez OBD2 bez VCDS — metody i ryzyka">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://poradnik-samochodowy.github.io/wylaczenie-start-stop-audi-obd2/">
+<meta property="og:description" content="Jak wyłączyć start-stop w Audi bez VCDS: przycisk, OBDeleven, adaptacja w module 09. Kiedy system sam nie gasi silnika i co z akumulatorem.">
+<meta property="og:image" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:secure_url" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Nowoczesny samochód z otwartą maską w uporządkowanym garażu z narzędziami">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wyłączenie start-stop w Audi przez OBD2 bez VCDS — metody i ryzyka">
+<meta name="twitter:description" content="Jak wyłączyć start-stop w Audi bez VCDS: przycisk, OBDeleven, adaptacja w module 09. Kiedy system sam nie gasi silnika i co z akumulatorem.">
+<meta name="twitter:image" content="https://poradnik-samochodowy.github.io/assets/social-share-20261025.jpg">
+<meta name="twitter:image:alt" content="Nowoczesny samochód z otwartą maską w uporządkowanym garażu z narzędziami">
+<!-- social-cards:end -->
 </head>
 <body>
 <a class="skip" href="#content">Przejdź do treści</a>
@@ -222,7 +259,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
     <p class="ps-meta">03.06.2026 · 4 min czytania</p>
   </div>
 </section>
-<main class="ps-layout" id="content">
+<main class="ps-layout" id="content" data-follow-parent="true">
 <article class="ps-article">
 <div class="wrap">
 <div class="answer-box">
@@ -334,7 +371,7 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.01em;font-family:inherit!important}
 <div class="ai-note" style="border-left:4px solid #c0392b;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Autor Krzysztof Wilk.</strong> Ten poradnik powstał z pomocą narzędzi AI na podstawie podlinkowanych źródeł i został sprawdzony przed publikacją.</div>
 </div>
 </article>
-<aside class="sidebar">
+<aside class="sidebar" data-follow-sidebar="existing">
 <nav class="ps-panel toc" aria-label="W tym artykule"><h3>W tym artykule</h3><ol><li><a href="#dlaczego-nie-gasi">Dlaczego start-stop nie gasi silnika?</a></li><li><a href="#metody">Trzy sposoby na wyłączenie</a></li><li><a href="#rozrusznik">Czy start-stop niszczy rozrusznik?</a></li><li><a href="#akumulator">Akumulator — nie zmieniaj typu po wyłączeniu</a></li><li><a href="#ryzyka">O czym pamiętać przed kodowaniem</a></li><li><a href="#faq">FAQ — start-stop w Audi</a></li><li><a href="#podsumowanie">Podsumowanie</a></li></ol></nav>
 <div class="ps-panel"><h3>W skrócie</h3><ul><li><strong>Najprościej:</strong> przycisk, przy każdej jeździe</li><li><strong>Na stałe bez VCDS:</strong> aplikacja OBDeleven</li><li><strong>Ręcznie:</strong> adaptacja w module 09</li><li><strong>Nie gasi silnika:</strong> akumulator, temperatura, pasy, nawiew na szybę</li><li><strong>Akumulator:</strong> zawsze EFB/AGM, nawet po wyłączeniu</li></ul></div>
 <div class="ps-panel"><h3>Audi w poradniku</h3><ul><li><a href="/audi/">Audi — wszystkie poradniki</a></li><li><a href="/audi/a3-8p/">Audi A3 8P — usterki</a></li><li><a href="/audi-a3-8v-vs-8p/">Audi A3 8V czy 8P</a></li><li><a href="/audi/a4-b7/">Audi A4 B7 1.8T</a></li></ul></div>
