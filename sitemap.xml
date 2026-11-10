@@ -30,4 +30,9 @@
   <url><loc>https://poradnik-samochodowy.github.io/editorial-policy.html</loc><lastmod>2026-10-19</lastmod><priority>0.3</priority></url>
   <url><loc>https://poradnik-samochodowy.github.io/sitemap.html</loc><lastmod>2026-10-19</lastmod><priority>0.3</priority></url>
 	<url><loc>https://poradnik-samochodowy.github.io/poradnik-serwisowy-samochodu/</loc><lastmod>2026-11-06</lastmod><priority>0.6</priority></url>
+  <url>
+    <loc>https://poradnik-samochodowy.github.io/plyn-wspomagania-alfa-romeo-jtdm/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
